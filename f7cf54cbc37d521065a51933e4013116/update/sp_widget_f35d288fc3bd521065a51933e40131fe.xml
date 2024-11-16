@@ -20,7 +20,7 @@
 		$scope.cartLabel = 'Cart]]>👇<![CDATA[';
 		$timeout(function () {
 			$scope.cartLabel = 'Cart';
-		}, 6000);
+		}, 3000);
 	}
 	$rootScope.$on('update_cart', updateCartLabel);
 
@@ -227,14 +227,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:28:43</sys_created_on>
         <sys_id>f35d288fc3bd521065a51933e40131fe</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>ShopNow header menu</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_f35d288fc3bd521065a51933e40131fe</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-16 11:07:13</sys_updated_on>
+        <sys_updated_on>2024-11-16 17:44:57</sys_updated_on>
         <template><![CDATA[<ul class="nav navbar-nav" aria-label="${Header}">
   <div class="header-loader" ng-class="{'invisible': !loadingIndicator}">
     <div class="hidden-xs hidden-sm sp-loading-indicator la-sm">

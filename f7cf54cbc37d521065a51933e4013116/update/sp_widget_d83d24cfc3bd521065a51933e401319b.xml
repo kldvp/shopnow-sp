@@ -1,90 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function($scope) {
+        <client_script><![CDATA[api.controller = function ($scope) {
   /* widget controller */
   var c = this;
-  c.showLoader = false;
-  c.items = c.data.products.slice(); // initial call
-  c.fetchMore = function() {
-	c.showLoader = true;
-	c.data.products = [];
-	c.server.update().then(function() {
-		c.showLoader = false;
-		c.items = c.items.concat(c.data.products); // concatenate products
-	});
+  function init() {
+    c.showLoader = false;
+    c.showMore = c.data.showMore;
+    c.items = c.data.products.slice(); // initial call
+    c.categories = c.data.categories;
+    // searching & filtering
+    c.selectedCategory = '';
+    c.searchQuery = '';
+    c.showReset = false;
+  }
+  init();
+  // fetch next set of items
+  c.fetchMore = function () {
+    c.showLoader = true;
+    c.data.products = []; // optimization
+    c.data.searchQuery = c.searchQuery;
+    c.data.category = c.selectedCategory && c.selectedCategory.name;
+    c.server.update().then(function () {
+      c.showLoader = false;
+      c.showMore = c.data.showMore;
+      c.items = c.items.concat(c.data.products); // concatenate products
+    });
   };
+  // reset everything
+  c.reset = function () {
+    c.server.refresh().then(function () {
+      init();
+    });
+  }
+  // search products with query and category
+  c.searchItems = function () {
+    c.showLoader = true;
+    if (!c.searchQuery) {
+      c.reset();
+    } else {
+      c.filteredItems();
+    }
+  }
+  c.filteredItems = function () {
+    c.showReset = true;
+    c.server.get({
+      action: 'get_items',
+      searchQuery: c.searchQuery,
+      category: c.selectedCategory,
+      end: 0,
+    }).then(function (res) {
+      c.showLoader = false;
+      c.showMore = res.data.showMore;
+      c.items = res.data.products;
+      c.categories = res.data.categories;
+    });
+  }
+
+  c.searchCategory = function (category) {
+    c.selectedCategory = category.name;
+    c.filteredItems();
+  }
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.col-md-10, .col-md-push-1, .col-md-9, .col-md-push-3 {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.product-item {
-  margin-bottom: 30px; /* Gap between rows */
-  display: flex; /* Ensures equal height */
-  flex-direction: column; /* Stack items vertically */
-}
-
-.product-container {
-  flex: 1; /* Allows the container to grow */
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: space-between; /* Space items evenly */
-  border: 1px solid #ccc; /* Border color */
-  border-radius: 4px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  overflow: hidden; /* Ensures no overflow */
-}
-
-.product-item figure {
-  margin: 0; /* Remove default margin from figure */
-  height: 150px; /* Set a fixed height for the image area */
-  overflow: hidden; /* Prevents overflow */
-}
-
-.product-item img {
-  width: 100%; /* Ensure the image fills the area */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 150px; /* Max height for uniformity */
-  object-fit: cover; /* Ensure images cover the area without distortion */
-  margin: 0; /* Remove any margin from the image */
-}
-
-.padding-4 {
-  padding: 0 10px; /* Set padding for product information */
-  text-align: left; /* Align text to the left */
-  margin: 0; /* Remove any margin to eliminate space */
-  display: flex; /* Use flex to manage child elements */
-  flex-direction: column; /* Stack text elements vertically */
-  justify-content: space-between; /* Space text evenly */
-  flex-grow: 1; /* Allow it to grow to fill available space */
-}
-
-/* Ensuring equal height across all items */
-.row {
-  display: flex; /* Flexbox for the row to handle equal heights */
-  flex-wrap: wrap; /* Allows wrapping of items */
-}
-
-.product-item {
-  flex: 1 1 25%; /* Flex-grow, flex-shrink, and basis to ensure four items in a row */
-  max-width: 25%; /* Limit to four items in a row */
-}
-
-@media (max-width: 767px) {
-  .product-item {
-    flex: 0 0 50%; /* Two items per row on smaller screens */
-    max-width: 50%; /* Limit to two items per row */
-  }
-}
-</css>
+        <css>.row {&#13;
+  margin-left: 0;&#13;
+  margin-right: 0;&#13;
+}&#13;
+&#13;
+.col-md-10, .col-md-push-1, .col-md-9, .col-md-push-3 {&#13;
+  padding-left: 0;&#13;
+  padding-right: 0;&#13;
+}&#13;
+&#13;
+.product-item {&#13;
+  margin-bottom: 30px; /* Gap between rows */&#13;
+  display: flex; /* Ensures equal height */&#13;
+  flex-direction: column; /* Stack items vertically */&#13;
+}&#13;
+&#13;
+.product-container {&#13;
+  flex: 1; /* Allows the container to grow */&#13;
+  display: flex; /* Use flexbox for alignment */&#13;
+  flex-direction: column; /* Stack items vertically */&#13;
+  justify-content: space-between; /* Space items evenly */&#13;
+  border: 1px solid #ccc; /* Border color */&#13;
+  border-radius: 4px; /* Rounded corners */&#13;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */&#13;
+  overflow: hidden; /* Ensures no overflow */&#13;
+}&#13;
+&#13;
+.product-item figure {&#13;
+  margin: 0; /* Remove default margin from figure */&#13;
+  height: 150px; /* Set a fixed height for the image area */&#13;
+  overflow: hidden; /* Prevents overflow */&#13;
+}&#13;
+&#13;
+.product-item img {&#13;
+  width: 100%; /* Ensure the image fills the area */&#13;
+  height: auto; /* Maintain aspect ratio */&#13;
+  max-height: 150px; /* Max height for uniformity */&#13;
+  object-fit: cover; /* Ensure images cover the area without distortion */&#13;
+  margin: 0; /* Remove any margin from the image */&#13;
+}&#13;
+&#13;
+.padding-4 {&#13;
+  padding: 0 10px; /* Set padding for product information */&#13;
+  text-align: left; /* Align text to the left */&#13;
+  margin: 0; /* Remove any margin to eliminate space */&#13;
+  display: flex; /* Use flex to manage child elements */&#13;
+  flex-direction: column; /* Stack text elements vertically */&#13;
+  justify-content: space-between; /* Space text evenly */&#13;
+  flex-grow: 1; /* Allow it to grow to fill available space */&#13;
+}&#13;
+&#13;
+/* Ensuring equal height across all items */&#13;
+.row {&#13;
+  display: flex; /* Flexbox for the row to handle equal heights */&#13;
+  flex-wrap: wrap; /* Allows wrapping of items */&#13;
+}&#13;
+&#13;
+.product-item {&#13;
+  flex: 1 1 25%; /* Flex-grow, flex-shrink, and basis to ensure four items in a row */&#13;
+  max-width: 25%; /* Limit to four items in a row */&#13;
+}&#13;
+&#13;
+@media (max-width: 767px) {&#13;
+  .product-item {&#13;
+    flex: 0 0 50%; /* Two items per row on smaller screens */&#13;
+    max-width: 50%; /* Limit to two items per row */&#13;
+  }&#13;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -98,12 +144,48 @@
         <option_schema>[{"hint":"Specify number of items to show for pagination","name":"items_in_page","section":"Presentation","default_value":"8","label":"Items in page","type":"integer"}]</option_schema>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {
-    /* populate the 'data' object */
-    /* e.g., data.table = $sp.getValue('table'); */
-    // Assign products to widget data
+        <script><![CDATA[(function () {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	// Assign products to widget data
 	const fieldNames = ['category', 'title', 'full_details', 'product_description', 'picture', 'price', 'sys_id'];
 	const pageLimit = parseInt(options.items_in_page);
+	// build query for search
+	function buildSearchQuery() {
+		if (!input || !input.searchQuery) return null;
+		let query = "titleLIKE<searchQuery>^ORproduct_descriptionLIKE<searchQuery>^ORproduct_descriptionLIKE<searchQuery>^ORcategoryLIKE<searchQuery>";
+		query = query.replaceAll('<searchQuery>', input.searchQuery.toString());
+		return query;
+	}
+	const searchKey = buildSearchQuery();
+	// build query for category
+	function buildCategoryQuery() {
+		if (!input || !input.category) return null;
+		let query = "category=<category>";
+		return query.replaceAll('<category>', input.category);
+	}
+	const categoryKey = buildCategoryQuery();
+	// add categories
+	function getCategories() {
+		var groupsGr = new GlideAggregate("x_1550111_shopnow_shop_products");
+		groupsGr.addAggregate("COUNT", "sys_id");
+		if (searchKey) groupsGr.addEncodedQuery(searchKey);
+		// if (searchKey && categoryKey) groupsGr.addEncodedQuery(categoryKey);
+		groupsGr.groupBy("category");
+		groupsGr.query();
+		var categories = [];
+		while (groupsGr.next()) {
+			var categoryObj = {
+				label: groupsGr.category.getDisplayValue(),
+				name: groupsGr.category.getValue(),
+				count: groupsGr.getAggregate('COUNT', 'sys_id'),
+			};
+			categories.push(categoryObj);
+		}
+		return categories;
+	}
+	// input is nothing but c.data or data object
+	// pagination window
 	if (!input) { // initial call
 		data.start = 0;
 		data.end = pageLimit;
@@ -111,70 +193,134 @@
 		data.start = input.end;
 		data.end = input.end + pageLimit;
 	}
-	// query to fetch products
-	const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
-	productGr.orderBy('number');
-	productGr.chooseWindow(data.start, data.end);
-	productGr.query();
-	const products = [];
-	while(productGr.next()) {
-		const product = {};
-		fieldNames.forEach((field) => {
-			product[field] = productGr.getDisplayValue(field);
-		});
-		if (product.product_description) {
-			product.product_description = product.product_description.replace(/<[^>]+>/g, '').substring(0, 60) + "...";
+	gs.info('pagination start :' + data.start + " end:" + data.end);
+	// get products
+	function getProducts() {
+		const products = [];
+		const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
+		if (searchKey) productGr.addEncodedQuery(searchKey);
+		if (categoryKey) productGr.addEncodedQuery(categoryKey);
+		productGr.orderBy('number');
+		productGr.chooseWindow(data.start, data.end);
+		productGr.query();
+		while (productGr.next()) {
+			const product = {};
+			fieldNames.forEach((field) => {
+				product[field] = productGr.getDisplayValue(field);
+			});
+			if (product.product_description) {
+				product.product_description = product.product_description.replace(/<[^>]+>/g, '').substring(0, 60) + "...";
+			}
+			product.url = "?id=shop_product_info&sys_id=" + product.sys_id;
+			products.push(product);
 		}
-		product.url = "?id=shop_product_info&sys_id=" + product.sys_id;
-		products.push(product);
+		return products;
 	}
+	data.products = getProducts();
+	data.categories = getCategories();
+	// query to fetch products
 	data.showMore = true;
-	if (!products.length || products.length < pageLimit) {
+	if (!data.products.length || data.products.length < pageLimit) {
 		data.showMore = false;
 	}
-    data.products = products;
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:27:55</sys_created_on>
         <sys_id>d83d24cfc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>207</sys_mod_count>
         <sys_name>ShopNow shop products list</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_d83d24cfc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-16 05:16:37</sys_updated_on>
-        <template><![CDATA[<div class="row">
-  <div class="col-md-10 col-md-push-1">
-    <div class="row">
-      <div ng-repeat="product in c.items" class="col-sm-3 product-item">
-        <div class="text-center product-container">
-          <figure class="block-4-image">
-            <a ng-href="{{product.url}}">
-              <img ng-src="{{::product.picture}}?t=large" alt="{{product.name}}" class="img-responsive">
-            </a>
-          </figure>
-          <div class="padding-4">
-            <h3><a ng-href="{{::product.url}}">{{product.title}}</a></h3>
-            <p class="margin-bottom-0" ng-bind-html="product.product_description"></p>
-            <p class="text-primary"><strong>₹{{product.price}}</strong></p>
-          </div>
+        <sys_updated_on>2024-11-16 17:40:34</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <!-- First Row: Add padding-bottom to create gap -->
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2" style="margin-bottom: 15px;">
+      <!-- Your content goes here -->
+      <div class="input-group">
+        <input type="text"
+                 class="form-control"
+                 placeholder="Search for products eg. game"
+                 ng-model="c.searchQuery"
+                 ng-keypress="($event.which === 13) && c.searchItems()">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="c.searchItems()">Search</button>
+            <button class="btn btn-default" type="button" ng-if="c.showReset" ng-click="c.reset()">
+              <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>Reset
+            </button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Row: Product List and Categories -->
+  <div class="row" style="line-height: 1;">
+    <!-- Categories on the left -->
+    <div class="col-md-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Categories</h4>
+        </div>
+        <div class="list-group">
+          <a href="javascript:void(0);" class="list-group-item"
+            ng-class="{'active': c.selectedCategory === category.name}" ng-repeat="category in c.categories"
+            ng-click="c.searchCategory(category)">
+            {{ category.label }}
+            <span class="badge" style="background-color: #337ab7; color: white;">{{ category.count }}</span>
+          </a>
         </div>
       </div>
     </div>
-    <div class="text-a-c" ng-if="c.showLoader">
-      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-    </div>
-    <div ng-if="data.showMore && !c.showLoader" class="text-center col-md-10 col-md-push-1 m-b-lg">
-      <button class="m-t-xs btn btn-default" ng-click="c.fetchMore()">
-        Show More Items
-      </button>
+
+    <!-- Product list takes the remaining space -->
+    <div class="col-md-10">
+      <div class="row" ng-if="c.items.length">
+        <div ng-repeat="product in c.items" class="col-sm-3 product-item">
+          <div class="text-center product-container">
+            <figure class="block-4-image">
+              <a ng-href="{{product.url}}">
+                <img ng-src="{{::product.picture}}?t=large" alt="{{product.name}}" class="img-responsive">
+              </a>
+            </figure>
+            <div class="padding-4">
+              <h3><a ng-href="{{::product.url}}">{{product.title}}</a></h3>
+              <p class="margin-bottom-0" ng-bind-html="product.product_description"></p>
+              <p class="text-primary"><strong>₹{{product.price}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" ng-if="!c.items.length && !c.showLoader">
+        <h1>No products found</h1>
+      </div>
+
+      <div class="text-center" ng-if="c.showLoader">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      </div>
+
+      <div ng-if="c.showMore && !c.showLoader" class="text-center col-md-12 m-b-lg">
+        <button class="m-t-xs btn btn-default" ng-click="c.fetchMore()">
+          Show More Items
+        </button>
+      </div>
     </div>
   </div>
-</div>
-]]></template>
+</div>]]></template>
     </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d83d24cfc3bd521065a51933e401319b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 12:53:11</sys_created_on>
+        <sys_id>324a0edbc3b9d21065a51933e401317d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 12:53:11</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

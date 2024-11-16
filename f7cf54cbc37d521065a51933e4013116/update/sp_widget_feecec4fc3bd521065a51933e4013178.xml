@@ -34,8 +34,6 @@
             c.disableBtn = false;
             if (r.data.errMsg) {
                 spUtil.addErrorMessage(r.data.errMsg);
-            } else {
-                spUtil.addInfoMessage('Product has been added to cart');
             }
         });
     };
@@ -118,7 +116,7 @@ hr {
         const sysId = $sp.getParameter('sys_id');
         if (!sysId) return;
         const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
-        const fieldNames = ['category', 'title', 'full_details', 'description', 'picture', 'price', 'sys_id'];
+        const fieldNames = ['category', 'title', 'full_details', 'product_description', 'picture', 'price', 'sys_id'];
         let product;
         if (productGr.get(sysId)) {
             product = {};
@@ -152,14 +150,14 @@ hr {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:26:44</sys_created_on>
         <sys_id>feecec4fc3bd521065a51933e4013178</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>ShopNow shop product info</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_feecec4fc3bd521065a51933e4013178</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-16 09:32:11</sys_updated_on>
+        <sys_updated_on>2024-11-16 17:43:23</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row" ng-if="product">
     <div class="col-md-6">
@@ -167,7 +165,7 @@ hr {
     </div>
     <div class="col-md-6">
       <h1>{{ product.title }}</h1>
-      <p ng-bind-html="product.description"></p>
+      <p ng-bind-html="product.product_description"></p>
       <hr>
       <p class="price"><strong>₹{{ product.price || 0 }}</strong></p>
       <div class="input-group custom-input-group">

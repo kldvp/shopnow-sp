@@ -135,9 +135,9 @@
 		if (productGr.get(cartItemGr.product)) {
 			cartItem.title = productGr.getDisplayValue('title');
 			cartItem.image = productGr.getDisplayValue('picture');
-			cartItem.price = parseInt(productGr.getDisplayValue('price'));
+			cartItem.price = parseInt(productGr.getValue('price'));
 		}
-		cartItem.total_amount = parseFloat(cartItemGr.getDisplayValue('total_amount'));
+		cartItem.total_amount = parseFloat(cartItemGr.getValue('total_amount'));
 		fieldNames.forEach((field) => {
 			cartItem[field] = cartItemGr.getDisplayValue(field);
 		});
@@ -162,14 +162,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:27:16</sys_created_on>
         <sys_id>3a0d688fc3bd521065a51933e401310c</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>ShopNow shop products cart</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_3a0d688fc3bd521065a51933e401310c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-16 11:01:47</sys_updated_on>
+        <sys_updated_on>2024-11-16 11:49:30</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row" ng-if="data.cart.items.length">
     <div class="col-md-10">
