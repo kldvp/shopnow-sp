@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+	/* widget controller */
+	var c = this;
+	$scope.cartItems = c.data.cart.items;
+	$scope.getItemTotal = function(item) {
+		return item.price * item.quantity;
+	};
+	$scope.increment = function(item) {
+		if (item.quantity < 5) {
+			item.quantity++;
+			item.total_amount = $scope.getItemTotal(item);
+			$scope.calculateCart();
+		}
+	};
+
+	$scope.decrement = function(item) {
+		if (item.quantity > 1) {
+			item.quantity--;
+			item.total_amount = $scope.getItemTotal(item);
+			$scope.calculateCart();
+		}
+	};
+
+	$scope.calculateCart = function() {
+		c.data.cart.subTotal =  c.data.cart.items.reduce(function(total, item){
+			return total + item.total_amount;
+		}, 0);
+		c.data.cart.total = c.data.cart.subTotal + c.data.cart.shipping;
+	};
+	$scope.checkout = function() {
+		// Implement checkout logic
+		alert('Checkout initiated!');
+	};
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.custom-input-group {
+  max-width: 120px;
+  margin-bottom: 15px; /* Space below the input group */
+}
+.margin-10 {
+  margin: 10px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>shopnow_shop_products_cart</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>ShopNow shop products cart</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    if (!input) { // initial call
+        const cartItems = [];
+        const fieldNames = ['sys_id', 'quantity', 'number'];
+        const cartItemGr = new GlideRecordSecure('x_1550111_shopnow_shop_cart');
+        cartItemGr.orderBy('number');
+        cartItemGr.query();
+        while (cartItemGr.next()) {
+            const cartItem = {};
+						cartItem.test = {
+							name: cartItemGr.product.title,
+							picture: cartItemGr.product.picture.getDisplayValue(),
+						};
+            const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
+            if (productGr.get(cartItemGr.product)) {
+                cartItem.title = productGr.getDisplayValue('title');
+                cartItem.image = productGr.getDisplayValue('picture');
+                cartItem.price = parseInt(productGr.getDisplayValue('price'));
+            }
+            cartItem.total_amount = parseFloat(cartItemGr.getDisplayValue('total_amount'));
+            fieldNames.forEach((field) => {
+                cartItem[field] = cartItemGr.getDisplayValue(field);
+            });
+            cartItem.url = "?id=shop_product_info&sys_id=" + cartItemGr.product.sys_id;
+            cartItems.push(cartItem);
+        }
+        data.cart = {
+            items: cartItems,
+            subTotal: 0,
+            shipping: 0,
+            total: 0
+        };
+        if (cartItems.length) {
+            data.cart.subTotal = cartItems.reduce(function(total, item) {
+                return total + item.total_amount;
+            }, 0);
+            data.cart.total += data.cart.subTotal + data.cart.shipping;
+        }
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 11:27:16</sys_created_on>
+        <sys_id>3a0d688fc3bd521065a51933e401310c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ShopNow shop products cart</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_widget_3a0d688fc3bd521065a51933e401310c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 03:55:12</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="row" ng-if="data.cart.items.length">
+    <div class="col-md-10">
+      <div class="page-header">
+        <h3>Shopping Cart <small class="pull-right label label-primary">{{ data.cart.items.length }} items</small></h3>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Description</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="item in data.cart.items">
+                      <td width="100">
+                        <img ng-src="{{ item.image }}" class="img-thumbnail" alt="Product">
+                      </td>
+                      <td>
+                        <h4><a ng-href="{{::item.url}}">{{item.title}}</a></h4>
+                      </td>
+                      <td>
+                        <strong>₹{{ item.price }}</strong>
+                      </td>
+                      <td>
+                        <div class="input-group custom-input-group">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default js-btn-minus" ng-click="decrement(item)" ng-disabled="item.quantity === 1" type="button">&minus;</button>
+                          </span>
+                          <input type="text" class="form-control text-center" ng-model="item.quantity" readonly>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default js-btn-plus" ng-click="increment(item)" ng-disabled="item.quantity === 5" type="button">&plus;</button>
+                          </span>
+                        </div>
+                      </td>
+                      <td><strong>₹{{ item.total_amount }}</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Order Summary</h3>
+            </div>
+            <div class="panel-body">
+              <div class="well well-sm">
+                <div class="row">
+                  <div class="col-xs-6">Subtotal:</div>
+                  <div class="col-xs-6 text-right"><strong>₹{{ data.cart.subTotal }}</strong></div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">Shipping:</div>
+                  <div class="col-xs-6 text-right"><strong>₹{{ data.cart.shipping }}</strong></div>
+                </div>
+                <hr class="margin-10">
+                <div class="row">
+                  <div class="col-xs-6 total-title"><h4>Total:</h4></div>
+                  <div class="col-xs-6 text-right"><h4 class="total-amount">₹{{ data.cart.total }}</h4></div>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" ng-click="checkout()">
+                Place order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-if="!data.cart.items.length">
+    <h1>Your cart is empty</h1>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

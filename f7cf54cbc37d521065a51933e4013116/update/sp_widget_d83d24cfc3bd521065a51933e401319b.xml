@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+  /* widget controller */
+  var c = this;
+  c.showLoader = false;
+  c.items = c.data.products.slice(); // initial call
+  c.fetchMore = function() {
+	c.showLoader = true;
+	c.data.products = [];
+	c.server.update().then(function() {
+		c.showLoader = false;
+		c.items = c.items.concat(c.data.products); // concatenate products
+	});
+  };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-md-10, .col-md-push-1, .col-md-9, .col-md-push-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.product-item {
+  margin-bottom: 30px; /* Gap between rows */
+  display: flex; /* Ensures equal height */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.product-container {
+  flex: 1; /* Allows the container to grow */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space items evenly */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.product-item figure {
+  margin: 0; /* Remove default margin from figure */
+  height: 150px; /* Set a fixed height for the image area */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.product-item img {
+  width: 100%; /* Ensure the image fills the area */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 150px; /* Max height for uniformity */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  margin: 0; /* Remove any margin from the image */
+}
+
+.padding-4 {
+  padding: 0 10px; /* Set padding for product information */
+  text-align: left; /* Align text to the left */
+  margin: 0; /* Remove any margin to eliminate space */
+  display: flex; /* Use flex to manage child elements */
+  flex-direction: column; /* Stack text elements vertically */
+  justify-content: space-between; /* Space text evenly */
+  flex-grow: 1; /* Allow it to grow to fill available space */
+}
+
+/* Ensuring equal height across all items */
+.row {
+  display: flex; /* Flexbox for the row to handle equal heights */
+  flex-wrap: wrap; /* Allows wrapping of items */
+}
+
+.product-item {
+  flex: 1 1 25%; /* Flex-grow, flex-shrink, and basis to ensure four items in a row */
+  max-width: 25%; /* Limit to four items in a row */
+}
+
+@media (max-width: 767px) {
+  .product-item {
+    flex: 0 0 50%; /* Two items per row on smaller screens */
+    max-width: 50%; /* Limit to two items per row */
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>shopnow_shop_products_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>ShopNow shop products list</name>
+        <option_schema>[{"hint":"Specify number of items to show for pagination","name":"items_in_page","section":"Presentation","default_value":"8","label":"Items in page","type":"integer"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    // Assign products to widget data
+	const fieldNames = ['category', 'title', 'full_details', 'product_description', 'picture', 'price', 'sys_id'];
+	const pageLimit = parseInt(options.items_in_page);
+	if (!input) { // initial call
+		data.start = 0;
+		data.end = pageLimit;
+	} else { // subsequent calls
+		data.start = input.end;
+		data.end = input.end + pageLimit;
+	}
+	// query to fetch products
+	const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
+	productGr.orderBy('number');
+	productGr.chooseWindow(data.start, data.end);
+	productGr.query();
+	const products = [];
+	while(productGr.next()) {
+		const product = {};
+		fieldNames.forEach((field) => {
+			product[field] = productGr.getDisplayValue(field);
+		});
+		if (product.product_description) {
+			product.product_description = product.product_description.replace(/<[^>]+>/g, '').substring(0, 60) + "...";
+		}
+		product.url = "?id=shop_product_info&sys_id=" + product.sys_id;
+		products.push(product);
+	}
+	data.showMore = true;
+	if (!products.length || products.length < pageLimit) {
+		data.showMore = false;
+	}
+    data.products = products;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 11:27:55</sys_created_on>
+        <sys_id>d83d24cfc3bd521065a51933e401319b</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>ShopNow shop products list</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_widget_d83d24cfc3bd521065a51933e401319b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 05:16:37</sys_updated_on>
+        <template><![CDATA[<div class="row">
+  <div class="col-md-10 col-md-push-1">
+    <div class="row">
+      <div ng-repeat="product in c.items" class="col-sm-3 product-item">
+        <div class="text-center product-container">
+          <figure class="block-4-image">
+            <a ng-href="{{product.url}}">
+              <img ng-src="{{::product.picture}}?t=large" alt="{{product.name}}" class="img-responsive">
+            </a>
+          </figure>
+          <div class="padding-4">
+            <h3><a ng-href="{{::product.url}}">{{product.title}}</a></h3>
+            <p class="margin-bottom-0" ng-bind-html="product.product_description"></p>
+            <p class="text-primary"><strong>₹{{product.price}}</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-a-c" ng-if="c.showLoader">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+    </div>
+    <div ng-if="data.showMore && !c.showLoader" class="text-center col-md-10 col-md-push-1 m-b-lg">
+      <button class="m-t-xs btn btn-default" ng-click="c.fetchMore()">
+        Show More Items
+      </button>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

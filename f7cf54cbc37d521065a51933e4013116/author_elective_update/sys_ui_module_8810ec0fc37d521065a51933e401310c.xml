@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Shop products">e237d6b9c3a9121065a51933e40131da</application>
+        <filter/>
+        <name>Shop products</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1550111_shopnow.shop_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:30:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8810ec0fc37d521065a51933e401310c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Shop products</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_ui_module_8810ec0fc37d521065a51933e401310c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:30:34</sys_updated_on>
+        <table>x_1550111_shopnow_shop_products</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_ui_module_8810ec0fc37d521065a51933e401310c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Shop products">e237d6b9c3a9121065a51933e40131da</application><filter/><name>Shop products</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_1550111_shopnow.shop_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-15 10:30:34</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8810ec0fc37d521065a51933e401310c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Shop products</sys_name><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_ui_module_8810ec0fc37d521065a51933e401310c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-15 10:30:34</sys_updated_on><table>x_1550111_shopnow_shop_products</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>-1480278736</payload_hash>
+        <record_name>Shop products</record_name>
+        <reverted_from/>
+        <source>bfcf180fc37d521065a51933e40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:30:34</sys_created_on>
+        <sys_id>cc10ec0fc37d521065a51933e401310e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1932f5fe8d20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:30:34</sys_updated_on>
+        <type>Module</type>
+        <update_guid>c010ec0f9b7d52106d1010ef9b1f340e</update_guid>
+        <update_guid_history>c010ec0f9b7d52106d1010ef9b1f340e:-1480278736</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:33:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>108d50718536480a856a1f496f4adfa1</sys_id>
+        <sys_metadata>8810ec0fc37d521065a51933e401310c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Shop products</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_ui_module_8810ec0fc37d521065a51933e401310c</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_8810ec0fc37d521065a51933e401310c">cc10ec0fc37d521065a51933e401310e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:33:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1550111_shopnow_shop_products</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1550111_shopnow_shop_products">full_detailsISEMPTY^ORcategory=^EQ<item endquery="false" field="full_details" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item display_value="-- None --" endquery="false" field="category" goto="false" newquery="false" operator="=" or="true" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>setDefaultValues</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	// Add your code here
+	if (!current.full_details) {
+		current.setValue('full_details', `
+		${current.product_description}
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend, tortor quis laoreet aliquet, augue odio porta risus, eget sagittis justo eros et elit. Vestibulum accumsan arcu at urna dictum lacinia. Mauris mauris ex, vulputate non blandit vitae, vehicula non lacus. Etiam a nisl sed tellus luctus venenatis ut id odio. Vestibulum at tristique nisl. Nullam scelerisque metus nisl, ut porta arcu laoreet id. Quisque nulla enim, cursus a tellus et, semper pulvinar enim. Nam aliquet felis id tortor viverra varius. Vestibulum tristique porttitor facilisis. Fusce dictum lacinia arcu eget imperdiet. Nulla ut dui bibendum, dignissim dui non, ultrices erat.
+
+		Etiam aliquam ligula tellus, congue tempor nisi accumsan eget. Donec sed dui nisl. Aenean interdum erat eu velit vehicula scelerisque. Ut nec aliquet diam. Mauris viverra, velit in porta tincidunt, leo leo laoreet metus, ut scelerisque sapien arcu vel tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec orci tortor, tempus eget suscipit at, varius sit amet orci. Nam rhoncus justo risus, ut fermentum augue rhoncus at. Nulla fringilla leo quis ligula finibus, eu molestie ex fringilla. Nunc semper in mi ut eleifend. Maecenas nec egestas nibh. Integer vitae tempus sem. In at orci sapien. Nullam ultrices dui in lectus ullamcorper, tempor laoreet nisi volutpat.
+		`);
+	}
+	if (!current.category) {
+		current.setValue('category', 'others');
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 12:03:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a5a4fc4bc3fd521065a51933e40131d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>setDefaultValues</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_script_a5a4fc4bc3fd521065a51933e40131d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 12:03:23</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=a5a4fc4bc3fd521065a51933e40131d4"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a5a4fc4bc3fd521065a51933e40131d4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 12:03:22</sys_created_on>
+        <sys_id>e745f44bc3fd521065a51933e4013139</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 12:03:22</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

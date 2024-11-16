@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+	/* widget controller */
+	var c = this;
+	console.log(c.data.user);
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.custom-input-group {
+  max-width: 120px;
+  margin-bottom: 15px;
+}
+
+.margin-10 {
+  margin: 10px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-thumbnail {
+  width: 100px; /* Consistent width */
+  height: 100px; /* Consistent height */
+  object-fit: cover; /* Ensures images cover the specified area without distortion */
+}
+
+.order-status {
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-delivered {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.status-processing {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+
+.status-cancelled {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.order-date {
+  color: #777;
+  font-size: 13px;
+}
+
+.action-buttons .btn {
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Remove all borders within the .no-border table */
+.table-responsive.no-border table,
+.table-responsive.no-border table tr,
+.table-responsive.no-border table td {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>shopnow_shop_orders</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>ShopNow shop orders</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	const user = gs.getUser();
+	data.user = { 
+		name: user.getDisplayName(),
+		email: user.getEmail()
+	};
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 11:26:11</sys_created_on>
+        <sys_id>fecc288fc3bd521065a51933e401319b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ShopNow shop orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_widget_fecc288fc3bd521065a51933e401319b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 11:26:11</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <!-- Filter Options -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3">
+              <select class="form-control">
+                <option>All Orders</option>
+                <option>Delivered</option>
+                <option>Processing</option>
+                <option>Cancelled</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search all orders">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Search</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order 1 -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-md-3">
+              <b>ORDER PLACED</b><br>
+              <span class="order-date">November 8, 2024</span>
+            </div>
+            <div class="col-md-3">
+              <strong>TOTAL</strong><br>
+              <span>₹24,999</span>
+            </div>
+            <div class="col-md-3">
+              <strong>SHIP TO</strong><br>
+              <span>John Doe</span>
+            </div>
+            <div class="col-md-3">
+              <strong>ORDER # 405-0318721-0111045</strong><br>
+              <a href="#">View order details</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="table-responsive no-border">
+                <table class="table">
+                  <tr>
+                    <td width="100">
+                      <img ng-src="e2c03fafc365921065a51933e401312c.iix?t=large" class="img-thumbnail" alt="Product">
+                    </td>
+                    <td>
+                      <h4><a href="#product/headphones">Premium Wireless Headphones</a></h4>
+                      <span class="order-status status-delivered">Delivered Nov 10</span>
+                    </td>
+                    <td class="pull-right">
+                      Qty: 1
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="action-buttons">
+                <button class="btn btn-default">
+                  Buy it again
+                </button>
+                <button class="btn btn-default">
+                  Write product review
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order 2 -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-md-3">
+              <strong>ORDER PLACED</strong><br>
+              <span class="order-date">November 5, 2024</span>
+            </div>
+            <div class="col-md-3">
+              <strong>TOTAL</strong><br>
+              <span>₹12,499</span>
+            </div>
+            <div class="col-md-3">
+              <strong>SHIP TO</strong><br>
+              <span>John Doe</span>
+            </div>
+            <div class="col-md-3 text-right">
+              <strong>ORDER # 405-0318721-0111046</strong><br>
+              <a href="#">View order details</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="table-responsive no-border">
+                <table class="table">
+                  <tr>
+                    <td width="100">
+                      <img ng-src="0031c137c32d921065a51933e401315e.iix?t=large" class="img-thumbnail" alt="Product">
+                    </td>
+                    <td>
+                      <h4><a href="#product/smartwatch">Smart Watch Pro</a></h4>
+                      <span class="order-status status-processing">Out for delivery</span>
+                    </td>
+                    <td class="text-right">
+                      Qty: 1
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="action-buttons">
+                <button class="btn btn-default btn-block text-center">
+                  Track package
+                </button>
+                <button class="btn btn-default btn-block text-center">
+                  Cancel order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order 3 -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-md-3">
+              <strong>ORDER PLACED</strong><br>
+              <span class="order-date">October 29, 2024</span>
+            </div>
+            <div class="col-md-3">
+              <strong>TOTAL</strong><br>
+              <span>₹4,999</span>
+            </div>
+            <div class="col-md-3">
+              <strong>SHIP TO</strong><br>
+              <span>John Doe</span>
+            </div>
+            <div class="col-md-3 text-right">
+              <strong>ORDER # 405-0318721-0111047</strong><br>
+              <a href="#">View order details</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="table-responsive no-border">
+                <table class="table">
+                  <tr>
+                    <td width="100">
+                      <img ng-src="bbee7c73c32d921065a51933e401312a.iix?t=large" class="img-thumbnail" alt="Product">
+                    </td>
+                    <td>
+                      <h4><a href="#product/keyboard">Mechanical Gaming Keyboard</a></h4>
+                      <span class="order-status status-cancelled">Cancelled</span>
+                    </td>
+                    <td class="text-right">
+                      Qty: 1
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="action-buttons">
+                <button class="btn btn-default">
+                  Buy it again
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

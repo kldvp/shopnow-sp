@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="DELETE">
+        <category display_value="" name="x_1550111_shopnow_shop_products">x_1550111_shopnow_shop_products</category>
+        <maximum_digits>6</maximum_digits>
+        <number>1000</number>
+        <prefix>SP</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:30:36</sys_created_on>
+        <sys_id>a810ec0fc37d521065a51933e401315f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SP</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_number_a810ec0fc37d521065a51933e401315f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:32:18</sys_updated_on>
+    </sys_number>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_number_a810ec0fc37d521065a51933e401315f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number"><sys_number action="INSERT_OR_UPDATE"><category display_value="" name="x_1550111_shopnow_shop_products">x_1550111_shopnow_shop_products</category><maximum_digits>6</maximum_digits><number>1000</number><prefix>SP</prefix><sys_class_name>sys_number</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-15 10:30:36</sys_created_on><sys_id>a810ec0fc37d521065a51933e401315f</sys_id><sys_mod_count>1</sys_mod_count><sys_name>SP</sys_name><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_number_a810ec0fc37d521065a51933e401315f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-15 10:32:18</sys_updated_on></sys_number></record_update>]]></payload>
+        <payload_hash>226054836</payload_hash>
+        <record_name>SP</record_name>
+        <reverted_from/>
+        <source>bfcf180fc37d521065a51933e40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:32:18</sys_created_on>
+        <sys_id>6570204fc37d521065a51933e4013155</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1932f617d730000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:32:18</sys_updated_on>
+        <type>Number</type>
+        <update_guid>2d70204f807d521015b41109c06a1c54</update_guid>
+        <update_guid_history>2d70204f807d521015b41109c06a1c54:226054836,6810ec0f4d7d5210cd6d1eb960842672:-775001035</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:33:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_number">sys_number</sys_db_object>
+        <sys_id>0533efa5edc74521a8b1ef996996d021</sys_id>
+        <sys_metadata>a810ec0fc37d521065a51933e401315f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SP</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent display_value="">9defd80fc37d521065a51933e401317f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_number_a810ec0fc37d521065a51933e401315f</sys_update_name>
+        <sys_update_version display_value="sys_number_a810ec0fc37d521065a51933e401315f">6570204fc37d521065a51933e4013155</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:33:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">4a2f6083c3fd521065a51933e4013196</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 11:36:50</sys_created_on>
+        <sys_id>be3f6083c3fd521065a51933e401319a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ShopNow Introduction</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_instance_be3f6083c3fd521065a51933e401319a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 11:37:33</sys_updated_on>
+        <title>ShopNow Introduction</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<h1 style=\"text-align: left;\">Welcome to Your One-Stop Shop! ]]>🛍<![CDATA[️✨</h1>\r\n<p style=\"text-align: left;\">Discover amazing products just for you! From trendy fashion ]]>👗👟<![CDATA[ to cutting-edge gadgets ]]>📱💻<![CDATA[, we&rsquo;ve got it all.&nbsp;</p>\r\n<p style=\"text-align: left;\">]]>🔍<![CDATA[ <strong>Browse Categories:</strong><br>- Fashion &amp; Accessories ]]>👒👜<![CDATA[<br>- Home &amp; Living ]]>🛋<![CDATA[️]]>🕯<![CDATA[️<br>- Beauty &amp; Wellness ]]>💄🧖<![CDATA[&zwj;♀️<br>- Tech &amp; Gadgets ]]>🔌📷<![CDATA[</p>\r\n<p style=\"text-align: left;\">]]>🛒<![CDATA[ <strong>Easy Shopping:</strong><br>Add your favorites to the cart and enjoy hassle-free checkout. Fast shipping guaranteed! ]]>🚚💨<![CDATA[</p>\r\n<p style=\"text-align: left;\">Happy Shopping! ]]>🥳🛒<![CDATA[</p>",
+		"displayValue": "<h1 style=\"text-align: left;\">Welcome to Your One-Stop Shop! ]]>🛍<![CDATA[️✨</h1>\n<p style=\"text-align: left;\">Discover amazing products just for you! From trendy fashion ]]>👗👟<![CDATA[ to cutting-edge gadgets ]]>📱💻<![CDATA[, we&rsquo;ve got it all.&nbsp;</p>\n<p style=\"text-align: left;\">]]>🔍<![CDATA[ <strong>Browse Categories:</strong><br>- Fashion &amp; Accessories ]]>👒👜<![CDATA[<br>- Home &amp; Living ]]>🛋<![CDATA[️]]>🕯<![CDATA[️<br>- Beauty &amp; Wellness ]]>💄🧖<![CDATA[&zwj;♀️<br>- Tech &amp; Gadgets ]]>🔌📷<![CDATA[</p>\n<p style=\"text-align: left;\">]]>🛒<![CDATA[ <strong>Easy Shopping:</strong><br>Add your favorites to the cart and enjoy hassle-free checkout. Fast shipping guaranteed! ]]>🚚💨<![CDATA[</p>\n<p style=\"text-align: left;\">Happy Shopping! ]]>🥳🛒<![CDATA[</p>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=be3f6083c3fd521065a51933e401319a"/>
+</record_update>

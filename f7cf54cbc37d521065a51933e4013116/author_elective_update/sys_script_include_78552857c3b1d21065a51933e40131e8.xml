@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1550111_shopnow.GetCartCount</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Script include to get updated cart count</description>
+        <mobile_callable>false</mobile_callable>
+        <name>GetCartCount</name>
+        <script><![CDATA[var GetCartCounts = Class.create();
+GetCartCounts.prototype = {
+    type: 'GetCartCounts',
+    initialize: function() {
+    },
+	getCount: function() {
+		const currentUserSysId = gs.getUserID();
+		cartCountGa = new GlideAggregate("x_1550111_shopnow_shop_cart");
+		cartCountGa.addQuery('cart_user', currentUserSysId);
+		cartCountGa.addAggregate('COUNT');
+		cartCountGa.query();
+		return (cartCountGa.next() && cartCountGa.getAggregate('COUNT')) || 0;
+	}
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 05:49:27</sys_created_on>
+        <sys_id>78552857c3b1d21065a51933e40131e8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetCartCount</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_script_include_78552857c3b1d21065a51933e40131e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 07:16:40</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>78552857c3b1d21065a51933e40131e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 05:49:25</sys_created_on>
+        <sys_id>2749e49bc3b1d21065a51933e4013181</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 05:49:25</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_script_include_78552857c3b1d21065a51933e40131e8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1550111_shopnow.GetCartCount&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Script include to get updated cart count&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;GetCartCount&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var GetCartCounts = Class.create();
+GetCartCounts.prototype = {
+    type: 'GetCartCounts',
+    initialize: function() {
+    },
+	getCount: function() {
+		const currentUserSysId = gs.getUserID();
+		cartCountGa = new GlideAggregate("x_1550111_shopnow_shop_cart");
+		cartCountGa.addQuery('cart_user', currentUserSysId);
+		cartCountGa.addAggregate('COUNT');
+		cartCountGa.query();
+		return (cartCountGa.next() &amp;&amp; cartCountGa.getAggregate('COUNT')) || 0;
+	}
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-16 05:49:27&lt;/sys_created_on&gt;&lt;sys_id&gt;78552857c3b1d21065a51933e40131e8&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;GetCartCount&lt;/sys_name&gt;&lt;sys_package display_value="ShopNow" source="x_1550111_shopnow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="ShopNow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_78552857c3b1d21065a51933e40131e8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-16 07:16:40&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;78552857c3b1d21065a51933e40131e8&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-16 05:49:25&lt;/sys_created_on&gt;&lt;sys_id&gt;2749e49bc3b1d21065a51933e4013181&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-16 05:49:25&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-282829334</payload_hash>
+        <record_name>GetCartCount</record_name>
+        <reverted_from/>
+        <source>bfcf180fc37d521065a51933e40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 07:16:41</sys_created_on>
+        <sys_id>6d4db417c335d21065a51933e4013105</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19333d4c0380000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 07:16:41</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>6d4d34d38635d210d4f809187ba2a4ac</update_guid>
+        <update_guid_history>6d4d34d38635d210d4f809187ba2a4ac:-282829334,78393c9f19f1d210b70c252959bec5ee:-625972024,cc59e49b7fb1d2100038d3122179afe9:641401826</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 07:23:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>054f1eb34322427c83f0cba87b87f904</sys_id>
+        <sys_metadata>78552857c3b1d21065a51933e40131e8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetCartCount</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_script_include_78552857c3b1d21065a51933e40131e8</sys_update_name>
+        <sys_update_version display_value="sys_script_include_78552857c3b1d21065a51933e40131e8">6d4db417c335d21065a51933e4013105</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 07:23:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

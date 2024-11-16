@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Shop catalog</name>
+        <order>100</order>
+        <roles>x_1550111_shopnow.shop_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:36:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dd51e84fc37d521065a51933e40131fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Shop catalog</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_app_application_dd51e84fc37d521065a51933e40131fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:36:06</sys_updated_on>
+        <title>Shop catalog</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_app_application_dd51e84fc37d521065a51933e40131fc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Shop catalog</name><order>100</order><roles>x_1550111_shopnow.shop_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-15 10:36:06</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>dd51e84fc37d521065a51933e40131fc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Shop catalog</sys_name><sys_overrides/><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_app_application_dd51e84fc37d521065a51933e40131fc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-15 10:36:06</sys_updated_on><title>Shop catalog</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-1122466489</payload_hash>
+        <record_name>Shop catalog</record_name>
+        <reverted_from/>
+        <source>bfcf180fc37d521065a51933e40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:36:06</sys_created_on>
+        <sys_id>5951e84fc37d521065a51933e40131ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1932f64f9460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:36:06</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>5d51e84f0b7d5210e66a9274633a07fe</update_guid>
+        <update_guid_history>5d51e84f0b7d5210e66a9274633a07fe:-1122466489</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Shop catalog">0628240bc3bd521065a51933e401311e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 11:05:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>b6e282cd672b4996830d952600a9fa31</sys_id>
+        <sys_metadata>dd51e84fc37d521065a51933e40131fc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Shop catalog</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_app_application_dd51e84fc37d521065a51933e40131fc</sys_update_name>
+        <sys_update_version display_value="sys_app_application_dd51e84fc37d521065a51933e40131fc">5951e84fc37d521065a51933e40131ff</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 11:05:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

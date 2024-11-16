@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Shop products">40106c0fc37d521065a51933e4013178</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Shop products</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1550111_shopnow_shop_products</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_1550111_shopnow.shop_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:30:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>04106c0fc37d521065a51933e401317b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Shop products</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_app_module_04106c0fc37d521065a51933e401317b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:32:35</sys_updated_on>
+        <timeline_page/>
+        <title>Shop products</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_app_module_04106c0fc37d521065a51933e401317b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Shop products">40106c0fc37d521065a51933e4013178</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Shop products</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1550111_shopnow_shop_products</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_1550111_shopnow.shop_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-15 10:30:34</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>04106c0fc37d521065a51933e401317b</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Shop products</sys_name><sys_overrides/><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_app_module_04106c0fc37d521065a51933e401317b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-15 10:32:35</sys_updated_on><timeline_page/><title>Shop products</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>786076177</payload_hash>
+        <record_name>Shop products</record_name>
+        <reverted_from/>
+        <source>bfcf180fc37d521065a51933e40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:32:35</sys_created_on>
+        <sys_id>6d80e84fc37d521065a51933e401310e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1932f61c02d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:32:35</sys_updated_on>
+        <type>Module</type>
+        <update_guid>2580e84fe47d52106a21f54da77c8f0e</update_guid>
+        <update_guid_history>2580e84fe47d52106a21f54da77c8f0e:786076177,e570684fa67d5210ed78e6a30ac33f1b:-1891942895,c010ec0fb07d521075d7b4bc4a89a60b:786076177</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Shop products">88c0608fc37d521065a51933e401316e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 10:33:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>756d617db51f4a0893e39aa1d015c8d9</sys_id>
+        <sys_metadata>04106c0fc37d521065a51933e401317b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Shop products</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_app_module_04106c0fc37d521065a51933e401317b</sys_update_name>
+        <sys_update_version display_value="sys_app_module_04106c0fc37d521065a51933e401317b">6d80e84fc37d521065a51933e401310e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 10:33:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

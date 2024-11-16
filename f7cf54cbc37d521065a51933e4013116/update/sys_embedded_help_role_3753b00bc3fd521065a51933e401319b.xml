@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_1550111_shopnow.shop_admin" name="x_1550111_shopnow.shop_admin">f443300bc3fd521065a51933e401316d</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 11:54:56</sys_created_on>
+        <sys_id>3753b00bc3fd521065a51933e401319b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>f443300bc3fd521065a51933e401316d</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_embedded_help_role_3753b00bc3fd521065a51933e401319b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 11:54:56</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

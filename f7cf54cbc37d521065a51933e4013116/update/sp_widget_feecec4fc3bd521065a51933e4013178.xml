@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function ($rootScope, $scope, spUtil) {
+    /* widget controller */
+    var c = this;
+    $scope.product = c.data.product;
+    $scope.cart = c.data.cart;
+    c.disableBtn = false;
+    // increment quantity by 1
+    c.increment = function () {
+        if (c.data.cart.quantity < 5) {
+            c.data.cart.quantity += 1;
+        }
+    };
+
+    // decrement quantity by 1
+    c.decrement = function () {
+        if (c.data.cart.quantity > 1) {
+            c.data.cart.quantity -= 1;
+        }
+    };
+    c.addToCart = function () { // add item to cart
+        c.disableBtn = true;
+        var payload = {
+            action: 'add_cart_item',
+            item: {
+                productId: $scope.product.sys_id,
+                quantity: $scope.cart.quantity
+            }
+        };
+        c.server.get(payload).then(function (r) {
+            $rootScope.$emit('update_cart');
+            c.disableBtn = false;
+            if (r.data.errMsg) {
+                spUtil.addErrorMessage(r.data.errMsg);
+            } else {
+                spUtil.addTrivialMessage('Product has been added to cart');
+            }
+        });
+    };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.container {
+  display: flex; /* Enable flexbox for the container */
+}
+
+.row {
+  display: flex; /* Use flexbox for the row */
+}
+
+.col-md-6 {
+  display: flex; /* Ensure columns are flex containers */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align items at the top */
+}
+
+.product-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80%; /* Limit max height if needed */
+  object-fit: cover; /* Cover the area without distortion */
+}
+
+.col-md-6 h2,
+.col-md-6 p {
+  margin: 0; /* Remove default margin */
+}
+
+.col-md-6 h2 {
+  margin-bottom: 0; /* Remove bottom margin from the heading */
+}
+
+.col-md-6 p {
+  margin-bottom: 0; /* Remove bottom margin from paragraphs */
+}
+
+.custom-input-group {
+  max-width: 120px;
+  margin: 15px 0 0; /* Space above input group, no margin below */
+}
+
+.btn-primary {
+  margin-top: 10px; /* Optional: add space above the button */
+}
+
+hr {
+  border: none; /* Remove default border */
+  height: 1px; /* Set height */
+  background-color: #ccc; /* Set color of the divider */
+  margin: 15px 0; /* Add margin for spacing */
+}
+
+.price {
+  font-size: 24px; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  margin: 10px 0; /* Add some margin */
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>shopnow_shop_product_info</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>ShopNow shop product info</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    if (!input) { // initial call fetch product information to display
+        const sysId = $sp.getParameter('sys_id');
+        if (!sysId) return;
+        const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
+        const fieldNames = ['category', 'title', 'full_details', 'description', 'picture', 'price', 'sys_id'];
+        let product;
+        if (productGr.get(sysId)) {
+            product = {};
+            fieldNames.forEach((field) => {
+                product[field] = productGr.getDisplayValue(field);
+            });
+        }
+        data.cart = {
+            quantity: 1
+        };
+        data.product = product;
+    } else if (input.action === 'add_cart_item') { // add product to cart
+		const productId = input.item.productId;
+		const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
+		const product = productGr.get(productId);
+		if (!product) {
+			data.errMsg = 'Product not found';
+			return;
+		}
+		const cartGr = new GlideRecord('x_1550111_shopnow_shop_cart');
+		cartGr.initialize();
+		cartGr.setValue('product', productGr.getValue('sys_id'));
+		cartGr.setValue('quantity', input.item.quantity);
+		cartGr.setValue('cart_user', gs.getUserID());
+		cartGr.setValue('total_amount', parseFloat(productGr.getValue('price')) * input.item.quantity);
+		cartGr.insert();
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 11:26:44</sys_created_on>
+        <sys_id>feecec4fc3bd521065a51933e4013178</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ShopNow shop product info</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_widget_feecec4fc3bd521065a51933e4013178</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 05:22:05</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="row" ng-if="product">
+    <div class="col-md-6">
+      <img src="{{::product.picture}}" alt="{{::product.name}}" class="img-responsive product-image">
+    </div>
+    <div class="col-md-6">
+      <h1>{{ product.title }}</h1>
+      <p ng-bind-html="product.description"></p>
+      <hr>
+      <p class="price"><strong>₹{{ product.price || 0 }}</strong></p>
+      <div class="input-group custom-input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default js-btn-minus" ng-click="c.decrement()" ng-disabled="data.cart.quantity === 1" type="button">&minus;</button>
+        </span>
+        <input type="text" class="form-control text-center" ng-model="data.cart.quantity" readonly>
+        <span class="input-group-btn">
+          <button class="btn btn-default js-btn-plus" ng-click="c.increment()" ng-disabled="data.cart.quantity === 5" type="button">&plus;</button>
+        </span>
+      </div>
+      <p>
+        <button class="btn btn-primary" ng-disabled="c.disableBtn" ng-click="c.addToCart()">Add To Cart</button>
+      </p>
+      <hr>
+      <h3>Product Details</h3>
+      <p ng-bind-html="product.full_details"></p>
+    </div>
+  </div>
+  <div class="row" ng-if="!product">
+    <h1>No product found</h1>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>feecec4fc3bd521065a51933e4013178</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 12:40:45</sys_created_on>
+        <sys_id>83dd7047c331921065a51933e40131b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 12:40:45</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

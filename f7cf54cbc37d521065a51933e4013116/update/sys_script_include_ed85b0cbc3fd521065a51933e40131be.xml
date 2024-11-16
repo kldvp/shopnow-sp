@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1550111_shopnow.seedShoppingData</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Seed data to provide if data not present in db</description>
+        <mobile_callable>false</mobile_callable>
+        <name>seedShoppingData</name>
+        <script><![CDATA[function seedShoppingData() {
+    const data = [{
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/9774609/pexels-photo-9774609.jpeg",
+            "alt": "Nourishing Skincare",
+            "name": "Nourishing Skincare",
+            "description": "Pamper your skin with our effective skincare products.",
+            "price": 40,
+            "sys_id": "f7e3a8d4e39b5f3c21b2a8f4c6d4b71c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/29107666/pexels-photo-29107666/free-photo-of-saw-palmetto-supplement-bottle-on-black-towel.jpeg",
+            "alt": "Healthy Haircare",
+            "name": "Healthy Haircare",
+            "description": "Achieve luscious locks with our haircare essentials.",
+            "price": 30,
+            "sys_id": "c9a4f1b30d0c4e6db4b59ae6cda9d8b2"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg",
+            "alt": "Stylish Home Decor",
+            "name": "Stylish Home Decor",
+            "description": "Transform your living space with our elegant home decor items.",
+            "price": 75,
+            "sys_id": "a5e4c7d8e4f3a3c2b2c1e9f7d4c1a9e"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/327136/pexels-photo-327136.jpeg",
+            "alt": "Functional Kitchenware",
+            "name": "Functional Kitchenware",
+            "description": "Upgrade your kitchen with our practical and stylish kitchenware.",
+            "price": 45,
+            "sys_id": "f3d5a8b4e3c2d4b1a2c9e6f5d0c8b7e"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/682933/pexels-photo-682933.jpeg",
+            "alt": "Latest Electronics",
+            "name": "Latest Electronics",
+            "description": "Stay connected with our cutting-edge electronic gadgets.",
+            "price": 150,
+            "sys_id": "e6b4f1a3d8c5a9c2b4f2d3a6e1f0b7a"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/159778/books-reading-series-narnia-159778.jpeg",
+            "alt": "Engrossing Books",
+            "name": "Engrossing Books",
+            "description": "Discover a world of stories with our diverse book collection.",
+            "price": 20,
+            "sys_id": "b3a8c6e4d5f9a0c2b4d1e8f7c2b1d5a"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/8014542/pexels-photo-8014542.jpeg",
+            "alt": "Fun Toys",
+            "name": "Fun Toys",
+            "description": "Spark imagination with our exciting range of toys.",
+            "price": 35,
+            "sys_id": "f2e1c8a6b3d5a9e4c6b7f1d2e4a5b3c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/10559701/pexels-photo-10559701.jpeg",
+            "alt": "Sports Equipment",
+            "name": "Sports Equipment",
+            "description": "Stay active with our top-quality sports equipment.",
+            "price": 80,
+            "sys_id": "a5b4c2e9f6d1e3a8c0b2f1d4e6c7a5b"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/17426951/pexels-photo-17426951/free-photo-of-backpack-hanging-on-tree.jpeg",
+            "alt": "Outdoor Gear",
+            "name": "Outdoor Gear",
+            "description": "Embark on your next adventure with our reliable outdoor gear.",
+            "price": 120,
+            "sys_id": "d7a6b1e2c5f8d4a9b3e0c7a4d9b5e6c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg",
+            "alt": "Travel Accessories",
+            "name": "Travel Accessories",
+            "description": "Make your travels comfortable with our essential travel accessories.",
+            "price": 40,
+            "sys_id": "c9e1d3a4f2b5e8c0a3f6d4b2c1e7a3b"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://themewagon.github.io/shoppers/images/cloth_1.jpg",
+            "alt": "Tank Top",
+            "name": "Tank Top",
+            "description": "A breezy and comfortable tank top, perfect for summer days.",
+            "price": 25,
+            "sys_id": "d1a6f4e9b5c2d7b3a1e8f0c5a9e2b4f"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+            "alt": "Sneakers",
+            "name": "Sneakers",
+            "description": "Stylish and comfortable sneakers that will take you anywhere. Available in a variety of colors.",
+            "price": 85,
+            "sys_id": "b3f8e1c4d7a5f2b6e0c9d4b1a2e3d7c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/1467574/pexels-photo-1467574.jpeg",
+            "alt": "Leather Boots",
+            "name": "Leather Boots",
+            "description": "Durable and stylish leather boots that will keep your feet warm and dry all winter long.",
+            "price": 120,
+            "sys_id": "a1b2c3d4e5f6a7b8c9d0e1f2g3h4i5j"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/8148587/pexels-photo-8148587.jpeg",
+            "alt": "Tote Bag",
+            "name": "Tote Bag",
+            "description": "A spacious and stylish tote bag that's perfect for everyday use. Made from recycled materials.",
+            "price": 35,
+            "sys_id": "e4c5f1b9d2b7c4a0e8d3a5b6f7e1b3c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/1294731/pexels-photo-1294731.jpeg",
+            "alt": "Backpack",
+            "name": "Backpack",
+            "description": "A comfortable and functional backpack that's perfect for school, work, or travel. Features multiple compartments for all your essentials.",
+            "price": 65,
+            "sys_id": "f3e2d1b4c5a8d0b7e9c6a3b1e4f2c5d"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/11700618/pexels-photo-11700618.jpeg",
+            "alt": "Minimalist Watch",
+            "name": "Minimalist Watch",
+            "description": "A sleek and stylish watch with a minimalist design. The perfect accessory for any outfit.",
+            "price": 99,
+            "sys_id": "c2b4e3f6d7c5a1b2e8f9d4b0a1e2b3c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg",
+            "alt": "Chronograph Watch",
+            "name": "Chronograph Watch",
+            "description": "A sporty and functional chronograph watch. Features stopwatch and tachymeter functions.",
+            "price": 150,
+            "sys_id": "d5a1f4e2c3b9d8a6b0e7c2f1a4b3e5c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg",
+            "alt": "Wireless Headphones",
+            "name": "Wireless Headphones",
+            "description": "High-quality wireless headphones that offer superior sound quality and long battery life.",
+            "price": 129,
+            "sys_id": "f1c2b3e4d5a9f7b8c0d1e8a6f4b2c3d"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg",
+            "alt": "Sunglasses",
+            "name": "Sunglasses",
+            "description": "Stylish and protective sunglasses to shield your eyes from the sun.",
+            "price": 45,
+            "sys_id": "c8b7d4e1a9f2b3c5e0f1d6c8a2e7b4f"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/4452398/pexels-photo-4452398.jpeg",
+            "alt": "Leather Wallet",
+            "name": "Leather Wallet",
+            "description": "A classic leather wallet that's both stylish and functional.",
+            "price": 60,
+            "sys_id": "d1f3a9c5b6e4d7c2a0e8b1f2c3b5e6d"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/71123/belts-leather-seam-sew-71123.jpeg",
+            "alt": "Leather Belt",
+            "name": "Leather Belt",
+            "description": "A high-quality leather belt that adds a touch of sophistication to any outfit.",
+            "price": 30,
+            "sys_id": "f4b2e9d1c6a3b5e8d4f1c2b9e1d8a0c"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/7481670/pexels-photo-7481670.jpeg",
+            "alt": "Woolen Scarf",
+            "name": "Woolen Scarf",
+            "description": "A cozy and stylish woolen scarf to keep you warm during the cold months.",
+            "price": 25,
+            "sys_id": "e7d6a3f5c1b8b0e9d4a5f2e3c6d1e7b"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/984619/pexels-photo-984619.jpeg",
+            "alt": "Stylish Hat",
+            "name": "Stylish Hat",
+            "description": "A trendy hat to complete your look.",
+            "price": 20,
+            "sys_id": "c2b5e9d1f7a6b4e3c5d2a8e9e0f3b1d"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/29161744/pexels-photo-29161744/free-photo-of-elegant-pearl-necklace-on-luxurious-fabric.jpeg",
+            "alt": "Elegant Jewelry",
+            "name": "Elegant Jewelry",
+            "description": "Beautiful jewelry pieces to elevate your style.",
+            "price": 50,
+            "sys_id": "f1c5d9a2e3b7f1c8e4b6d0a9e2c3e4b"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/965990/pexels-photo-965990.jpeg",
+            "alt": "Luxurious Perfume",
+            "name": "Luxurious Perfume",
+            "description": "A captivating fragrance to leave a lasting impression.",
+            "price": 75,
+            "sys_id": "d3f2c5a8b1e9c4d7e2a6b0e1f5c3e8a"
+        },
+        {
+            "url": "shop-single.html",
+            "image": "https://images.pexels.com/photos/6954164/pexels-photo-6954164.jpeg",
+            "alt": "High-Quality Makeup",
+            "name": "High-Quality Makeup",
+            "description": "Enhance your natural beauty with our premium makeup products.",
+            "price": 35,
+            "sys_id": "b2e7f1c3d9a4b5e6c1a8d0e4f3b7e2d"
+        }
+    ];
+    return data;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 12:06:04</sys_created_on>
+        <sys_id>ed85b0cbc3fd521065a51933e40131be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>seedShoppingData</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_script_include_ed85b0cbc3fd521065a51933e40131be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 12:06:04</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ed85b0cbc3fd521065a51933e40131be</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-15 12:06:03</sys_created_on>
+        <sys_id>f2e5bc4bc3fd521065a51933e4013104</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-15 12:06:03</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
