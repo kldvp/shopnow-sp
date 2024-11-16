@@ -10,23 +10,23 @@
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">aba1fc07c3fd521065a51933e40131cf</sp_column>
-        <sp_widget display_value="breadcrumbs">0fb269305b3212000d7ec7ad31f91ae2</sp_widget>
+        <sp_column display_value="1">31603cc3c3fd521065a51933e4013146</sp_column>
+        <sp_widget display_value="EC Breadcrumb">f9e6ff8553d1a1101852ddeeff7b12b8</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-11-15 11:47:35</sys_created_on>
-        <sys_id>90b1f847c3fd521065a51933e401314f</sys_id>
+        <sys_created_on>2024-11-16 11:08:49</sys_created_on>
+        <sys_id>5e62b11fc339d21065a51933e40131d5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
-        <sys_update_name>sp_instance_90b1f847c3fd521065a51933e401314f</sys_update_name>
+        <sys_update_name>sp_instance_5e62b11fc339d21065a51933e40131d5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-15 11:47:35</sys_updated_on>
+        <sys_updated_on>2024-11-16 11:08:49</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters/>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=90b1f847c3fd521065a51933e401314f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=5e62b11fc339d21065a51933e40131d5"/>
 </record_update>
