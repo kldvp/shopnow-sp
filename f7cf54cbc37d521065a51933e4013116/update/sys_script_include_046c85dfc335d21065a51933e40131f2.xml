@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1550111_shopnow.getCartItemsCount</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>getCartItemsCount</name>
+        <script><![CDATA[function getCartItemsCount() {
+    const currentUserSysId = gs.getUserID();
+    cartCountGa = new GlideAggregate("x_1550111_shopnow_shop_cart");
+    cartCountGa.addQuery('cart_user', currentUserSysId);
+    cartCountGa.addAggregate('COUNT');
+    cartCountGa.query();
+    return (cartCountGa.next() && cartCountGa.getAggregate('COUNT')) || 0;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 08:23:37</sys_created_on>
+        <sys_id>046c85dfc335d21065a51933e40131f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getCartItemsCount</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_script_include_046c85dfc335d21065a51933e40131f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 08:23:37</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>046c85dfc335d21065a51933e40131f2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 08:23:37</sys_created_on>
+        <sys_id>069c495bc375d21065a51933e40131b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 08:23:37</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
