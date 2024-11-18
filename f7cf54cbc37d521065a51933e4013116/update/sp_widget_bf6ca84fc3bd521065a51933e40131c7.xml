@@ -22,11 +22,33 @@
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {
+        <script><![CDATA[(function () {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
 	const iconLinkOptions = [
 		// add product
+		// {
+		// 	"short_description": "Add a new product to inventory",
+		// 	"color": "primary",
+		// 	"roles": "x_1550111_shopnow.shop_admin",
+		// 	"type": "url",
+		// 	"title": "Add product",
+		// 	"sys_class_name": "sp_instance_link",
+		// 	"size_dv": "Medium",
+		// 	"type_dv": "URL",
+		// 	"sys_name": "Add product",
+		// 	"sp_widget": "3caa67afcb13020000f8d856634c9c2e",
+		// 	"sys_class_name_dv": "Instance with Link",
+		// 	"order": 1,
+		// 	"link_template": "Circle Icon",
+		// 	"widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
+		// 	"active": true,
+		// 	"color_dv": "Primary",
+		// 	"url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
+		// 	"glyph": "pencil-square-o",
+		// 	"sp_widget_dv": "Icon Link",
+		// 	"size": "md"
+		// },
 		{
 			"short_description": "Add a new product to inventory",
 			"color": "primary",
@@ -44,7 +66,8 @@
 			"widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
 			"active": true,
 			"color_dv": "Primary",
-			"url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
+			// "url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
+			"url": "?id=sc_cat_item&sys_id=e77ffae3c3f1561065a51933e40131b4",
 			"glyph": "pencil-square-o",
 			"sp_widget_dv": "Icon Link",
 			"size": "md"
@@ -97,12 +120,12 @@
 		}
 	];
 	data.iconLinkWidgets = [];
-	iconLinkOptions.forEach(function(linkOptions){
+	iconLinkOptions.forEach(function (linkOptions) {
 		if (linkOptions.roles && !gs.hasRole(linkOptions.roles)) {
 			return;
 		}
 		const iconLinkWidgetInstance = $sp.getWidget("shopnow_shop_icon_link", linkOptions);
-		iconLinkWidgetInstance.data.href = linkOptions.type === 'page' ? '?id='+linkOptions.sp_page : linkOptions.url;
+		iconLinkWidgetInstance.data.href = linkOptions.type === 'page' ? '?id=' + linkOptions.sp_page : linkOptions.url;
 		iconLinkWidgetInstance.data.target = linkOptions.target || "";
 		data.iconLinkWidgets.push(iconLinkWidgetInstance);
 	});
@@ -112,14 +135,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:24:37</sys_created_on>
         <sys_id>bf6ca84fc3bd521065a51933e40131c7</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>ShopNow Shop Actions</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_bf6ca84fc3bd521065a51933e40131c7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-15 11:59:04</sys_updated_on>
+        <sys_updated_on>2024-11-17 18:41:07</sys_updated_on>
         <template><![CDATA[<div class="row">
   <div class="col-sm-4" ng-repeat="iconLink in c.data.iconLinkWidgets">
     <sp-widget widget="iconLink"></sp-widget>

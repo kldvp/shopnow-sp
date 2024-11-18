@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Shop users should have read access to create cart items</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1550111_shopnow_shop_orders</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[answer = current.isNewRecord();
+]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 06:44:54</sys_created_on>
+        <sys_id>21d88f3bc3f5961065a51933e401315f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_security_acl_21d88f3bc3f5961065a51933e401315f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 06:44:54</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>21d88f3bc3f5961065a51933e401315f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 06:44:20</sys_created_on>
+        <sys_id>5b09cb3bc3f5961065a51933e4013169</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 06:44:20</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

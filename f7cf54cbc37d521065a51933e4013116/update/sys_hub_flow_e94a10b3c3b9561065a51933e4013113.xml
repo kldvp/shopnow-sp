@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=3521000,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Get Attachment Value and Set it to table's image field</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>getandsetproductimage</internal_name>
+        <label_cache>[{"name":"Created_1.current.closed_by.email","label":"Trigger - Record Created➛Shop products Record➛Closed by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"Created_1.current.closed_by","label":"Trigger - Record Created➛Shop products Record➛Closed by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1550111_shopnow_shop_products","column_name":"closed_by","usedInstances":{"c736d4b6-970b-48c8-9ae2-65a671c45ff5":["notification"]}},{"name":"ef154df6-7d81-4247-829c-f7ee46bf4377.__action_status__","label":"3 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ef154df6-7d81-4247-829c-f7ee46bf4377.__action_status__.code","label":"3 - Update Record➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"95408634-84f1-40ac-bd3d-9b0f6f3a34d3":["condition"],"ab13c97b-599e-444a-be9c-f5a018327bf7":["condition"]},"attributes":{}},{"name":"Created_1.current","label":"Trigger - Record Created➛Shop products Record","reference":"x_1550111_shopnow_shop_products","reference_display":"Shop products","type":"reference","base_type":"reference","usedInstances":{"ebc79b37-7a73-44ab-af04-024ffccc9c31":["target_record"],"4eb3a663-b038-4c28-a882-95482fcda456":["record"],"ef154df6-7d81-4247-829c-f7ee46bf4377":["record"],"c736d4b6-970b-48c8-9ae2-65a671c45ff5":["record"],"fd61df17-0bff-4074-8e4e-ee518de6eb47":["record"],"3a06d20c-31d4-425f-96d4-a104ad5e135a":["record"],"733a2840-93ab-4c76-a461-12ec00340a14":["record"]},"attributes":{}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Shop products Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1550111_shopnow_shop_products","column_name":"sys_id","usedInstances":{"cea5b2d5-637a-49b8-9744-c5588c070e55":["conditions"]}},{"name":"cea5b2d5-637a-49b8-9744-c5588c070e55.Record","label":"1 - Look Up Record➛sys_attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","usedInstances":{"26e457bf-7c8f-4657-89c1-5bbf7a721f2c":["source_record"],"4743f490-9fda-4f51-aae9-e12107bc0fca":["condition"],"751068c2-257d-4b5f-b6b2-7a4432e678c0":["attachment_record"],"ebc79b37-7a73-44ab-af04-024ffccc9c31":["attachment_record"],"3d1a2be9-d3a3-4287-804a-c66cc703a64a":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>4d90a4bfc3b9561065a51933e4013186</master_snapshot>
+        <master_snapshot_digest/>
+        <name>GetAndSetProductImage</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>9590a4bfc3b9561065a51933e40131f3</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:00:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e94a10b3c3b9561065a51933e4013113</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>GetAndSetProductImage</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_hub_flow_e94a10b3c3b9561065a51933e4013113</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:26</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1550111_shopnow_shop_products">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9590a4bfc3b9561065a51933e40131f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:28:17</sys_updated_on>
+        <table>x_1550111_shopnow_shop_products</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>e94a10b3c3b9561065a51933e4013113</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:59:26</sys_created_on>
+        <sys_id>f1b7243bc3f9561065a51933e40131f4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:26</sys_updated_on>
+        <trigger display_value="">9590a4bfc3b9561065a51933e40131f3</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=e94a10b3c3b9561065a51933e4013113^sys_idNOT INf1b7243bc3f9561065a51933e40131f4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=e94a10b3c3b9561065a51933e4013113^sys_idNOT IN294a10b3c3b9561065a51933e4013116"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>e94a10b3c3b9561065a51933e4013113</id>
+        <name>GetAndSetProductImage</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:00:43</sys_created_on>
+        <sys_id>294a10b3c3b9561065a51933e4013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:00:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=294a10b3c3b9561065a51933e4013116"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=e94a10b3c3b9561065a51933e4013113^sys_idNOT IN16bd10bbc3b9561065a51933e4013129,9ebd10bbc3b9561065a51933e4013123"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</model>
+        <model_id>e94a10b3c3b9561065a51933e4013113</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_e94a10b3c3b9561065a51933e4013113</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:15:47</sys_created_on>
+        <sys_id>16bd10bbc3b9561065a51933e4013129</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:15:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=16bd10bbc3b9561065a51933e4013129"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</model>
+        <model_id>e94a10b3c3b9561065a51933e4013113</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_e94a10b3c3b9561065a51933e4013113</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:15:47</sys_created_on>
+        <sys_id>9ebd10bbc3b9561065a51933e4013123</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:15:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9ebd10bbc3b9561065a51933e4013123"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=e94a10b3c3b9561065a51933e4013113^sys_idNOT IN96bd98bbc3b9561065a51933e40131eb"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:15:48</sys_created_on>
+        <sys_id>96bd98bbc3b9561065a51933e40131eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:17:45</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VZ227jNhD9FUFPLZACuvimvO0mWTTAdtM6afchSAlKJG2iNOVKlBJ3kX/vUBdblqVYtpPWzr7swqQ0M+dw5gxHuf9mCuxTYZ6bd9gX1DwzuVQ0kljcLeYUlpVeRhLP9N4MS4JVGC3McxUl9MwMI0Ij89w+M1MsEnq7iK8JvASPZm8Ur5vFNvx+Qna/b9m2jeJpOJfhY/Y/mkchSQIVw5OEx3OBF38UL9zCtlHZnuMILCvt9ZsZTLkgEZXm+f0DRK5dByzAnkOtwLVdx7EsZ9Sz/YHr2w5xMbUsMFFHXAtVNQBf4aRPikpCwRXDIqYNnEQUkxspFssnpkBpTsoMP8X8H7A+svRzjELsAc33gmnIA3ozVzyU+UoeUL4ZimQmv+SBapIow4lQJUmwksQUETrXsWlvhWsG9D2OS0efuMxgFJsiDLBY/sJKRdxPFI01s4wL4BjlJMRhEmVhjq8ubsaX6OuHu4ufr8ZofHV7N76+uLu6NJ8zPOjvRFvMIyxiQTmc5+XJfuJU6JNSXGV8x0HE5+pDoHhKi2iez1Z5GSUSTKAl7xsZmhO3ZPAzjwH/PUAo2clMwj77XJgcJ9II4YTgHyNIIuBGGeXps+sZnhScsl/LZMs4KfIkxRFCMxQvYjRNfASsTSZAFZfzRKGhN/LsAW5Jv2GwxkxWFGD63jQfnvVhUUEDVckt9ntc/fULj2MuJxWSlhh16m1CXKKDHDVKBnOo8WlhfVgrtOKhsiotq1V/NrMnrWVFTW86SIxtM+ZT5lhDjdq2XJ/Z1tDqY0ZcywqcisRsum+NS9WyuQruJdEpVrqoTq9NdeKsYESH8qizV0ZZrdhOuZeuJ25hx9EHXYjbxRGGVhNpdyeVXmZcvny5nngvQXtlccckxfAGKTF2Ee8OKv04pRLFVCldt7vLtIR6yN7BuZOKmunENjRBLIyML6H86Xr1nHFLQSkgzpPSs6p2dwENxiLjXaH2QzWtdyyN9COsryHVRdpy5t9RE6sVV7rO4taWRXujvsfcYAgIoUmxHvWx3XP62BsOXObVWlbNWXsYx9O0OkpE2io2Te2iawmmjZW8bBy1BrRPltfOuzDtbmmX3y8pBzXqwl57n94n2CPo4bUBrNvsxQQM6Vzu0dB9HPw1icJEkg2dB5sGl8bqCeOHgu0fT0vSqx0NsoK+jHf9idNBeUjjWuVPWa5YLvaau1xm+x7tUQvGLReamN/3PD/ADmPDwZA6dq2JrRw3RnM8ratDRaRNJdU24DRmW9qUpDtMXf9/gAdJepFzjYqe7x2BPm9R44tQEq7y5lrX4nIrNvcs1aBivDyKP69+2yzUfHFbrQ4GGBPapk4+q9RqFVZDMKoB4ZvUqvXW32Tzz8N7Z9QsJFRcrsyZa/1A0/KIpYqRChEmBFUI65iCObZ97wnZZACIo4M+AehQKApZtYNehgZsGODE4MwoUFNi+AtDTSmoiAA9AYeG9n5iI2H1/rCJfHnVfte4c/3d+BAAyxmy0wJ28IxfK6H1S9M22aVkiPt9d9g853v1K1KTwy3xHM+1aWdZSJtU5sUJdze7dZuNM24lq9ePtuNI/45Rv9kFryGKI7jtHdhlhe6eGy12Ijih5d4rCFFhKV1danaf29jIC/r2sEWURv1WUSqcvxSYaoD9n9wOdacpcum4/nL/WoPHw78EQ6eeHCIAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=e94a10b3c3b9561065a51933e4013113^sys_idNOT IN5ebd98bbc3b9561065a51933e40131ec,7626a0b7c3f9561065a51933e401313b,f890a4bfc3b9561065a51933e401316e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:15:48</sys_created_on>
+        <sys_id>5ebd98bbc3b9561065a51933e40131ec</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 19:00:02</sys_updated_on>
+        <ui_id>cea5b2d5-637a-49b8-9744-c5588c070e55</ui_id>
+        <values>H4sIAAAAAAAA/+VY227bOBD9FUHPjlfyTXbeihgGCnQboEn70hYERVIxsTSpUlRSx/C/dyhKtmDLF6E2kGAfyRmSZ2bOGZH6vvI59W99OgkmyWQyHEdB0O8HwWjUJziM4/6IxEGMB37Hl3jBwNPgWDAYPmOR23G2zBA2BpP5gkkDBsqzVODlt0N2MueCaib92+8/O36KNexrmPZvVzumc4EJHDMBro8lsh2gZpluhqiwublP9WXeZ2dQmlooQcdnvw2TlAGGBIuMdfwFlhQbpZebGc0wvZdiOzHnEOGt71vn3xl/hXPHgfVLGERFmLNthsXJU5cuZ0qm2OAHo3Nicl26k7nihGUuJ5QlOBfmrj7nHO5Tw5V0S1zobrUS+UJ+dinxNxtU1YGZPGOIstQGa9GXoSQPc/XypUI647LIS2kUimCxGUF1NY9zY/GsfCaYLTRa4DTl8gmlWj3zYjFgWXSfBAy6iVAvcGjGn2QXEwu8C7nF3RnMT4vpb1hzG8W/sA0sBkBcAEuQK2Omcl2k8xkRkWeFQWOZub38dcfS7k7gLNtGDmlHv3KL2+WhjBi5pNklRPPUfIAtnlkZ3LpT6WN4lIaTLe2IkpRbFFlNJCVqkAKnP3LYgq5Wd0AfwygKuyTXkGXTdfb1el9Erde3FNnp6CqR3dXDawq5lNve3KemDUq5hReT2yAI3pvg4PC3p7f2CnIpOCGjkB4lGt1yKlPaIJfLmo72ldGa62dAqLh+b9npxctDqEqqJ5wJ2vRlmVnDzpel9//9srxJogMgilwFuRRcFt0WgF5LAcOj9IvDHa4VFKtdtuwczsi+DrBnlPfaWg1nwKnU8ABne48OTwPEqu8XlNnt+dVkKYL+xUTQ711OBKtNqJtkNuS9uiHailb+r9Yf7/oDDWsLwnWTyFqdGbY9s7feF3G/lYrrhHOW6QHeXfgaeUCVnWu2gTksLc9DTsPohdMnZranV15UmRcs/muyl8JEVaGK8K5wJQ2Pvozi2pWUJ2gBleMp3CE1I0AOeJJphhKVS4rKO/OWSLaSCdeZKZ33m80XBvqRngJxembOvMLb23i3/CCfjqNK5cfEqwIpT8s8CMQrAvE2gbQLu03jGlzwonqNxjXDXBQVgSdRWisp01rpA83rRDGPsOLMznYmqPCioP6+9TXJoLEFnsD6Lt7Xl29PhOF40MOjqB+GQRAGNArGURSOR3EywtEg2eoUoUwS6KiwcwJUge1RRY2qzsF+D3JttW2zOQNVRcGpkvap3YuMZ2FBfb0K1mngZVOJlRIMy52u8gjfin9mJf6Sr8M32VnexR+nnD/uZttNNeb7WveHnH+V/FfOPlqajVnQG4eU3IyjMLoZJHR0M6F4eIMn8TDqU0YGySWvBD//AIkwbZXHFQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>ab13c97b-599e-444a-be9c-f5a018327bf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:52:41</sys_created_on>
+        <sys_id>7626a0b7c3f9561065a51933e401313b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 19:00:02</sys_updated_on>
+        <ui_id>733a2840-93ab-4c76-a461-12ec00340a14</ui_id>
+        <values>H4sIAAAAAAAA/+2Y227jNhCGX4XQtauV7diOszfdxgi6aPaAxN2i2CwEiqQsNpSokpQTN8i79Fn6ZB1KtCTbgWNvXCBBc5NAQ3I4M/w/Hvz1zuPUO/GO6HEwjOIjPAr6vX4QHPfG46g/joPj0TjoEup1vAynDHoqRqSy33MsCmu4uztVDBtGw65PCqVYZu7voZ1ynQu8+OK6gYUkXFBo906+fut4OVbg0TDlndytNe0aksARE9B1itWMGXSxDG09VLPI7TeVpEghvJAvjefOwcS1oPcTaIFBNqqg47FbwzLKIJwYC806Xoozio1Ui9oCudNPmWgMCc8MuHyntSQc6qKRSRhiKeYC3XCTIIyqwHzP+rvV/C8Irt+zrmIGNSA2Vp4RTiEir2We4kiwSVVW6PK+6RJPsMGXRhXEFKqutuSE6aqilMW4EOa0bas6fMoNl1k1xNgJ3GgpijT7WBXSqx20VrPQLKQst/WxCcPkkHx8mcibi2XAZzwrK+kqIyTBov6KLxlWJDnjTNjlzoo0gr4dDxujeFQYGyYIQ0CvZp6wDNXOBT2ZYOVypjjPeTYLcyXnvJwQwk/9mYAPPxbyBsZrPst8TGyuPqwg9s/APinNX7DiNvEP4AYG33c8vdCnAmvdpA9rEP5Z2OirYqyGY0eHpejsYKJ4bt7BVHPmkr3vOMy6422apkeNdls+G9Ruw+5gEHS73VAnMs8gMfvf5k1h5fUmdI8P2I/JHeJvmLRaejgfx+OG7bw9Fn2sGhyN3T1prPToYJwCgabaJCr2kHHh1QAeB6sAbgHveQBXY7Qzcatk/Tf0gFB0WCHgcisn/w6qHmMpGA6jaBgNRv1Gi2MS01EUD/GI9Bvt3cAurFKsrsNyF24B1d1Exu0t+3GxQyxLLmDXFgVl6LdlUNvidKBEUsI2mK1TApG+OSurW1PSe9KZVUkTGYlgMcUCTqo6JGtszjGTYIO4RhpWy0dTibjLqjWigxayQGmhDXQz0LIC4Mrhd/S82XOScNbJg3p5EXAeHsLB9gMBN+LGSWhkC71cYY2pfy0pFvxHzdQc1gdOKB/y26Tykd770bpD0PUpJjczcFBqWK9stsbk5dLoeOxv57E6pDZwbB1KwfNG46Uo3wYueMpLUVTMHh4GulVXLFiREiEtGA7wXNph8qWoT083I9lH1Effd8i8qvpFqrq79R3Ohitaig4t6x1mX8r6pzVdR3sLe/Aq7P+RsAfbpUVWxKSL6A9GTEvcv8tCLV+TRU7tL2BIFwTWSceFEAt/U/27DNnzKvN4Dks8LusMHspqH0yGr5eaZ0HJ4ZHAW+UU91b3V0kXLR6uiiDokxzZmH8wPFukhCkpTQSFuS4b6ZV3VXVjE4YV+hXu8Z1q2Ju8sl9le7kpgYJSY5KUP9+2YUJE5hwAsw/X9svzSRPav71hFun87ZP8TBOcXWtUucNp/hZdsBlWVD/J6y+CztHn8qm06mdzK3J+d1yNg1e7+vzn763N+xbp8SLst7nuQEN996hY2IDDbauJScXapvrz9MN5s6WOnnjzGA4G/eHrpnqQq0d+Q3tUyTx3uR34+vHtXxFHQ1B0GwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>4743f490-9fda-4f51-aae9-e12107bc0fca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:15</sys_created_on>
+        <sys_id>f890a4bfc3b9561065a51933e401316e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 19:00:02</sys_updated_on>
+        <ui_id>ef154df6-7d81-4247-829c-f7ee46bf4377</ui_id>
+        <values>H4sIAAAAAAAA/+VWXU/bMBT9K5YfWRcSCoiVJ0SHNmkb0ph4WVHkxDetN8fObKejq/rfd/2RUsHGmLQXNF6C75fPufeeJp/XVHA6oYfA8+JVcVyPi/H4IM8PTg6L6nhcFQd8zAAKOqKKtYCRBmptOJ6XTPbesF6fG2AOeFlkdW8MKLfZoJ8L20m2uk5haKkXQnL008nnmxHtmMGKDgydrO+5ngpJsgokhn4cMN3H6FadP3Nd9y3iKsVgfJcyp8lD3k7Rg0keTpGPKNw6UBwQSMOkhRFtmeLMabOiE2d6NCBpfqnkahuxEMpFoi27teIH3nyY+7gGkFmdmrA9fmKVhGlsUnQ1U+bYFVavXW+2PdOiBhv7wqFhvXTnu7YYcNk5oVVMcb5wytayb9WH2BW6LbAzk95CyaHzXD36SK25WujvHwegF0KFtiSaUtdMbk/MOSOq3nk4awoSQp9b1nVCzcvO6KUIyQilzeYSD1kj9Xe804q5yljtcWfYWZZdoH0azNfMCE/iPZbB5M2I2pU9l8zaOyrYx/Jb75FEYolCGboQWlCGbfDJtRGdO8OrlpCAb0Zp8aujx7asfnW3VDs175b/tiyOjvKiKEq70J1CYv7peXOcon0ogz8n/J1KnoB/UElYuN/wSUJ5YHu3m0s+REeSydE/k8nJc5NJovLsdfIndeQHj/4G72xTEITdUUYnwnhmfZ6PecNfxmuAP5TEI5F/p4UnoB20cCFAcvsL+IMQoEWIDspI554YkpNcJ+f2vfHPFFEc5+HvmeniP3h9RIrR5jGn7fX/PhZI9/dmam/vrMbOW+Kx7p8F8MSDJ71FvsQtgDS8DBZdfYHaZeQqFCBtbx0xgFcpwkjYyoz4ipd+94jq2wofwhLdNBYcqVbkRUGEIq+N0Ya8wSWU/ooriC0LYJZMyPDDrsP8LUnKJH2HwDqDUH3OjGYzSliDyhvg+XS4ZagDmCAaQ/AtZhy2vyZRx0NghvOdz8EMn4ZZCPTzC7zw1lNfKzHbVvHG/ZmaKV8bl4TVC78Zb/n98mVRllLrr2XflfGzL0sPnDl+72GhoWs7VU5x5pYtgW9XebPZ3PwE1x5zXA0LAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=e94a10b3c3b9561065a51933e4013113^sys_idNOT IN3a26a0b7c3f9561065a51933e401313a,debd98bbc3b9561065a51933e40131ee"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fa26a0b7c3f9561065a51933e4013139</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>4743f490-9fda-4f51-aae9-e12107bc0fca</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:52:41</sys_created_on>
+        <sys_id>3a26a0b7c3f9561065a51933e401313a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:24</sys_updated_on>
+        <ui_id>ab13c97b-599e-444a-be9c-f5a018327bf7</ui_id>
+        <values>H4sIAAAAAAAA/+VUy27bMBD8lUBnW9DTr5vRIkCBtgGaIJc2IChyaROlSFUk7biG/71LPZIgcdCgyK03c3a5M7Mc+RgZ7xrv7I1ZWys3Olp9v5tEUgcMfx8jTWuIVhEzmksnjSYdMIl2VPlQWDtH2bYG7S6YaSTwC+sZA2uFV+qAjVzaRtHD7Vv72VYq3sKgpKEt8jloo9XxWckdGiCKVqBw7LVrpd7gdcnxJBIq0iVLWZ7N8ixJskWRVrO8SjOeU6A59o0XP4zGLj53yORVx4EPcTsymZYHWWkyieDegeaA1IIqC5OopppTZ9rDA9IC5VdaPQJbqR2Oi0LzvZW/cXZWlqFRAHpk0BfZ1kgGV01Q0iOOVmosGuVr/bUXHHYNgnrlxl0j4i0QDk1QF+gGbnG9NftvI9Gl1J2ToagMo+rhRB36rbwDG14AFISnIzVtGtwCaVqzk91l1FLHG4WHWCizR9IQp5iyIDzGZdD4EvGPHXxLWxlcfMExeLmXWVErGemih+NcixZO3TrILx8E9QYHK6TfBjZY1srGrZFnB4Pq0+Rlbp9E9ngEkZYFF7PpnC/SaZEV8+kiW7KpmAMUs0oU+XweE9KLJ9ZR5y0hMTMcTqcfPklynryM9rvNfY9PYElLUaZJef4TKGbnPoEz4X8999lfch8e8I2xT5LkP829tKTP7+CtI//n2N+FjPcMtg8IByYtCrkJ2KfxXz0UDvjSkj2F9qb9GSw8Yqc/+bAVbx8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">52bd98bbc3b9561065a51933e40131ee</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:15:48</sys_created_on>
+        <sys_id>debd98bbc3b9561065a51933e40131ee</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:24</sys_updated_on>
+        <ui_id>4743f490-9fda-4f51-aae9-e12107bc0fca</ui_id>
+        <values>H4sIAAAAAAAA/+VUy27bMBD8FUFnWdDD8utmtAlgoImL2AhQFIGwolY2UYpURcqOa/jfu5SsJGgc9HnrTZxd7swsBzq6qjFVY/RazbXmG+nOPj94LpcWo++jK6FEd+YyJXNuuJJpC3juDkRjC4vCmRsDbFuiNM4dMlXnDteOVMa5KitzoN6c60rA4f43rrAtF3mNZz0V1MRqsHZnxx9K5lBhKiBDQZNXpuZyQ9d5TqcigCKcspDF0SiOgiCaDMNsFGdhlMeAEFNff/Fdb8/50CLem74tH+G6ZyLtVlYYeC4+GpQ5EnUBQqPnliBzMKo+PCE1Qr6U4hnYcmlonGubHzX/RrOjJLGNBZJHhl2RbRVnuKyskg4xkIm+qERTyttOsF03FtAI06+bkEZjmmNl1Vm6M3ex2qr9XU90zWXr5FwUioF4OoEhv1ljUNsXQIH26dISqoq2kFa12vH2Mmkp/Y2gg18ItSdSGyofmBXu0zLAvyb8fQvfQ82tixsaQ5c7mRloztI2gDTO1GTh1K4j/dpYQZ3Bs5W02wY1aFbzysyJZ4dn1SfvdXpfBPd4ZAhJFuXJYBSPYTCcZpPBdDwcDliSTCYsGAeYJH4Xz9Npsbpdrq9uPq4/vQ7034z6F0GfQlIkYZBcDvpwdCnoFyL+drqjn6TbPtMvhjsIgv803VynXUrP3lryPw73g01yx6C7gOTIuCYha4st+j+4LRzopTl7Ce1V/cVaeMZO3wETBkYyCwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=e94a10b3c3b9561065a51933e4013113"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_e94a10b3c3b9561065a51933e4013113^sys_idNOT IN16bd10bbc3b9561065a51933e4013128,d2bd98bbc3b9561065a51933e40131e8"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e94a10b3c3b9561065a51933e4013113</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:15:47</sys_created_on>
+        <sys_id>16bd10bbc3b9561065a51933e4013128</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:15:47</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e94a10b3c3b9561065a51933e4013113</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:15:48</sys_created_on>
+        <sys_id>d2bd98bbc3b9561065a51933e40131e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:15:48</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e94a10b3c3b9561065a51933e4013113"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_e94a10b3c3b9561065a51933e4013113"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e94a10b3c3b9561065a51933e4013113"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Get Attachment Value and Set it to table's image field</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>getandsetproductimage</internal_name>
+        <label_cache>[{"name":"Created_1.current.closed_by.email","label":"Trigger - Record Created➛Shop products Record➛Closed by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"Created_1.current.closed_by","label":"Trigger - Record Created➛Shop products Record➛Closed by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1550111_shopnow_shop_products","column_name":"closed_by","usedInstances":{"c736d4b6-970b-48c8-9ae2-65a671c45ff5":["notification"]}},{"name":"ef154df6-7d81-4247-829c-f7ee46bf4377.__action_status__","label":"3 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ef154df6-7d81-4247-829c-f7ee46bf4377.__action_status__.code","label":"3 - Update Record➛Action Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"95408634-84f1-40ac-bd3d-9b0f6f3a34d3":["condition"],"ab13c97b-599e-444a-be9c-f5a018327bf7":["condition"]},"attributes":{}},{"name":"Created_1.current","label":"Trigger - Record Created➛Shop products Record","reference":"x_1550111_shopnow_shop_products","reference_display":"Shop products","type":"reference","base_type":"reference","usedInstances":{"ebc79b37-7a73-44ab-af04-024ffccc9c31":["target_record"],"4eb3a663-b038-4c28-a882-95482fcda456":["record"],"ef154df6-7d81-4247-829c-f7ee46bf4377":["record"],"c736d4b6-970b-48c8-9ae2-65a671c45ff5":["record"],"fd61df17-0bff-4074-8e4e-ee518de6eb47":["record"],"3a06d20c-31d4-425f-96d4-a104ad5e135a":["record"],"733a2840-93ab-4c76-a461-12ec00340a14":["record"]},"attributes":{}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Shop products Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1550111_shopnow_shop_products","column_name":"sys_id","usedInstances":{"cea5b2d5-637a-49b8-9744-c5588c070e55":["conditions"]}},{"name":"cea5b2d5-637a-49b8-9744-c5588c070e55.Record","label":"1 - Look Up Record➛sys_attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","usedInstances":{"26e457bf-7c8f-4657-89c1-5bbf7a721f2c":["source_record"],"4743f490-9fda-4f51-aae9-e12107bc0fca":["condition"],"751068c2-257d-4b5f-b6b2-7a4432e678c0":["attachment_record"],"ebc79b37-7a73-44ab-af04-024ffccc9c31":["attachment_record"],"3d1a2be9-d3a3-4287-804a-c66cc703a64a":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>GetAndSetProductImage</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="GetAndSetProductImage">e94a10b3c3b9561065a51933e4013113</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4d90a4bfc3b9561065a51933e4013186</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:26</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4d90a4bfc3b9561065a51933e4013186^sys_idNOT IN0590a4bfc3b9561065a51933e4013188"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4d90a4bfc3b9561065a51933e4013186</id>
+        <name>GetAndSetProductImage</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>0590a4bfc3b9561065a51933e4013188</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:28:16</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0590a4bfc3b9561065a51933e4013188"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4d90a4bfc3b9561065a51933e4013186^sys_idNOT IN8990a4bfc3b9561065a51933e4013189,8990a4bfc3b9561065a51933e40131d9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</model>
+        <model_id>4d90a4bfc3b9561065a51933e4013186</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4d90a4bfc3b9561065a51933e4013186</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>8990a4bfc3b9561065a51933e4013189</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8990a4bfc3b9561065a51933e4013189"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</model>
+        <model_id>4d90a4bfc3b9561065a51933e4013186</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4d90a4bfc3b9561065a51933e4013186</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>8990a4bfc3b9561065a51933e40131d9</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8990a4bfc3b9561065a51933e40131d9"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4d90a4bfc3b9561065a51933e4013186^sys_idNOT IN8190a4bfc3b9561065a51933e40131e6"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>8190a4bfc3b9561065a51933e40131e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:28:16</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VZ227jNhD9FUFPLZACuvimvO0mWTTAdtM6afchSAlKJG2iNOVKlBJ3kX/vUBdblqVYtpPWzr7swqQ0M+dw5gxHuf9mCuxTYZ6bd9gX1DwzuVQ0kljcLeYUlpVeRhLP9N4MS4JVGC3McxUl9MwMI0Ij89w+M1MsEnq7iK8JvASPZm8Ur5vFNvx+Qna/b9m2jeJpOJfhY/Y/mkchSQIVw5OEx3OBF38UL9zCtlHZnuMILCvt9ZsZTLkgEZXm+f0DRK5dByzAnkOtwLVdx7EsZ9Sz/YHr2w5xMbUsMFFHXAtVNQBf4aRPikpCwRXDIqYNnEQUkxspFssnpkBpTsoMP8X8H7A+svRzjELsAc33gmnIA3ozVzyU+UoeUL4ZimQmv+SBapIow4lQJUmwksQUETrXsWlvhWsG9D2OS0efuMxgFJsiDLBY/sJKRdxPFI01s4wL4BjlJMRhEmVhjq8ubsaX6OuHu4ufr8ZofHV7N76+uLu6NJ8zPOjvRFvMIyxiQTmc5+XJfuJU6JNSXGV8x0HE5+pDoHhKi2iez1Z5GSUSTKAl7xsZmhO3ZPAzjwH/PUAo2clMwj77XJgcJ9II4YTgHyNIIuBGGeXps+sZnhScsl/LZMs4KfIkxRFCMxQvYjRNfASsTSZAFZfzRKGhN/LsAW5Jv2GwxkxWFGD63jQfnvVhUUEDVckt9ntc/fULj2MuJxWSlhh16m1CXKKDHDVKBnOo8WlhfVgrtOKhsiotq1V/NrMnrWVFTW86SIxtM+ZT5lhDjdq2XJ/Z1tDqY0ZcywqcisRsum+NS9WyuQruJdEpVrqoTq9NdeKsYESH8qizV0ZZrdhOuZeuJ25hx9EHXYjbxRGGVhNpdyeVXmZcvny5nngvQXtlccckxfAGKTF2Ee8OKv04pRLFVCldt7vLtIR6yN7BuZOKmunENjRBLIyML6H86Xr1nHFLQSkgzpPSs6p2dwENxiLjXaH2QzWtdyyN9COsryHVRdpy5t9RE6sVV7rO4taWRXujvsfcYAgIoUmxHvWx3XP62BsOXObVWlbNWXsYx9O0OkpE2io2Te2iawmmjZW8bBy1BrRPltfOuzDtbmmX3y8pBzXqwl57n94n2CPo4bUBrNvsxQQM6Vzu0dB9HPw1icJEkg2dB5sGl8bqCeOHgu0fT0vSqx0NsoK+jHf9idNBeUjjWuVPWa5YLvaau1xm+x7tUQvGLReamN/3PD/ADmPDwZA6dq2JrRw3RnM8ratDRaRNJdU24DRmW9qUpDtMXf9/gAdJepFzjYqe7x2BPm9R44tQEq7y5lrX4nIrNvcs1aBivDyKP69+2yzUfHFbrQ4GGBPapk4+q9RqFVZDMKoB4ZvUqvXW32Tzz8N7Z9QsJFRcrsyZa/1A0/KIpYqRChEmBFUI65iCObZ97wnZZACIo4M+AehQKApZtYNehgZsGODE4MwoUFNi+AtDTSmoiAA9AYeG9n5iI2H1/rCJfHnVfte4c/3d+BAAyxmy0wJ28IxfK6H1S9M22aVkiPt9d9g853v1K1KTwy3xHM+1aWdZSJtU5sUJdze7dZuNM24lq9ePtuNI/45Rv9kFryGKI7jtHdhlhe6eGy12Ijih5d4rCFFhKV1danaf29jIC/r2sEWURv1WUSqcvxSYaoD9n9wOdacpcum4/nL/WoPHw78EQ6eeHCIAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4d90a4bfc3b9561065a51933e4013186^sys_idNOT IN0d90a4bfc3b9561065a51933e40131e4,2c36e0b7c3f9561065a51933e4013160,c990a4bfc3b9561065a51933e40131e5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>0d90a4bfc3b9561065a51933e40131e4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:28:16</sys_updated_on>
+        <ui_id>cea5b2d5-637a-49b8-9744-c5588c070e55</ui_id>
+        <values>H4sIAAAAAAAA/+VY227bOBD9FUHPjlfyTXbeihgGCnQboEn70hYERVIxsTSpUlRSx/C/dyhKtmDLF6E2kGAfyRmSZ2bOGZH6vvI59W99OgkmyWQyHEdB0O8HwWjUJziM4/6IxEGMB37Hl3jBwNPgWDAYPmOR23G2zBA2BpP5gkkDBsqzVODlt0N2MueCaib92+8/O36KNexrmPZvVzumc4EJHDMBro8lsh2gZpluhqiwublP9WXeZ2dQmlooQcdnvw2TlAGGBIuMdfwFlhQbpZebGc0wvZdiOzHnEOGt71vn3xl/hXPHgfVLGERFmLNthsXJU5cuZ0qm2OAHo3Nicl26k7nihGUuJ5QlOBfmrj7nHO5Tw5V0S1zobrUS+UJ+dinxNxtU1YGZPGOIstQGa9GXoSQPc/XypUI647LIS2kUimCxGUF1NY9zY/GsfCaYLTRa4DTl8gmlWj3zYjFgWXSfBAy6iVAvcGjGn2QXEwu8C7nF3RnMT4vpb1hzG8W/sA0sBkBcAEuQK2Omcl2k8xkRkWeFQWOZub38dcfS7k7gLNtGDmlHv3KL2+WhjBi5pNklRPPUfIAtnlkZ3LpT6WN4lIaTLe2IkpRbFFlNJCVqkAKnP3LYgq5Wd0AfwygKuyTXkGXTdfb1el9Erde3FNnp6CqR3dXDawq5lNve3KemDUq5hReT2yAI3pvg4PC3p7f2CnIpOCGjkB4lGt1yKlPaIJfLmo72ldGa62dAqLh+b9npxctDqEqqJ5wJ2vRlmVnDzpel9//9srxJogMgilwFuRRcFt0WgF5LAcOj9IvDHa4VFKtdtuwczsi+DrBnlPfaWg1nwKnU8ABne48OTwPEqu8XlNnt+dVkKYL+xUTQ711OBKtNqJtkNuS9uiHailb+r9Yf7/oDDWsLwnWTyFqdGbY9s7feF3G/lYrrhHOW6QHeXfgaeUCVnWu2gTksLc9DTsPohdMnZranV15UmRcs/muyl8JEVaGK8K5wJQ2Pvozi2pWUJ2gBleMp3CE1I0AOeJJphhKVS4rKO/OWSLaSCdeZKZ33m80XBvqRngJxembOvMLb23i3/CCfjqNK5cfEqwIpT8s8CMQrAvE2gbQLu03jGlzwonqNxjXDXBQVgSdRWisp01rpA83rRDGPsOLMznYmqPCioP6+9TXJoLEFnsD6Lt7Xl29PhOF40MOjqB+GQRAGNArGURSOR3EywtEg2eoUoUwS6KiwcwJUge1RRY2qzsF+D3JttW2zOQNVRcGpkvap3YuMZ2FBfb0K1mngZVOJlRIMy52u8gjfin9mJf6Sr8M32VnexR+nnD/uZttNNeb7WveHnH+V/FfOPlqajVnQG4eU3IyjMLoZJHR0M6F4eIMn8TDqU0YGySWvBD//AIkwbZXHFQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>ab13c97b-599e-444a-be9c-f5a018327bf7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:52:48</sys_created_on>
+        <sys_id>2c36e0b7c3f9561065a51933e4013160</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:26</sys_updated_on>
+        <ui_id>733a2840-93ab-4c76-a461-12ec00340a14</ui_id>
+        <values>H4sIAAAAAAAA/+2Y227jNhCGX4XQtauV7diOszfdxgi6aPaAxN2i2CwEiqQsNpSokpQTN8i79Fn6ZB1KtCTbgWNvXCBBc5NAQ3I4M/w/Hvz1zuPUO/GO6HEwjOIjPAr6vX4QHPfG46g/joPj0TjoEup1vAynDHoqRqSy33MsCmu4uztVDBtGw65PCqVYZu7voZ1ynQu8+OK6gYUkXFBo906+fut4OVbg0TDlndytNe0aksARE9B1itWMGXSxDG09VLPI7TeVpEghvJAvjefOwcS1oPcTaIFBNqqg47FbwzLKIJwYC806Xoozio1Ui9oCudNPmWgMCc8MuHyntSQc6qKRSRhiKeYC3XCTIIyqwHzP+rvV/C8Irt+zrmIGNSA2Vp4RTiEir2We4kiwSVVW6PK+6RJPsMGXRhXEFKqutuSE6aqilMW4EOa0bas6fMoNl1k1xNgJ3GgpijT7WBXSqx20VrPQLKQst/WxCcPkkHx8mcibi2XAZzwrK+kqIyTBov6KLxlWJDnjTNjlzoo0gr4dDxujeFQYGyYIQ0CvZp6wDNXOBT2ZYOVypjjPeTYLcyXnvJwQwk/9mYAPPxbyBsZrPst8TGyuPqwg9s/APinNX7DiNvEP4AYG33c8vdCnAmvdpA9rEP5Z2OirYqyGY0eHpejsYKJ4bt7BVHPmkr3vOMy6422apkeNdls+G9Ruw+5gEHS73VAnMs8gMfvf5k1h5fUmdI8P2I/JHeJvmLRaejgfx+OG7bw9Fn2sGhyN3T1prPToYJwCgabaJCr2kHHh1QAeB6sAbgHveQBXY7Qzcatk/Tf0gFB0WCHgcisn/w6qHmMpGA6jaBgNRv1Gi2MS01EUD/GI9Bvt3cAurFKsrsNyF24B1d1Exu0t+3GxQyxLLmDXFgVl6LdlUNvidKBEUsI2mK1TApG+OSurW1PSe9KZVUkTGYlgMcUCTqo6JGtszjGTYIO4RhpWy0dTibjLqjWigxayQGmhDXQz0LIC4Mrhd/S82XOScNbJg3p5EXAeHsLB9gMBN+LGSWhkC71cYY2pfy0pFvxHzdQc1gdOKB/y26Tykd770bpD0PUpJjczcFBqWK9stsbk5dLoeOxv57E6pDZwbB1KwfNG46Uo3wYueMpLUVTMHh4GulVXLFiREiEtGA7wXNph8qWoT083I9lH1Effd8i8qvpFqrq79R3Ohitaig4t6x1mX8r6pzVdR3sLe/Aq7P+RsAfbpUVWxKSL6A9GTEvcv8tCLV+TRU7tL2BIFwTWSceFEAt/U/27DNnzKvN4Dks8LusMHspqH0yGr5eaZ0HJ4ZHAW+UU91b3V0kXLR6uiiDokxzZmH8wPFukhCkpTQSFuS4b6ZV3VXVjE4YV+hXu8Z1q2Ju8sl9le7kpgYJSY5KUP9+2YUJE5hwAsw/X9svzSRPav71hFun87ZP8TBOcXWtUucNp/hZdsBlWVD/J6y+CztHn8qm06mdzK3J+d1yNg1e7+vzn763N+xbp8SLst7nuQEN996hY2IDDbauJScXapvrz9MN5s6WOnnjzGA4G/eHrpnqQq0d+Q3tUyTx3uR34+vHtXxFHQ1B0GwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>4743f490-9fda-4f51-aae9-e12107bc0fca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>c990a4bfc3b9561065a51933e40131e5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:28:16</sys_updated_on>
+        <ui_id>ef154df6-7d81-4247-829c-f7ee46bf4377</ui_id>
+        <values>H4sIAAAAAAAA/+VWXU/bMBT9K5YfWRcSCoiVJ0SHNmkb0ph4WVHkxDetN8fObKejq/rfd/2RUsHGmLQXNF6C75fPufeeJp/XVHA6oYfA8+JVcVyPi/H4IM8PTg6L6nhcFQd8zAAKOqKKtYCRBmptOJ6XTPbesF6fG2AOeFlkdW8MKLfZoJ8L20m2uk5haKkXQnL008nnmxHtmMGKDgydrO+5ngpJsgokhn4cMN3H6FadP3Nd9y3iKsVgfJcyp8lD3k7Rg0keTpGPKNw6UBwQSMOkhRFtmeLMabOiE2d6NCBpfqnkahuxEMpFoi27teIH3nyY+7gGkFmdmrA9fmKVhGlsUnQ1U+bYFVavXW+2PdOiBhv7wqFhvXTnu7YYcNk5oVVMcb5wytayb9WH2BW6LbAzk95CyaHzXD36SK25WujvHwegF0KFtiSaUtdMbk/MOSOq3nk4awoSQp9b1nVCzcvO6KUIyQilzeYSD1kj9Xe804q5yljtcWfYWZZdoH0azNfMCE/iPZbB5M2I2pU9l8zaOyrYx/Jb75FEYolCGboQWlCGbfDJtRGdO8OrlpCAb0Zp8aujx7asfnW3VDs175b/tiyOjvKiKEq70J1CYv7peXOcon0ogz8n/J1KnoB/UElYuN/wSUJ5YHu3m0s+REeSydE/k8nJc5NJovLsdfIndeQHj/4G72xTEITdUUYnwnhmfZ6PecNfxmuAP5TEI5F/p4UnoB20cCFAcvsL+IMQoEWIDspI554YkpNcJ+f2vfHPFFEc5+HvmeniP3h9RIrR5jGn7fX/PhZI9/dmam/vrMbOW+Kx7p8F8MSDJ71FvsQtgDS8DBZdfYHaZeQqFCBtbx0xgFcpwkjYyoz4ipd+94jq2wofwhLdNBYcqVbkRUGEIq+N0Ya8wSWU/ooriC0LYJZMyPDDrsP8LUnKJH2HwDqDUH3OjGYzSliDyhvg+XS4ZagDmCAaQ/AtZhy2vyZRx0NghvOdz8EMn4ZZCPTzC7zw1lNfKzHbVvHG/ZmaKV8bl4TVC78Zb/n98mVRllLrr2XflfGzL0sPnDl+72GhoWs7VU5x5pYtgW9XebPZ3PwE1x5zXA0LAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4d90a4bfc3b9561065a51933e4013186^sys_idNOT IN4590a4bfc3b9561065a51933e40131e3,e836e0b7c3f9561065a51933e4013163"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">52bd98bbc3b9561065a51933e40131ee</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>4590a4bfc3b9561065a51933e40131e3</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:26</sys_updated_on>
+        <ui_id>4743f490-9fda-4f51-aae9-e12107bc0fca</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K8jPAYVAKPCGSitVasvUokrVVEU3zk2x5thZ7LRliP++6zhAtTJtaH3cGz7365ybe8SG6dqWtTVLPTNGPCs2/foUMKEcRr83TEGBbMq4VpmwQqukAQL2ArJ2gau8M7MW+KpAZTt3yHWVdYTpKG07F0Vp15SbCVNKWD+cUMJXQmYVtnxKqGiqxYpNN7+EREYd8xDy/oT3+SAaDaIwjMbDfjoapP0oGwDCgBpKSFFS6vlOSOe6QYLfKrTr0uHGVkI9t+/rtsv9DiTqjlU/DBi+WVQZEp8cpMGAFaAysLpa75EKIVsoeQBWQllqx1zymxE/aGAUxy4xR5LI0Qf3zyWkEud+nT6Uz8EC0am5ras2na+04Gj8gjLMoZb2/D3mExalk+tLrGvcVmtZF+rWb4XtG+y+HiG1wSTD0ql19Fst+f1Kv97tmF4K1WymDUrNQe5fYGl/aW0dnw1Die4SkgLKkraalJV+EU0xcSl6z5IevVzqVxrqbrQH3BHv0XKhd0n4vIEfoBJOxQ21oWJPMwUjeNLcM7WjNSHbBsyszbkEYw4iacPJ99pR9JJbcYnfjyvhlSjtjCa/YKtjG3y0xztnbDYcIU6jLO6OBmfQHU7ScXdyNhx2eRyPxzw8CzGOe/7+t9ur+9vF8uLmy/Lxo2P+pdVpTppAnMf9MD7upOHomJOOeOhE+0R/sI/7bn/pnjAM/9vnU+wjTOKPvtXWDP9E9zw5q/iZ+11zYYha85mudv9BLrCmAxP8PfSqq29O1AHb/gQHaLcczQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fa26a0b7c3f9561065a51933e4013139</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="GetAndSetProductImage">4d90a4bfc3b9561065a51933e4013186</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>4743f490-9fda-4f51-aae9-e12107bc0fca</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:52:48</sys_created_on>
+        <sys_id>e836e0b7c3f9561065a51933e4013163</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:26</sys_updated_on>
+        <ui_id>ab13c97b-599e-444a-be9c-f5a018327bf7</ui_id>
+        <values>H4sIAAAAAAAA/+1VXU8bMRD8K8jPl9N9JQHeUBBSJVqkgnhpkbVnr4lV53w920Aa5b93fXcJqKQqSDz2LZ5d787MeZQNs8G3wbsbe+acvm/Y6be7hOkmYvR7wxpYITtlwjZSe20b3gMJewATYuHMexDLFTb+SNhWozxyQQh0TgVj1tQotWsNrG/f2i+W2sgORyYtdLTPY8dON3+UtKRxKgOVn4hclMWsLLKsOK7yelbWeSFLQChpoIEaDbUudhKOLnsk+as2v24j7nynm/vxfDlOud6BtpORVZ4lDJ88NhKJjwLjMGEraCR42633SIcgrxrzDCx142kci81PTv+ihcV0GhsVkkSBQ3F/vIHa4Png5VBS5+CB6AThQze2i6XVZOZgkEQFwfjFS2xouGqj3OGKj4PH29aEVfNlcIXtB+w+HSHBIZfYRrWR/qhFXS/t49cd0wvd9M6MRWMFmP0JPPlXBx/5bBgajC+Br6BtyVXedvZB95eJyyq9N3RIlbGPtDS+zhREJJ6SuZBeEH7ew7fQ6ajiM42hywPNGpwWvH/JNI5sQrZNmFu7hQHnnkWSw/xniBQHyaM4PvgTr4hOt/6MNj/gqGObvA7Gi0xsNqjyaSXVbDKXx/mkKqr55Lg4ERM1R6xmtarK+TzlfJDDnQcfHOepsBK32+8hy0qZvc7Oh819X8ZOYKqmeTY9nLFqdihjB9L1zmAV/whW/KJvzFWWZf+D9SHB0o4PcRi19cs/MFd3MUTDzr3XQjui1n+mT7v/pVhY0wPT4iX0aLsfUdQztv0N0v8fG+EGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_4d90a4bfc3b9561065a51933e4013186^sys_idNOT IN0190a4bfc3b9561065a51933e40131d7,cd90a4bfc3b9561065a51933e40131dd"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4d90a4bfc3b9561065a51933e4013186</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>0190a4bfc3b9561065a51933e40131d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:28:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4d90a4bfc3b9561065a51933e4013186</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:16</sys_created_on>
+        <sys_id>cd90a4bfc3b9561065a51933e40131dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:28:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4d90a4bfc3b9561065a51933e4013186"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>e94a10b3c3b9561065a51933e4013113</sys_id>
+        <latest_snapshot>4d90a4bfc3b9561065a51933e4013186</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch0-07-16-2024_07-27-2024_1019.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=e94a10b3c3b9561065a51933e4013113^sys_idNOT INd590a4bfc3b9561065a51933e40131f5"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"d590a4bfc3b9561065a51933e40131f5","name":"plan","plan_signature":null}}</plan>
+        <plan_id>e94a10b3c3b9561065a51933e4013113</plan_id>
+        <snapshot>26d7283bc3f9561065a51933e4013158</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:28:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d590a4bfc3b9561065a51933e40131f5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:59:26</sys_updated_on>
+        <trigger display_value="">9590a4bfc3b9561065a51933e40131f3</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=e94a10b3c3b9561065a51933e4013113"/>
+</record_update>

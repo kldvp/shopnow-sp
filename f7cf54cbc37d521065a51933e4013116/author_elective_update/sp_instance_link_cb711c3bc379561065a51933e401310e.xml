@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>pencil-square-o</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Register Product">e77ffae3c3f1561065a51933e40131b4</sc_cat_item>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">cd719c7bc379561065a51933e4013128</sp_column>
+        <sp_page display_value="sc_cat_item">9f12251147132100ba13a5554ee490f4</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 17:22:19</sys_created_on>
+        <sys_id>cb711c3bc379561065a51933e401310e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Add a new product to catalog</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_instance_link_cb711c3bc379561065a51933e401310e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 17:27:14</sys_updated_on>
+        <title>Add a new product to catalog</title>
+        <type>sc_cat_item</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=cb711c3bc379561065a51933e401310e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sp_instance_link_cb711c3bc379561065a51933e401310e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;pencil-square-o&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="Register Product"&gt;e77ffae3c3f1561065a51933e40131b4&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;cd719c7bc379561065a51933e4013128&lt;/sp_column&gt;&lt;sp_page display_value="sc_cat_item"&gt;9f12251147132100ba13a5554ee490f4&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-17 17:22:19&lt;/sys_created_on&gt;&lt;sys_id&gt;cb711c3bc379561065a51933e401310e&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Add a new product to catalog&lt;/sys_name&gt;&lt;sys_package display_value="ShopNow" source="x_1550111_shopnow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ShopNow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_cb711c3bc379561065a51933e401310e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-17 17:27:14&lt;/sys_updated_on&gt;&lt;title&gt;Add a new product to catalog&lt;/title&gt;&lt;type&gt;sc_cat_item&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=cb711c3bc379561065a51933e401310e"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-922024669</payload_hash>
+        <record_name>Add a new product to catalog</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 17:27:14</sys_created_on>
+        <sys_id>4792d4fbc379561065a51933e40131cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1933b2a18550000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 17:27:14</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>cb92d4fb4d795610cc3d79c5344289ca</update_guid>
+        <update_guid_history>cb92d4fb4d795610cc3d79c5344289ca:-922024669,f8f158bb9679561047e1690f0001699b:1785791465,26c1d87b8479561002589c6571882def:785346709,bbb114bb64795610cedfd12ac5181bf1:1198438014,0771dc7b3f79561072171824f46acb28:-1507339555</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Add a new product to catalog">f393a0b3c3f9561065a51933e401319c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-17 18:41:34</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>341b354002f942f2ab57832a678a3d11</sys_id>
+        <sys_metadata>cb711c3bc379561065a51933e401310e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add a new product to catalog</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sp_instance_link_cb711c3bc379561065a51933e401310e</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_cb711c3bc379561065a51933e401310e">4792d4fbc379561065a51933e40131cb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-17 18:41:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

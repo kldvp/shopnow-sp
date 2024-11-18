@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Shop users will have write access to update cart items&#13;
+- Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role&#13;
+- There are no conditions defined because if user can read items, they can update cart items too.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1550111_shopnow_shop_cart</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 05:49:47</sys_created_on>
+        <sys_id>e47c3ef3c3f5961065a51933e4013158</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_cart</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_security_acl_e47c3ef3c3f5961065a51933e4013158</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 05:51:33</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>
