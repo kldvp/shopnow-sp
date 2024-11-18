@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id display_value="Shop Admins" name="Shop Admins">c86a6193c339d21065a51933e40131e1</group_id>
+        <report_id display_value="Last 7 days orders count">e1f368c8c3ce961065a51933e40131a4</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 13:34:07</sys_created_on>
+        <sys_id>02d62000c302d61065a51933e4013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e1f368c8c3ce961065a51933e40131a4</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_report_users_groups_02d62000c302d61065a51933e4013191</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 13:34:07</sys_updated_on>
+        <user_id/>
+    </sys_report_users_groups>
+</record_update>

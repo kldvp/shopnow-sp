@@ -52,7 +52,12 @@
 	};
 	$scope.checkout = function () {
 		// Implement checkout logic
-		$location.url('?id=shop_order_place');
+		$scope.server.get({
+			action: 'place_order',
+			cartItems: $scope.cartItems
+		}).then(function () {
+			$location.url('?id=shop_order_place');
+		});
 	};
 
 	// using record watcher to update cart items
@@ -106,17 +111,48 @@
 			gs.addErrorMessage("You don't have permission to remove this item");
 			return;
 		}
-		var deleteCartItemGr = new GlideRecordSecure('x_1550111_shopnow_shop_cart');
+		var deleteCartItemGr = new GlideRecord('x_1550111_shopnow_shop_cart');
 		if (deleteCartItemGr.get(cartItemId) && deleteCartItemGr.canDelete()) {
 			deleteCartItemGr.deleteRecord();
 		} else {
 			gs.addErrorMessage('You donot have permission to delete cart item');
+			return;
+		}
+	}
+	function placeOrder() {
+		if (!input.cartItems || !input.cartItems.length) {
+			gs.addErrorMessage('Cart items are required to place an order');
+			return;
+		}
+		const cartItems = input.cartItems;
+		const orderGr = new GlideRecord('x_1550111_shopnow_shop_orders');
+		const cartGr = new GlideRecord('x_1550111_shopnow_shop_cart');
+		if (orderGr.canCreate() && cartGr.canDelete()) {
+			cartItems.forEach((item) => {
+				// place an order for each cart item
+				orderGr.initialize();
+				orderGr.setValue('product', item.productId);
+				orderGr.setValue('quantity', parseInt(item.quantity));
+				orderGr.setValue('total_amount', parseFloat(item.total_amount));
+				orderGr.setValue('ordered_by', gs.getUserID());
+				orderGr.insert();
+				// delete cart item
+				if (cartGr.get(item.sys_id)) {
+					cartGr.deleteRecord();
+				}
+			});
+		} else {
+			gs.addErrorMessage('You donot have permission to perform this operation');
+			return;
 		}
 	}
 
 	if (input && input.action) { //sub-sequent calls
 		if (input.action === 'delete_item') {
 			return deleteCartItem();
+		}
+		if (input.action === 'place_order') {
+			return placeOrder();
 		}
 	}
 	// initial call
@@ -129,15 +165,12 @@
 	cartItemGr.query();
 	while (cartItemGr.next()) {
 		const cartItem = {};
-		cartItem.test = {
-			name: cartItemGr.product.title,
-			picture: cartItemGr.product.picture.getDisplayValue(),
-		};
 		const productGr = new GlideRecordSecure('x_1550111_shopnow_shop_products');
 		if (productGr.get(cartItemGr.product)) {
 			cartItem.title = productGr.getDisplayValue('title');
 			cartItem.image = productGr.getDisplayValue('picture');
 			cartItem.price = parseInt(productGr.getValue('price'));
+			cartItem.productId = productGr.getUniqueValue();
 		}
 		cartItem.total_amount = parseFloat(cartItemGr.getValue('total_amount'));
 		fieldNames.forEach((field) => {
@@ -164,14 +197,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:27:16</sys_created_on>
         <sys_id>3a0d688fc3bd521065a51933e401310c</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>ShopNow shop products cart</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_3a0d688fc3bd521065a51933e401310c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 05:59:56</sys_updated_on>
+        <sys_updated_on>2024-11-18 11:25:28</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row" ng-if="data.cart.items.length">
     <div class="col-md-10">

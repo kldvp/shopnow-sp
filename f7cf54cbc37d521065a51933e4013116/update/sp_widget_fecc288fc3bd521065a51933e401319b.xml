@@ -122,10 +122,10 @@
 		return query.replaceAll('<placeholder>', input.status);
 	}
 	const statusKey = buildStatusQuery();
-	var user = gs.getUser();
 	var orders = [];
 	function getOrders() {
-		var ordersGr = new GlideRecordSecure("x_1550111_shopnow_shop_orders");
+		var ordersGr = new GlideRecord("x_1550111_shopnow_shop_orders");
+		ordersGr.addQuery('ordered_by', gs.getUserID());
 		if (statusKey) ordersGr.addEncodedQuery(statusKey);
 		ordersGr.orderByDesc("sys_created_on");
 		ordersGr.query();
@@ -150,6 +150,7 @@
 	}
 	function getOrderStatuses() {
 		var orderStatusesGr = new GlideAggregate("x_1550111_shopnow_shop_orders");
+		orderStatusesGr.addQuery('ordered_by', gs.getUserID());
 		orderStatusesGr.groupBy("order_status");
 		orderStatusesGr.query();
 		var orderStatuses = [{ label: 'All Orders', name: '' }];
@@ -170,14 +171,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:26:11</sys_created_on>
         <sys_id>fecc288fc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>81</sys_mod_count>
+        <sys_mod_count>83</sys_mod_count>
         <sys_name>ShopNow shop orders</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_fecc288fc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 07:07:29</sys_updated_on>
+        <sys_updated_on>2024-11-18 11:27:44</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-md-10">

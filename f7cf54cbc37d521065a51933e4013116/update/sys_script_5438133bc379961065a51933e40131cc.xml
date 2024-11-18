@@ -12,7 +12,7 @@
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_1550111_shopnow_shop_cart</collection>
-        <condition>!gs.hasRole('x_1550111_shopnow.shop_admin') &amp;&amp; current.ordered_by != gs.getUserID()</condition>
+        <condition>!gs.hasRole('x_1550111_shopnow.shop_admin') &amp;&amp; current.cart_user != gs.getUserID()</condition>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
@@ -27,10 +27,10 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	// Add your code here
-	gs.addErrorMessage("You don't have access to perform "+ current.operation() +" operation");
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    // Add your code here
     current.setAbortAction(true);
+    gs.addErrorMessage("You don't have access to perform " + current.operation() + " operation");
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -38,7 +38,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5438133bc379961065a51933e40131cc</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>ShopCartExplicitAcls</sys_name>
         <sys_overrides/>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
@@ -46,7 +46,7 @@
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sys_script_5438133bc379961065a51933e40131cc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 07:53:54</sys_updated_on>
+        <sys_updated_on>2024-11-18 11:47:26</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

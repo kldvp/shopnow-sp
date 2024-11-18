@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_source">
+    <sys_report_source action="INSERT_OR_UPDATE">
+        <description>Fetch Last 7 days reports</description>
+        <display>Last_7_days_reports (Shop orders)</display>
+        <filter table="x_1550111_shopnow_shop_orders">sys_created_onONLast 7 days@javascript:gs.beginningOfLast7Days()@javascript:gs.endOfLast7Days()<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 7 days@javascript:gs.beginningOfLast7Days()@javascript:gs.endOfLast7Days()"/>
+        </filter>
+        <name>Last_7_days_reports</name>
+        <sys_class_name>sys_report_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 12:59:43</sys_created_on>
+        <sys_id>1a4e9844c3ce961065a51933e4013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Last_7_days_reports (Shop orders)</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_report_source_1a4e9844c3ce961065a51933e4013116</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 12:59:43</sys_updated_on>
+        <table>x_1550111_shopnow_shop_orders</table>
+    </sys_report_source>
+</record_update>

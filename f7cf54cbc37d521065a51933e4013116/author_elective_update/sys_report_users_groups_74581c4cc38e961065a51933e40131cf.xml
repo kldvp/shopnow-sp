@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="DELETE">
+        <group_id/>
+        <report_id display_value="">b8581c4cc38e961065a51933e40131ce</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 12:30:41</sys_created_on>
+        <sys_id>74581c4cc38e961065a51933e40131cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b8581c4cc38e961065a51933e40131ce</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_report_users_groups_74581c4cc38e961065a51933e40131cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 12:30:41</sys_updated_on>
+        <user_id display_value="Prasad Kodali">6816f79cc0a8016401c5a33be04be441</user_id>
+    </sys_report_users_groups>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_report_users_groups_74581c4cc38e961065a51933e40131cf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups"><sys_report_users_groups action="INSERT_OR_UPDATE"><group_id/><report_id display_value="">b8581c4cc38e961065a51933e40131ce</report_id><sys_class_name>sys_report_users_groups</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-18 12:30:41</sys_created_on><sys_id>74581c4cc38e961065a51933e40131cf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>b8581c4cc38e961065a51933e40131ce</sys_name><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_report_users_groups_74581c4cc38e961065a51933e40131cf</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-18 12:30:41</sys_updated_on><user_id display_value="Prasad Kodali">6816f79cc0a8016401c5a33be04be441</user_id></sys_report_users_groups></record_update>]]></payload>
+        <payload_hash>-373701079</payload_hash>
+        <record_name>b8581c4cc38e961065a51933e40131ce</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 12:30:41</sys_created_on>
+        <sys_id>78581c4cc38e961065a51933e40131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1933f40f25c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 12:30:41</sys_updated_on>
+        <type>Report Users and Groups</type>
+        <update_guid>7c581c4c4c8e96109a1c8e10912ca5d0</update_guid>
+        <update_guid_history>7c581c4c4c8e96109a1c8e10912ca5d0:-373701079</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 12:32:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_report_users_groups">sys_report_users_groups</sys_db_object>
+        <sys_id>2893cca5030f41038f7a5ea728aac419</sys_id>
+        <sys_metadata>74581c4cc38e961065a51933e40131cf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b8581c4cc38e961065a51933e40131ce</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_report_users_groups_74581c4cc38e961065a51933e40131cf</sys_update_name>
+        <sys_update_version display_value="sys_report_users_groups_74581c4cc38e961065a51933e40131cf">78581c4cc38e961065a51933e40131d1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 12:32:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
