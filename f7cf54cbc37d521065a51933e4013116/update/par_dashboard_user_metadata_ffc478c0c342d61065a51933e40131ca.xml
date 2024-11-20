@@ -18,11 +18,11 @@
         <include_thresholds>true</include_thresholds>
         <include_trends>true</include_trends>
         <include_widget_notification>true</include_widget_notification>
-        <last_updated_on>2024-11-18 14:41:24</last_updated_on>
+        <last_updated_on>2024-11-19 11:33:57</last_updated_on>
         <po_project_id_list>[]</po_project_id_list>
         <refresh_information>false</refresh_information>
-        <refresh_interval/>
-        <requested_by_user/>
+        <refresh_interval>-1</refresh_interval>
+        <requested_by_user display_value="Beth Anglin">46d44a23a9fe19810012d100cca80666</requested_by_user>
         <schedule_repetition>false</schedule_repetition>
         <show_insights_panel>true</show_insights_panel>
         <sys_class_name>par_dashboard_user_metadata</sys_class_name>
@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ffc478c0c342d61065a51933e40131ca</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>par_dashboard_user_metadata_ffc478c0c342d61065a51933e40131ca</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 14:41:24</sys_updated_on>
+        <sys_updated_on>2024-11-19 11:33:57</sys_updated_on>
         <updated_by_user display_value="Prasad Kodali">6816f79cc0a8016401c5a33be04be441</updated_by_user>
         <use_custom_tab_colors>false</use_custom_tab_colors>
     </par_dashboard_user_metadata>

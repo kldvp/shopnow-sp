@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="0cd0608fc37d521065a51933e40131fa" extends="task" label="Shop orders" max_length="40" name="x_1550111_shopnow_shop_orders" type="collection">
-        <element attributes="edge_encryption_enabled=true" choice="3" default="processing" label="Order Status" max_length="40" name="order_status" type="choice">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="processing" label="Order Status" max_length="40" name="order_status" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Processing" sequence="0" value="processing"/>
+                <element inactive_on_update="false" label="Waiting for Approval" sequence="4" value="approval"/>
                 <element inactive_on_update="false" label="Shipping" sequence="1" value="shipping"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
                 <element inactive_on_update="false" label="Delivered" sequence="2" value="delivered"/>

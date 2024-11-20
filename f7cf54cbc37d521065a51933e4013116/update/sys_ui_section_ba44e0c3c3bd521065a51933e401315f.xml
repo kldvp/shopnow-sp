@@ -4,13 +4,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-15 10:53:25</sys_created_on>
-            <sys_id>ba45a807c3bd521065a51933e40131b9</sys_id>
+            <sys_created_on>2024-11-19 12:08:07</sys_created_on>
+            <sys_id>37bc595cc30a1a1065a51933e4013165</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-15 10:53:25</sys_updated_on>
+            <sys_updated_on>2024-11-19 12:08:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>ordered_by</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-15 10:53:25</sys_created_on>
-            <sys_id>3245a807c3bd521065a51933e40131ba</sys_id>
+            <sys_created_on>2024-11-19 12:08:07</sys_created_on>
+            <sys_id>3fbc595cc30a1a1065a51933e4013165</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-15 10:53:25</sys_updated_on>
+            <sys_updated_on>2024-11-19 12:08:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>product</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-15 10:53:25</sys_created_on>
-            <sys_id>b645a807c3bd521065a51933e40131ba</sys_id>
+            <sys_created_on>2024-11-19 12:08:07</sys_created_on>
+            <sys_id>37bc595cc30a1a1065a51933e4013166</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-15 10:53:25</sys_updated_on>
+            <sys_updated_on>2024-11-19 12:08:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,41 +46,41 @@
             <element>quantity</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-15 10:53:25</sys_created_on>
-            <sys_id>3e45a807c3bd521065a51933e40131ba</sys_id>
+            <sys_created_on>2024-11-19 12:08:07</sys_created_on>
+            <sys_id>3fbc595cc30a1a1065a51933e4013166</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-15 10:53:25</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>order_status</element>
-            <position>4</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-15 10:53:25</sys_created_on>
-            <sys_id>b245a807c3bd521065a51933e40131bb</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-15 10:53:25</sys_updated_on>
+            <sys_updated_on>2024-11-19 12:08:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>total_amount</element>
-            <position>5</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-15 10:53:25</sys_created_on>
-            <sys_id>3a45a807c3bd521065a51933e40131bb</sys_id>
+            <sys_created_on>2024-11-19 12:08:07</sys_created_on>
+            <sys_id>37bc595cc30a1a1065a51933e4013167</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-15 10:53:25</sys_updated_on>
+            <sys_updated_on>2024-11-19 12:08:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>order_status</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-11-19 12:08:07</sys_created_on>
+            <sys_id>3fbc595cc30a1a1065a51933e4013167</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-11-19 12:08:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>.split</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-15 10:53:25</sys_created_on>
-            <sys_id>be45a807c3bd521065a51933e40131bb</sys_id>
+            <sys_created_on>2024-11-19 12:08:07</sys_created_on>
+            <sys_id>37bc595cc30a1a1065a51933e4013168</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-15 10:53:25</sys_updated_on>
+            <sys_updated_on>2024-11-19 12:08:07</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>

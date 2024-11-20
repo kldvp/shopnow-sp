@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function ($scope) {
+        <client_script><![CDATA[api.controller = function ($scope, spUtil) {
 	/* widget controller */
 	var c = this;
 	function init() {
@@ -13,16 +13,19 @@
 	// show cancel button based on order status
 	$scope.showCancel = function (order) {
 		return ['shipping', 'processing'].includes(order.statusClass);
-	}
+	};
 	$scope.onStatusChange = function () {
-		console.log('selected status :', $scope.selectedStatus);
 		$scope.server.get({
 			action: 'get_items',
 			status: $scope.selectedStatus,
 		}).then(function (res) {
 			$scope.orders = res.data.orders;
 		});
-	}
+	};
+
+	spUtil.recordWatch($scope, "x_1550111_shopnow_shop_orders", "ordered_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe", function (res) {
+		$scope.onStatusChange();
+	});
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>.custom-input-group {
@@ -171,19 +174,19 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:26:11</sys_created_on>
         <sys_id>fecc288fc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>ShopNow shop orders</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_fecc288fc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 11:27:44</sys_updated_on>
+        <sys_updated_on>2024-11-20 07:22:30</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-md-10">
       <!-- Filter Options -->
-      <div class="panel panel-default">
+      <div class="panel panel-default" ng-if="orders && orders.length">
         <div class="panel-body">
           <div class="row">
             <div class="col-md-3">
@@ -263,10 +266,21 @@
         </div>
       </div>
       <div ng-if="(orders | filter:searchText).length === 0">
-        <p>No orders found</p>
+        <h1>No orders found</h1>
       </div>
     </div>
   </div>
 </div>]]></template>
     </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>fecc288fc3bd521065a51933e401319b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-20 07:14:30</sys_created_on>
+        <sys_id>7423a924c34e5a1065a51933e40131f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-20 07:14:30</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

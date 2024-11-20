@@ -35,11 +35,11 @@
                         "composition": [
                             {
                                 "definition": {
-                                    "id": "2b1c080881e05dc63b917044290b233f",
+                                    "id": "23051643b7e03010097cb81cde11a910",
                                     "type": "MACROPONENT"
                                 },
-                                "elementId": "list___simple_1",
-                                "elementLabel": "List - Simple 1",
+                                "elementId": "vertical_bar_1",
+                                "elementLabel": "Vertical bar 1",
                                 "eventMappings": [],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
@@ -47,168 +47,707 @@
                                 },
                                 "preset": null,
                                 "propertyValues": {
-                                    "bare": {
+                                    "additionalGroupByConfig": {
+                                        "type": "JSON_LITERAL",
+                                        "value": []
+                                    },
+                                    "allowChangeDateRange": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "applyDateRange": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "backgroundRefreshInterval": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "bareBorder": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "cacheExpirationTime": {
+                                        "type": "JSON_LITERAL",
+                                        "value": 0
+                                    },
+                                    "chartExtraConfig": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "chartSize": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "chartVariation": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "stacked"
+                                    },
+                                    "colorConfig": {
+                                        "type": "JSON_LITERAL",
+                                        "value": {
+                                            "type": "default"
+                                        }
+                                    },
+                                    "componentId": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "8z7md18b"
+                                    },
+                                    "configPropModifiers": {
+                                        "type": "JSON_LITERAL",
+                                        "value": {}
+                                    },
+                                    "configVersion": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "23.0.0-ci-SNAPSHOT"
+                                    },
+                                    "contextMenuActions": {
+                                        "type": "JSON_LITERAL",
+                                        "value": []
+                                    },
+                                    "dataCategory": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "dataLabelPosition": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "middle"
+                                    },
+                                    "dataPassthrough": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "dataSources": {
+                                        "container": [
+                                            {
+                                                "container": {
+                                                    "allowRealTime": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": true
+                                                    },
+                                                    "dataCategories": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": [
+                                                            "trend",
+                                                            "group",
+                                                            "simple"
+                                                        ]
+                                                    },
+                                                    "filterQuery": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": ""
+                                                    },
+                                                    "id": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5OTY3Nzk1MzM="
+                                                    },
+                                                    "isDatabaseView": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": false
+                                                    },
+                                                    "label": {
+                                                        "type": "TRANSLATION_LITERAL",
+                                                        "value": {
+                                                            "code": null,
+                                                            "comment": "",
+                                                            "message": "Shop orders"
+                                                        }
+                                                    },
+                                                    "preferredVisualizations": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": [
+                                                            "d24d53f60350de7a652caf3188a46ed2"
+                                                        ]
+                                                    },
+                                                    "reportSourceSysId": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "1a4e9844c3ce961065a51933e4013116"
+                                                    },
+                                                    "sourceType": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "table"
+                                                    },
+                                                    "tableOrViewName": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "x_1550111_shopnow_shop_orders"
+                                                    }
+                                                },
+                                                "type": "MAP_CONTAINER"
+                                            }
+                                        ],
+                                        "type": "LIST_CONTAINER"
+                                    },
+                                    "dateFormat": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "default"
+                                    },
+                                    "description": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "disableTooltip": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "drilldownLabel": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "emptyStateAlignment": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "vertical-centered"
+                                    },
+                                    "emptyStateContent": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "There are no scores available for the selected criteria. Contact your admin for more info."
+                                    },
+                                    "emptyStateHeading": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "No data available."
+                                        }
+                                    },
+                                    "emptyStateIllustration": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "no-data"
+                                    },
+                                    "enableClickAndStay": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "enableCustomEmptyState": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "enableDrilldown": {
                                         "type": "JSON_LITERAL",
                                         "value": true
                                     },
-                                    "columnPreferenceKey": {
+                                    "enableRealTimeUpdate": {
                                         "type": "JSON_LITERAL",
-                                        "value": ""
+                                        "value": false
                                     },
-                                    "columns": {
+                                    "endTime": {
                                         "type": "JSON_LITERAL",
-                                        "value": ""
+                                        "value": null
                                     },
-                                    "fixedQuery": {
+                                    "extensionType": {
                                         "type": "JSON_LITERAL",
-                                        "value": ""
+                                        "value": "bar"
+                                    },
+                                    "filterConfigurations": {
+                                        "binding": {
+                                            "address": [
+                                                "parFilters"
+                                            ]
+                                        },
+                                        "type": "STATE_BINDING"
                                     },
                                     "followFilters": {
                                         "type": "JSON_LITERAL",
                                         "value": true
                                     },
-                                    "groupByField": {
+                                    "forecastConfig": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "formats": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "groupBy": {
+                                        "type": "JSON_LITERAL",
+                                        "value": [
+                                            {
+                                                "disableRanges": false,
+                                                "groupBy": [
+                                                    {
+                                                        "dataSource": "dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5OTY3Nzk1MzM=",
+                                                        "groupByField": "active",
+                                                        "isChoice": false,
+                                                        "isPaBucket": false,
+                                                        "isRange": false
+                                                    }
+                                                ],
+                                                "maxNumberOfGroups": 10,
+                                                "numberOfGroupsBasedOn": "NO_OF_GROUP_BASED_ON_PER_METRIC",
+                                                "showOthers": false
+                                            }
+                                        ]
+                                    },
+                                    "groupByConfig": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "headerTitle": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "headingLevel": {
+                                        "type": "JSON_LITERAL",
+                                        "value": 2
+                                    },
+                                    "headingPosition": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "top"
+                                    },
+                                    "hideDevSettings": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hideMatrixAggregate": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hideYAxis0": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hideYAxis1": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hideYAxis2": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hideYAxis3": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hideYAxis4": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "iconStyle": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "background"
+                                    },
+                                    "legendExpandToFit": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "legendHorizontalAlignment": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "center"
+                                    },
+                                    "legendMaxItemWidth": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "legendPosition": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "bottom"
+                                    },
+                                    "lineStrokeWidth": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "2"
+                                    },
+                                    "metrics": {
+                                        "container": [
+                                            {
+                                                "container": {
+                                                    "aggregateFunction": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "COUNT"
+                                                    },
+                                                    "axisId": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "primary"
+                                                    },
+                                                    "dataSource": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5OTY3Nzk1MzM="
+                                                    },
+                                                    "id": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "ZEdGaWJHVjRYekUxTlRBeE1URmZjMmh2Y0c1dmQxOXphRzl3WDI5eVpHVnljekUzTXpFNU9UWTNOemsxTXpNPTE3MzE5OTY3ODEzNDk="
+                                                    },
+                                                    "numberFormat": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": {
+                                                            "customFormat": false
+                                                        }
+                                                    }
+                                                },
+                                                "type": "MAP_CONTAINER"
+                                            }
+                                        ],
+                                        "type": "LIST_CONTAINER"
+                                    },
+                                    "newReporting": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "numberOfPeriods": {
+                                        "type": "JSON_LITERAL",
+                                        "value": 3
+                                    },
+                                    "pageId": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "period": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "refreshFrequency": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "refreshRequest": {
                                         "type": "JSON_LITERAL",
                                         "value": ""
                                     },
-                                    "hideColumnFiltering": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideColumnGrouping": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideColumnReorder": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideColumnResizing": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideColumnSorting": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideDotwalk": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideEmptyStateImage": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideHeader": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideHighlightContent": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideHighlightedValues": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideInlineEditing": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideLastRefreshedText": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideLinks": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hidePersonalization": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideRefreshButton": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideRowSelector": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideTitle": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideTitleRowCount": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideViewAll": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "highlightContent": {
-                                        "type": "JSON_LITERAL",
-                                        "value": {
-                                            "color": "",
-                                            "patterns": []
-                                        }
-                                    },
-                                    "highlightedValueConfigId": {
+                                    "scoreIcon": {
                                         "type": "JSON_LITERAL",
                                         "value": ""
                                     },
-                                    "isDashboard": {
+                                    "scoreSize": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "auto"
+                                    },
+                                    "scoreType": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "selectedElements": {
+                                        "type": "JSON_LITERAL",
+                                        "value": []
+                                    },
+                                    "showAbsolutePeriod": {
                                         "type": "JSON_LITERAL",
                                         "value": false
                                     },
-                                    "limit": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "listTitle": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "All Active Tasks"
-                                        }
-                                    },
-                                    "maxCharLimit": {
-                                        "type": "JSON_LITERAL",
-                                        "value": 4000
-                                    },
-                                    "maxColumns": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "nrlLandmark": {
-                                        "type": "JSON_LITERAL",
-                                        "value": true
-                                    },
-                                    "overrideWordWrapUserPref": {
+                                    "showAdditionalGroupBySelector": {
                                         "type": "JSON_LITERAL",
                                         "value": false
-                                    },
-                                    "query": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "active=true"
-                                    },
-                                    "refreshRequested": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
                                     },
                                     "showBorder": {
                                         "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "showCacheTime": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "showChange": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "showChangeFrom": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "showChangePercentage": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "showClosestSeriesOnHover": {
+                                        "type": "JSON_LITERAL",
                                         "value": false
                                     },
-                                    "table": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "x_1550111_shopnow_shop_orders"
-                                    },
-                                    "wordWrap": {
+                                    "showComment": {
                                         "type": "JSON_LITERAL",
                                         "value": false
+                                    },
+                                    "showConfidenceBand": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showDataLabels": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showDataPassthrough": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showDataTable": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showDateRangeByDefault": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showFilterIcon": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "showFirstGroupAggregate": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showForecast": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showForecastRange": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showGapPercentage": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "showHeader": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "showHeaderSeparator": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showLegend": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "showLegendValue": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showMaximumRange": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showMetricLabel": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "showOverlappingLabels": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showRefresh": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "showScoreDate": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showScoreUpdateTime": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showSecondGroupAggregate": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showSparkline": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showStackedValues": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "none"
+                                    },
+                                    "showSubAggregate": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showTarget": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showThreshold": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showTotalAggregate": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showTotalValue": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "showTrend": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showXGrid": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "showYGrid": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "showZero": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "sortBy": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "value"
+                                    },
+                                    "sortByOrder": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "desc"
+                                    },
+                                    "sparklineStyle": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "area"
+                                    },
+                                    "standardFormatData": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "startTime": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "telemetry": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "trendBy": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "useDataCache": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "useRelativeScoreTime": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "wrapTitle": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "xAxisMaxLabelSize": {
+                                        "type": "JSON_LITERAL",
+                                        "value": 100
+                                    },
+                                    "xAxisTitle": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "xAxisTruncationType": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "end"
+                                    },
+                                    "xAxisWrapLabels": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "yAxis0From": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis0Position": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "left"
+                                    },
+                                    "yAxis0Title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis0To": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis1From": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis1Position": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "right"
+                                    },
+                                    "yAxis1Title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis1To": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis2From": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis2Position": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "right"
+                                    },
+                                    "yAxis2Title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis2To": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis3From": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis3Position": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "right"
+                                    },
+                                    "yAxis3Title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis3To": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis4From": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis4Position": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "right"
+                                    },
+                                    "yAxis4Title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxis4To": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxisFrom": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxisHidden": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "yAxisPosition": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "bottom"
+                                    },
+                                    "yAxisShowGrid": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    },
+                                    "yAxisStyle": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "default"
+                                    },
+                                    "yAxisTitle": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "yAxisTo": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
                                     }
                                 },
                                 "slot": null,
@@ -220,7 +759,7 @@
                                 "children": null,
                                 "items": [
                                     {
-                                        "element_id": "list___simple_1",
+                                        "element_id": "vertical_bar_1",
                                         "styles": {}
                                     }
                                 ],
@@ -518,7 +1057,10 @@
         <output_prop_mapping/>
         <props>[]</props>
         <required_translations>[ {
-  "message" : "All Active Tasks",
+  "message" : "No data available.",
+  "comment" : ""
+}, {
+  "message" : "Shop orders",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -531,14 +1073,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-18 14:29:13</sys_created_on>
         <sys_id>1d737840c342d61065a51933e40131d2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>ShopNow Dashboard default</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sys_ux_macroponent_1d737840c342d61065a51933e40131d2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 14:33:52</sys_updated_on>
+        <sys_updated_on>2024-11-19 06:17:32</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=1d737840c342d61065a51933e40131d2"/>
 </record_update>
