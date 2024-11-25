@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function ($scope, spUtil) {
+        <client_script><![CDATA[api.controller = function ($scope, spUtil, spModal) {
 	/* widget controller */
 	var c = this;
 	c.searchText = '';
@@ -20,11 +20,27 @@
 		});
 	};
 
+	$scope.cancelOrder = function (order) {
+		console.log('Order with id mark as cancelled :' + JSON.stringify(order, null, 2));
+		spModal.confirm("Are you sure, you want to cancel this order ?").then(function (confirmed) {
+			if (confirmed) {
+				$scope.server.get({
+					action: 'cancel_order',
+					orderId: order.sysId,
+				}).then(function (res) {
+					console.log('order cancelled');
+					// c.data.orders = res.data.orders;
+				});
+			}
+		});
+	};
+
 	$scope.refreshData = function () {
 		this.server.refresh();
 	}
 
 	spUtil.recordWatch($scope, "x_1550111_shopnow_shop_orders", "ordered_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe", function (res) {
+		console.log('Refresh called');
 		if (c.selectedStatus) return;
 		$scope.refreshData();
 	});
@@ -114,6 +130,20 @@
         <script><![CDATA[(function () {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
+	if (input && input.action === 'cancel_order' ) {
+		if (!input.orderId) {
+			gs.addErrorMessage('Order id is not provided.');
+			return;
+		}
+		var updateOrderGr = new GlideRecord("x_1550111_shopnow_shop_orders");
+		updateOrderGr.addQuery('sys_id', input.orderId);
+		updateOrderGr.query();
+		if (updateOrderGr.next()) {
+			updateOrderGr.order_status = 'cancelled';
+			updateOrderGr.update();
+		}
+		return;
+	}
 	function formatDate(date) {
 		var gd = new GlideDate();
 		gd.setValue(date);
@@ -136,6 +166,7 @@
 		ordersGr.query();
 		while (ordersGr.next()) {
 			var orderObj = {
+				sysId: ordersGr.sys_id.toString(),
 				placedDate: formatDate(new GlideDateTime(ordersGr.sys_created_on).getDate()),
 				total: ordersGr.total_amount.getDisplayValue(),
 				shipTo: ordersGr.ordered_by.name.getDisplayValue(),
@@ -176,14 +207,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:26:11</sys_created_on>
         <sys_id>fecc288fc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>174</sys_mod_count>
+        <sys_mod_count>210</sys_mod_count>
         <sys_name>ShopNow shop orders</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_fecc288fc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-23 13:32:17</sys_updated_on>
+        <sys_updated_on>2024-11-25 09:17:43</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-md-10">
@@ -234,7 +265,6 @@
             </div>
             <div class="col-md-3">
               <strong>ORDER # {{ order.orderId }}</strong><br />
-              <a href="javascript:void(0);">View order details</a>
             </div>
           </div>
         </div>

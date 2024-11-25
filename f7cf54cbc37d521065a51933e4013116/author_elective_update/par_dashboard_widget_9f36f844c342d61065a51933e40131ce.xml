@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">b3c478c0c342d61065a51933e40131d5</canvas>
+        <component display_value="Pie">96abe7e38d8790718022c5630a92176c</component>
+        <component_props>{"applyDateRange":false,"bareBorder":false,"colorConfig":{"type":"default"},"configVersion":"23.0.0-ci-SNAPSHOT","dataLabelsType":"value","dataSources":[{"allowRealTime":true,"dataCategories":["group","simple","trend"],"filterQuery":"","id":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","isDatabaseView":false,"preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"sourceType":"table","tableOrViewName":"x_1550111_shopnow_shop_orders","label":"Shop orders"}],"dateFormat":"default","emptyStateHeading":"No data available.","emptyStateIllustration":"add-data","enableCustomEmptyState":false,"enableDrilldown":true,"enableRealTimeUpdate":false,"filterConfigurations":"@state.parFilters","followFilters":true,"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","groupByField":"order_status","isChoice":true,"isPaBucket":false,"isRange":false}],"maxNumberOfGroups":12,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":true,"disableRanges":false}],"headerTitle":"Status of Today's Orders","hideMatrixAggregate":false,"legendExpandToFit":false,"legendHorizontalAlignment":"center","metrics":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","id":"ZEdGaWJHVjRYekUxTlRBeE1URmZjMmh2Y0c1dmQxOXphRzl3WDI5eVpHVnljekUzTXpFNU16TXlNalEyTmpNME5EYzFORFV4Tnk0eE1ERXpPVE16TVE9PTE3MzE5MzMyMjQ2NjQ2ODg3NTI3My4xMzg4NDczOA==","numberFormat":{"customFormat":false},"dateFormat":{"customFormat":false},"stringFormat":{"customFormat":false}}],"newReporting":false,"numberOfPeriods":2,"period":"M","registerOrientation":"horizontal","registerPosition":"bottom","showAbsolutePeriod":false,"showBorder":true,"showChange":false,"showChangeFrom":"previous","showChangePercentage":false,"showComment":false,"showConfidenceBand":false,"showDataLabels":false,"showDataPassthrough":false,"showFilterIcon":true,"showFirstGroupAggregate":false,"showForecast":false,"showForecastRange":false,"showGapPercentage":false,"showHeader":true,"showHeaderSeparator":true,"showMaximumRange":false,"showMetricLabel":false,"showRegister":true,"showRegisterOnSameLine":false,"showRegisterPercentage":true,"showRegisterValue":true,"showSecondGroupAggregate":false,"showSparkline":false,"showSubAggregate":false,"showTarget":false,"showThreshold":false,"showTotalAggregate":false,"showTrend":false,"sortBy":"value","sortByOrder":"desc","telemetry":"null","truncationType":"start","wrapTitle":true,"componentId":"hb42tjxx","id":"metrics","value":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","id":"ZEdGaWJHVjRYekUxTlRBeE1URmZjMmh2Y0c1dmQxOXphRzl3WDI5eVpHVnljekUzTXpFNU16TXlNalEyTmpNME5EYzFORFV4Tnk0eE1ERXpPVE16TVE9PTE3MzE5MzMyMjQ2NjQ2ODg3NTI3My4xMzg4NDczOA==","numberFormat":{"customFormat":false},"dateFormat":{"customFormat":false},"stringFormat":{"customFormat":false}}],"noDebounce":true,"propLabel":"Metric label","showDateRangeByDefault":false,"allowChangeDateRange":false,"scoreType":null}</component_props>
+        <h>19</h>
+        <name>Status of Today's Orders</name>
+        <stored_component display_value="Status of Today's Orders">e9da3112327d4ab7b93e70afd78041a8</stored_component>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 14:41:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9f36f844c342d61065a51933e40131ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Status of Today's Orders</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>par_dashboard_widget_9f36f844c342d61065a51933e40131ce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 14:41:23</sys_updated_on>
+        <visualization/>
+        <w>22</w>
+        <widget_props/>
+        <x>25</x>
+        <y>0</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>par_dashboard_widget_9f36f844c342d61065a51933e40131ce</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">b3c478c0c342d61065a51933e40131d5</canvas><component display_value="Pie">96abe7e38d8790718022c5630a92176c</component><component_props>{"applyDateRange":false,"bareBorder":false,"colorConfig":{"type":"default"},"configVersion":"23.0.0-ci-SNAPSHOT","dataLabelsType":"value","dataSources":[{"allowRealTime":true,"dataCategories":["group","simple","trend"],"filterQuery":"","id":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","isDatabaseView":false,"preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"sourceType":"table","tableOrViewName":"x_1550111_shopnow_shop_orders","label":"Shop orders"}],"dateFormat":"default","emptyStateHeading":"No data available.","emptyStateIllustration":"add-data","enableCustomEmptyState":false,"enableDrilldown":true,"enableRealTimeUpdate":false,"filterConfigurations":"@state.parFilters","followFilters":true,"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","groupByField":"order_status","isChoice":true,"isPaBucket":false,"isRange":false}],"maxNumberOfGroups":12,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":true,"disableRanges":false}],"headerTitle":"Status of Today's Orders","hideMatrixAggregate":false,"legendExpandToFit":false,"legendHorizontalAlignment":"center","metrics":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","id":"ZEdGaWJHVjRYekUxTlRBeE1URmZjMmh2Y0c1dmQxOXphRzl3WDI5eVpHVnljekUzTXpFNU16TXlNalEyTmpNME5EYzFORFV4Tnk0eE1ERXpPVE16TVE9PTE3MzE5MzMyMjQ2NjQ2ODg3NTI3My4xMzg4NDczOA==","numberFormat":{"customFormat":false},"dateFormat":{"customFormat":false},"stringFormat":{"customFormat":false}}],"newReporting":false,"numberOfPeriods":2,"period":"M","registerOrientation":"horizontal","registerPosition":"bottom","showAbsolutePeriod":false,"showBorder":true,"showChange":false,"showChangeFrom":"previous","showChangePercentage":false,"showComment":false,"showConfidenceBand":false,"showDataLabels":false,"showDataPassthrough":false,"showFilterIcon":true,"showFirstGroupAggregate":false,"showForecast":false,"showForecastRange":false,"showGapPercentage":false,"showHeader":true,"showHeaderSeparator":true,"showMaximumRange":false,"showMetricLabel":false,"showRegister":true,"showRegisterOnSameLine":false,"showRegisterPercentage":true,"showRegisterValue":true,"showSecondGroupAggregate":false,"showSparkline":false,"showSubAggregate":false,"showTarget":false,"showThreshold":false,"showTotalAggregate":false,"showTrend":false,"sortBy":"value","sortByOrder":"desc","telemetry":"null","truncationType":"start","wrapTitle":true,"componentId":"hb42tjxx","id":"metrics","value":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzE1NTAxMTFfc2hvcG5vd19zaG9wX29yZGVyczE3MzE5MzMyMjQ2NjM0NDc1NDUxNy4xMDEzOTMzMQ==","id":"ZEdGaWJHVjRYekUxTlRBeE1URmZjMmh2Y0c1dmQxOXphRzl3WDI5eVpHVnljekUzTXpFNU16TXlNalEyTmpNME5EYzFORFV4Tnk0eE1ERXpPVE16TVE9PTE3MzE5MzMyMjQ2NjQ2ODg3NTI3My4xMzg4NDczOA==","numberFormat":{"customFormat":false},"dateFormat":{"customFormat":false},"stringFormat":{"customFormat":false}}],"noDebounce":true,"propLabel":"Metric label","showDateRangeByDefault":false,"allowChangeDateRange":false,"scoreType":null}</component_props><h>19</h><name>Status of Today's Orders</name><stored_component display_value="Status of Today's Orders">e9da3112327d4ab7b93e70afd78041a8</stored_component><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-18 14:41:23</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9f36f844c342d61065a51933e40131ce</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Status of Today's Orders</sys_name><sys_overrides/><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>par_dashboard_widget_9f36f844c342d61065a51933e40131ce</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-18 14:41:23</sys_updated_on><visualization/><w>22</w><widget_props/><x>25</x><y>0</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>782527612</payload_hash>
+        <record_name>Status of Today's Orders</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 14:41:23</sys_created_on>
+        <sys_id>5f36f844c342d61065a51933e40131d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1933fb89b090000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 14:41:23</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>5336f8443a42d610f023e2023773b3d0</update_guid>
+        <update_guid_history>5336f8443a42d610f023e2023773b3d0:782527612</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Status of Today's Orders">55e2645ec386925065a51933e4013136</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-25 13:03:12</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>2c5ae66a448e4cabb7e11f7457aeb771</sys_id>
+        <sys_metadata>9f36f844c342d61065a51933e40131ce</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Status of Today's Orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_9f36f844c342d61065a51933e40131ce</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_9f36f844c342d61065a51933e40131ce">5f36f844c342d61065a51933e40131d0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-25 13:03:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
