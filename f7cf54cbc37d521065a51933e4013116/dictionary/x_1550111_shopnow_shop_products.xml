@@ -14,7 +14,7 @@
         <element label="Available" max_length="40" name="available" type="boolean"/>
         <element label="Full details" max_length="65536" name="full_details" type="html"/>
         <element label="Picture" mandatory="true" max_length="40" name="picture" type="user_image"/>
-        <element label="Product Attachment" max_length="40" name="product_pic" type="file_attachment"/>
+        <element label="Product attachment" max_length="40" name="product_pic" type="file_attachment"/>
         <element label="Price" mandatory="true" max_length="40" name="price" type="float"/>
         <element attributes="edge_encryption_enabled=true" display="true" label="Title" mandatory="true" max_length="255" name="title" type="string_full_utf8"/>
         <element label="Product description" mandatory="true" max_length="8000" name="product_description" type="html"/>

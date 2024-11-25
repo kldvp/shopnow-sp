@@ -4,7 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=11403000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=419457000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>26000</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -15,7 +15,7 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>medicalapproval</internal_name>
-        <label_cache>[{"name":"Created_1.current.ordered_by.name","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null],"3648643a-9617-4495-89a0-984c46f44fe1":[null]}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.__action_status__","label":"2 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null]},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.ordered_by.email","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":["ah_to"]}},{"name":"Created_1.current.ordered_by","label":"Trigger - Record Created➛Shop orders Record➛Ordered by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1550111_shopnow_shop_orders","column_name":"ordered_by","usedInstances":{}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.39c5fea2c331121065a51933e4013119}}","label":"Shop Doctors","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["approval_conditions"]}},{"name":"c771f31d-157c-48ae-bf41-8d680aebe008.record","label":"1 - Update Record➛x_1550111_shopnow_shop_orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Shop orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"c771f31d-157c-48ae-bf41-8d680aebe008":["record"],"3d383bb2-dcc6-4c3d-b297-11e5fd65fd89":["record"],"67b780ff-47b3-4e51-8897-c6086064dcbe":["record"],"3648643a-9617-4495-89a0-984c46f44fe1":["record",null],"dce6f124-5824-424d-ad67-86b38cb4a5c3":["record"]},"attributes":{}}]</label_cache>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Shop orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"c771f31d-157c-48ae-bf41-8d680aebe008":["record"],"3d383bb2-dcc6-4c3d-b297-11e5fd65fd89":["record"],"67b780ff-47b3-4e51-8897-c6086064dcbe":["record"],"3648643a-9617-4495-89a0-984c46f44fe1":["record",null],"dce6f124-5824-424d-ad67-86b38cb4a5c3":["record"]},"attributes":{}},{"name":"c771f31d-157c-48ae-bf41-8d680aebe008.record","label":"1 - Update Record➛x_1550111_shopnow_shop_orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.39c5fea2c331121065a51933e4013119}}","label":"Shop Doctors","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["approval_conditions"]}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.ordered_by","label":"Trigger - Record Created➛Shop orders Record➛Ordered by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1550111_shopnow_shop_orders","column_name":"ordered_by","usedInstances":{}},{"name":"Created_1.current.ordered_by.email","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":["ah_to"]}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.__action_status__","label":"2 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null]},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.ordered_by.name","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null],"3648643a-9617-4495-89a0-984c46f44fe1":[null]}}]</label_cache>
         <master_snapshot>30527414c3461a1065a51933e401318c</master_snapshot>
         <master_snapshot_digest/>
         <name>MedicalApproval</name>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c0a94898c3421a1065a51933e4013164</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>MedicalApproval</sys_name>
         <sys_overrides/>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sys_hub_flow_c0a94898c3421a1065a51933e4013164</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:01</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:55</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
@@ -82,14 +82,14 @@
         <identifier>c0a94898c3421a1065a51933e4013164</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-11-19 09:15:01</sys_created_on>
-        <sys_id>2c25f818c3461a1065a51933e4013182</sys_id>
+        <sys_created_on>2024-11-24 02:35:55</sys_created_on>
+        <sys_id>0fb98db9c342125065a51933e401312b</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:01</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:55</sys_updated_on>
         <trigger display_value="">5552b414c3461a1065a51933e4013102</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=c0a94898c3421a1065a51933e4013164^sys_idNOT IN2c25f818c3461a1065a51933e4013182"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=c0a94898c3421a1065a51933e4013164^sys_idNOT IN0fb98db9c342125065a51933e401312b"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=c0a94898c3421a1065a51933e4013164"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=c0a94898c3421a1065a51933e4013164^sys_idNOT IN4ca908d8c3421a1065a51933e4013151"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -310,10 +310,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:40</sys_created_on>
         <sys_id>1b423414c3461a1065a51933e40131ad</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:29</sys_updated_on>
+        <sys_updated_on>2024-11-24 03:12:14</sys_updated_on>
         <ui_id>ea0b2d66-12d2-4970-837d-e96336f432e8</ui_id>
         <values>H4sIAAAAAAAA/+1Y32/aOhj9Vyo/UxYTUgJv1VCv7tXdJrVVX0oVGftL8WScLHa6soj/fY7thAxWChMvVfdU+fuV852egwn3FeIMTdAoTgcwHg+COQ6CMAjiiAZxCPNwdDEKCQ1QD0myBFNZAM0KZs5PRJR1oKroaITTELNzHI3o+TAmcD5Ph/g8ZhdxQGAOZl7f9a3XppNxlQuyuvMDTIQuuGAFSDS5f+ihnBTmWRoKNKm2UoeCFWQOwpReN2i30etVXp9ZRsslSJ3wJvi/75z6zNm/U5MxTTWcoIfgWYNkYHCkRCjooSWRjOisWKGJLkoTKICwL1Ks2ooFl9rtuSTPiv8wDw4HdV0KZjHqOWiPt2QuYOo4cql0SjS5MdOpLouWsoxTUI4WBikphf7YjbmCL7nmmXQtuh7suzNRLuVnRwpqB3T+JaWChEFe71qjd6ulN4vs+3UD9IpLy4pfU2SUiPZEtC74vNQ1nAqBAEvzkuQ5l49JXmRP3DYbKMv+ozCHfiqy7+aZij/KPqE17r5hlvSvTHxqw3ek4PUSn8wY07zuIbVSHwVRarOK4TH5VtZI3GJ+hcSy4Cio+2jBc31pnvIEHvO6580wp3v1RTdycuM2XnhOcBQFGONELbJcmnXqv4lVj9pV/mvlx9niANiNLW497q01vCnsMbG5Xz1h284+u4S3BN5vCR/ZeMIJ6TeWiIM3Zgm/2pv3xGt2CPA+XbF4oyODwOxARJJyEN07oknsWqCTOU7tB6Bq1H7pn3F25WG9BNfr3x5/p3/bv6X/wZH6f/lOiIPgrVngPd0KdK/gINzo6mtWFnKPC5IFV1YdL7qhU3GcKw4A2bjiP4dy2xTb4P/EE+FfT7wPTwyjvXLrfMVolU0zyXiNWHWc4T6hQV3DV6BaXcrVP/dVpTTRnPbDMY1SIAMahhgPcHARkQiPwxCGATaR8Xr9sOukE0w8znkHUNG+lJQC1GvUeN+1ycI3db3XXmzNRO+/4aleU96g/d7LtzK6V2/peKMvVhqCiO6+p1Qz5GDP0GSGZCZhhnozVFcltcBs2FQYcG3CxqpqvXaRsiB+AO4cN92MrJStVHQBzOjTRn+JJNYQPn6KHwYO4KTx4LSEs6kjZZcm770Wp+OF79x9N77ATvpwy7t3YHSyO3D414KnsKCByZP2dcNccOZT8IS+fPgJ9pc1EEsTAAA=</values>
     </sys_hub_action_instance_v2>
@@ -332,10 +332,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:40</sys_created_on>
         <sys_id>1b423414c3461a1065a51933e40131b1</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:29</sys_updated_on>
+        <sys_updated_on>2024-11-24 03:12:14</sys_updated_on>
         <ui_id>67b780ff-47b3-4e51-8897-c6086064dcbe</ui_id>
         <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPURQTQC1vEwhpUtdK7cRLV0VOfAOWnI/ZDoUh/vuuEydE0LVU6gsaL8j3y+ec3JM874ngZEpGwAN6SydJSMNwGATDmxGNJ2FMhzxkAJR4JGcZYKWCpFAczxsmKxvY72cKmAEeUT+plILcHA6Y50KXku2WrgwjyVpIjnkyfX7xSMkUTjSgyHR/kroUkmQxSCx9bDGdYjS70p55kVQZ4opEG7xznXOXGXyfYwabLBwaeAS2BnIOCCRlUoNHMpZzZgq1I1OjKgwgaf6Qy11XsRa5aYhmbKvFH7x5FNi6FJBZ4kTojj9ZLGHeiNSk0jkz7AmnJ6ZSnWaFSEA3unBIWSXNrB9rCh5KI4q8aTF2sOsuZJXl940qpBvQeyaVhohDabla9A219GldvD62QBcir2VxNGWRMNmdmDFKxJWxcPYEJNQ6Z6wsRb6KSlVsRN2MUDJ/JfHgp7J4xTu1WOU+SyxuH5Vl/gLj8zq8ZEpYEj9wDDYfPKJ3eiaZ1kcqqGP0u7JIGmKOQlSrUEsQ1dtgmxMlSvMNr9qAA37w3OLH4/e2LLk9LlVv5nH5txEdjwNKaaTXRZkjMfsf1Yukz03wUfnnHHIB9tYh9bL9g4szyVnsrt87uG8SziLjL7PIzbVZxFG5eo985Ixg+O77t7dNtRl0zxX1kkTaMFPpX1UQhBxJ4uPQyPfcFB9Uf84TF6BuPbEQILl+g0ZrCMgQpoGooXViCpccLF2y+3Z8mTPoJKh/V+aP/+YT8vIX5BjlND0JAAA=</values>
     </sys_hub_action_instance_v2>
@@ -354,10 +354,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:40</sys_created_on>
         <sys_id>1b423414c3461a1065a51933e40131b2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:29</sys_updated_on>
+        <sys_updated_on>2024-11-24 03:12:14</sys_updated_on>
         <ui_id>dce6f124-5824-424d-ad67-86b38cb4a5c3</ui_id>
         <values>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</values>
     </sys_hub_action_instance_v2>
@@ -376,10 +376,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:40</sys_created_on>
         <sys_id>5f423414c3461a1065a51933e40131b3</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:29</sys_updated_on>
+        <sys_updated_on>2024-11-24 03:12:14</sys_updated_on>
         <ui_id>3d383bb2-dcc6-4c3d-b297-11e5fd65fd89</ui_id>
         <values>H4sIAAAAAAAA/+VVXW/aMBT9K5WfoygmgFreJhDSpK6V2omXroqMfQOWnI/ZDoUh/vuuExMi6CiV+oKWF+T75XNO7iEvWyIFGZE+iIje0SGPaRz3oqh326fzYTynPREzAEoCkrMMsFIDL7TA84qpygW227EGZkEkNOSV1pDb3Q7zQppSsc3Ml2GEL6USmCejl9eAlEzjRAuajLZHqUshKTYHhaVPe0zHGO2mdGdR8CpDXIncB+9958Rnbr5PMINNDg6NAgJrC7kABJIyZSAgGcsFs4XekJHVFQaQtHjM1aatWMrcNkQztjbyD97cj1xdCsiMexHa4082VzBpRGpS6YRZ9ozTua10q1khOZhGFwEpq5Qdd2NNwWNpZZE3LdYN9t2FqrL8oVGFtAM676QykAgoHVeHvqGWPi+Lt6c90KnMa1k8TVVwptoTs1bLeWUdnC0BBbXOGStLmS+SUhcrWTcjlCxcKDyEqSre8E4jF3nIuMMdorIsnGJ8UodnTEtH4geOweZdQMzGjBUz5kAFdUx+Vw5JQ8xTSGoVagmSehtcM9eytN/wqhV44LvAL/58cG7L+N1hqTozD8u/TuhgEFFKE7MsyhyJud+kXiRzaoKPyj/nkAuw7x1SL9s/uHiTnMTuu703D03CW2TwZRa5vTaLeCpX75GPnBH1zv7/drapNoPpuKJeksRYZivzq4qiWHCGIikF4tQT54s/54gLMO8dMZWghHmHxN4OkCFKC0lD6sgSPnkz88n2y/FlvqDDqH6uzB3/zQfk9S+LKmkPOwkAAA==</values>
     </sys_hub_action_instance_v2>
@@ -398,10 +398,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 07:22:25</sys_created_on>
         <sys_id>765bd894c3c21a1065a51933e4013112</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:29</sys_updated_on>
+        <sys_updated_on>2024-11-24 03:12:14</sys_updated_on>
         <ui_id>c771f31d-157c-48ae-bf41-8d680aebe008</ui_id>
         <values>H4sIAAAAAAAA/+VVXW/aMBT9K5WfoygmgFreJhDSpK6V2omXroqc+AYsOR+zHQpD/PddJ06IoKNU6gtaXpDvl885uYe87IjgZEKGwAN6R8dJSMNwEASD2yGNx2FMBzxkAJR4JGcZYKWCpFAcz2smKxvY7aYKmAEeUT+plILc7PeY50KXkm0XrgwjyUpIjnkyeXn1SMkUTjSgyGR3lLoUkmQxSCx9ajEdYzTb0p55kVQZ4opEG7x3nTOXufk+www2WTg08AhsDOQcEEjKpAaPZCznzBRqSyZGVRhA0vwxl9uuYiVy0xDN2EaLP3jzMLB1KSCzxInQHX+yWMKsEalJpTNm2DNOT0ylOs0KkYBudOGQskqaaT/WFDyWRhR502LsYNddyCrLHxpVSDeg904qDRGH0nK16Btq6fOqeHtqgc5FXsviaMoiYbI7MWOUiCtj4ewISKh1zlhZinwZlapYi7oZoWT+UuLBT2Xxhndqscx9lljcPirL/DnGZ3V4wZSwJH7gGGzee0Rv9VQyrQ9UUMfod2WRNMQchahWoZYgqrfBNidKlOYbXrUGB3zvucWPR+e2LLk7LFVv5mH5NxEdjQJKaaRXRZkjMfsb1YukT03wUfnnHHIB9tYh9bL9g4szyUnsvt9789AknEVGX2aR22uziKNy9R75yBnB4Oz/b2+bajPonivqJYm0YabSv6ogCDmCRJqI5MQSZ2s/54cLELd+mAuQXL9DoTUDZAjSQNRQOjKES94sXLL7bnyZK+g4qJ8r88Z/8/l4/QurDXIKOQkAAA==</values>
     </sys_hub_action_instance_v2>
@@ -420,10 +420,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:40</sys_created_on>
         <sys_id>9b423414c3461a1065a51933e40131b4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:29</sys_updated_on>
+        <sys_updated_on>2024-11-24 03:12:14</sys_updated_on>
         <ui_id>3648643a-9617-4495-89a0-984c46f44fe1</ui_id>
         <values>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</values>
     </sys_hub_action_instance_v2>
@@ -447,10 +447,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:40</sys_created_on>
         <sys_id>9b423414c3461a1065a51933e40131b0</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:14:59</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:53</sys_updated_on>
         <ui_id>a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e</ui_id>
         <values>H4sIAAAAAAAA/+VUTW/bMAz9K4bPjiHbiZvkVmwoUGBbgbXoZSsMWqIbYbLkWXLSLMh/H+WPtlhT7AO97WY9iuR75JMPoelc0zl7Y86tlfc6XH+5i0KpPUbfh1BDjeE65EYL6aTRRQ9E4RZU5wOXVWA3pgmE4c60ATRNa7YooqBRwDEAHZhWYEsZQlrC9rd/ncg3UokWR24NtMTAUWR9+CXk9g0WCkpUVP/atVLfU7oUdKoYVMmKJzxL8yxlLF3OkzLPyiQVGSBkdG9KfDdJDT70SPTqDHw/wu3UaSC8TlgU4oNDLZBaV6AsRmENWgAJ3T8iLYK40uoJ2EjtqFzoLz9Y+YNqp4uFv1ghaeQ4BPnGSI5XjWcyIA5KNQWN6mr9aSDsh44VdMpNQyeks1gIbDw7327sXV1vzO7z1OhC6l7JGFSGg3o8gSO9ZefQ+g2gwpoKFTUtkKZQ+C3KPpm41PG9okNcKbOjpt5gMXBPPKZhQHxB+PsevoVWehUfqUy/dE+zBCt50ZuRyrmWJBz7cRTfO09oEDhKKYZp0AXLW9m4c+qzxZH1MXrp5GcmPhwQWJmKPJ+RIdLZfHXGZsvsTMxwlWdZXs2zFJfx4FFQhXXg8Hj82jGWicm5Ly3+VmXf4gGsYFEtErY4/QDm+akHcML6r7s+/Y3r/fr+0PSMsf/U9dIWg3tHbX3zfzb9nXf40MEOBhHIpSUiNx67nP7yPrCnTUv+HNqZ9puX8IQdfwJa3EBXLwYAAA==</values>
         <workflow_reference/>
@@ -458,7 +458,7 @@
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">df423414c3461a1065a51933e40131b2</block>
-        <comment/>
+        <comment>If shop doctor rejected, cancel order</comment>
         <connected_to>a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e</connected_to>
         <decision_table/>
         <display_text/>
@@ -473,10 +473,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:40</sys_created_on>
         <sys_id>d7423414c3461a1065a51933e40131b3</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:14:59</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:53</sys_updated_on>
         <ui_id>b452526b-4036-4717-8d24-4994e654d62a</ui_id>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
@@ -632,7 +632,7 @@
         <description>Approval flow for medicine related orders</description>
         <flow_priority>MEDIUM</flow_priority>
         <internal_name>medicalapproval</internal_name>
-        <label_cache>[{"name":"Created_1.current.ordered_by.name","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null],"3648643a-9617-4495-89a0-984c46f44fe1":[null]}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.__action_status__","label":"2 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null]},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.ordered_by.email","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":["ah_to"]}},{"name":"Created_1.current.ordered_by","label":"Trigger - Record Created➛Shop orders Record➛Ordered by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1550111_shopnow_shop_orders","column_name":"ordered_by","usedInstances":{}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.39c5fea2c331121065a51933e4013119}}","label":"Shop Doctors","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["approval_conditions"]}},{"name":"c771f31d-157c-48ae-bf41-8d680aebe008.record","label":"1 - Update Record➛x_1550111_shopnow_shop_orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Shop orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"c771f31d-157c-48ae-bf41-8d680aebe008":["record"],"3d383bb2-dcc6-4c3d-b297-11e5fd65fd89":["record"],"67b780ff-47b3-4e51-8897-c6086064dcbe":["record"],"3648643a-9617-4495-89a0-984c46f44fe1":["record",null],"dce6f124-5824-424d-ad67-86b38cb4a5c3":["record"]},"attributes":{}}]</label_cache>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Shop orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"c771f31d-157c-48ae-bf41-8d680aebe008":["record"],"3d383bb2-dcc6-4c3d-b297-11e5fd65fd89":["record"],"67b780ff-47b3-4e51-8897-c6086064dcbe":["record"],"3648643a-9617-4495-89a0-984c46f44fe1":["record",null],"dce6f124-5824-424d-ad67-86b38cb4a5c3":["record"]},"attributes":{}},{"name":"c771f31d-157c-48ae-bf41-8d680aebe008.record","label":"1 - Update Record➛x_1550111_shopnow_shop_orders Record","reference":"x_1550111_shopnow_shop_orders","reference_display":"Shop orders","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.39c5fea2c331121065a51933e4013119}}","label":"Shop Doctors","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"ea0b2d66-12d2-4970-837d-e96336f432e8":["approval_conditions"]}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.ordered_by","label":"Trigger - Record Created➛Shop orders Record➛Ordered by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1550111_shopnow_shop_orders","column_name":"ordered_by","usedInstances":{}},{"name":"Created_1.current.ordered_by.email","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":["ah_to"]}},{"name":"ea0b2d66-12d2-4970-837d-e96336f432e8.__action_status__","label":"2 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null]},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.ordered_by.name","label":"Trigger - Record Created➛Shop orders Record➛Ordered by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"dce6f124-5824-424d-ad67-86b38cb4a5c3":[null],"3648643a-9617-4495-89a0-984c46f44fe1":[null]}}]</label_cache>
         <master>true</master>
         <name>MedicalApproval</name>
         <natlang/>
@@ -649,7 +649,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>30527414c3461a1065a51933e401318c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -657,7 +657,7 @@
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:01</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:54</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow_snapshot>
@@ -741,14 +741,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:46</sys_created_on>
         <sys_id>38527414c3461a1065a51933e401318e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:00</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -825,14 +825,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:46</sys_created_on>
         <sys_id>49527414c3461a1065a51933e40131be</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:01</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1020,10 +1020,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:47</sys_created_on>
         <sys_id>05527414c3461a1065a51933e40131c8</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:01</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:54</sys_updated_on>
         <ui_id>a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e</ui_id>
         <values>H4sIAAAAAAAA/+1Vy27bMBD8FYFn2ZAlW4l9CxwECJA2QBPk0gbCilzFRGlSFSk7ruF/71KUH2hctAFy7M2c5S5nRjvwlpnW1a2zj+bKWvmi2ezrc8yk9hj93jINS2Qzxo0W0kmjiw6I2QpU6wu3VWQXpo6E4c40EdR1Y1Yo4qhWwDECHZlGYEMdQlrCNk/vbuQLqUSDPbcaGmLgqDLb/laSguZWCVSjKR/xLM2zNEnSy/GozLNylIoMEDIaqKBERVfne1HRXYfEf1TrNrXHrWukfunPd/2Uhz0Y+M5GSczw1aEWSHwqUBZjtgQtgHRuDkiDIO61OgILqR2NY/7yq5U/6cF0MvEXKySJHEPxcHyEUuF1MDWUqmtwQHRa7tqmv84XRnK0wSCBFbTKzU+xcOG+9nJDi/OD+26j2qX+HFxhhwH7b0hIa7EQWHu1nn6vpXpYmPWXPdMbqTtn+qIyHNThBI78K1vn+WwZKlzSoGJJ+0CuFn4pZNdMXJbDF0WHYaXMmh71+zoE7okPyVwY3hB+3cFP0Eiv4hON6XbI0yzBSl50u03jyCZku5jZjZ0rsPYokhwufrSeYpDciyuCP76FN7J2V/TyCnsdu/htVE5Sst0iJGUq8nxAe5gOxtOLZHCZXYgBTvMsy6txluLlMIQAVGEdONztvrVJkol9NN5m6KPGvi9hU5hUk1EyOZ+wcX4uYWey9c5YpX+Jlf+e/5iqJEn+x+pDYiVtEcLQa+se/8BUPfsIhTcPXnNpiVr3mW73/1O+sKEFk/wUWpvmuxd1xHa/AK8S+lLxBgAA</values>
         <workflow_reference/>
@@ -1031,7 +1031,7 @@
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">df423414c3461a1065a51933e40131b2</block>
-        <comment/>
+        <comment>If shop doctor rejected, cancel order</comment>
         <connected_to>a750bb4c-f4fd-4dcb-ad25-9c3b54ab882e</connected_to>
         <decision_table/>
         <display_text/>
@@ -1046,10 +1046,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:47</sys_created_on>
         <sys_id>49527414c3461a1065a51933e40131c9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:01</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:54</sys_updated_on>
         <ui_id>b452526b-4036-4717-8d24-4994e654d62a</ui_id>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
@@ -1201,17 +1201,17 @@
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"d552b414c3461a1065a51933e4013104","name":"plan","plan_signature":null}}</plan>
         <plan_id>c0a94898c3421a1065a51933e4013164</plan_id>
-        <snapshot>5735bc18c3461a1065a51933e40131a7</snapshot>
+        <snapshot>0b021975c382125065a51933e401314f</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-19 09:02:47</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d552b414c3461a1065a51933e4013104</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 09:15:01</sys_updated_on>
+        <sys_updated_on>2024-11-24 02:35:55</sys_updated_on>
         <trigger display_value="">5552b414c3461a1065a51933e4013102</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=c0a94898c3421a1065a51933e4013164"/>

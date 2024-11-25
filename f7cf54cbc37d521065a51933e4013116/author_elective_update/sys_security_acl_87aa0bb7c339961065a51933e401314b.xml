@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Shop Admins will have delete access to delete any order</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1550111_shopnow_shop_orders</name>
+        <operation display_value="delete">delete</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 06:52:17</sys_created_on>
+        <sys_id>87aa0bb7c339961065a51933e401314b</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_security_acl_87aa0bb7c339961065a51933e401314b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 09:01:34</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_security_acl_87aa0bb7c339961065a51933e401314b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>false</admin_overrides><advanced>false</advanced><applies_to/><condition/><decision_type>allow</decision_type><description>Shop Admins will have delete access to delete any order</description><local_or_existing>Local</local_or_existing><name>x_1550111_shopnow_shop_orders</name><operation display_value="delete">delete</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-18 06:52:17</sys_created_on><sys_id>87aa0bb7c339961065a51933e401314b</sys_id><sys_mod_count>9</sys_mod_count><sys_name>x_1550111_shopnow_shop_orders</sys_name><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_security_acl_87aa0bb7c339961065a51933e401314b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-22 09:01:34</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-679630033</payload_hash>
+        <record_name>x_1550111_shopnow_shop_orders</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 09:01:34</sys_created_on>
+        <sys_id>acde4055c3065e1065a51933e40131ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193531aef900000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 09:01:34</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>24de405580065e10144424f8a2277dec</update_guid>
+        <update_guid_history>24de405580065e10144424f8a2277dec:-679630033,d97e0815b8065e109c613b0c7d816aa8:2126612712,ebaa84dd03c25e1006ca33bd010845c7:-339218946,f3c5bb8129825e10bc70b2b1d055e290:814341029,f6edfbf84c8eda10fa64600a947b8e20:-339218946,65dd3bf8568eda107c1161a8c72f0c41:-1949256299,06ac7738858eda10b35121814af80fbd:565913012,300ab7f4b08eda10c634214c6000ea06:-966997251,5c6973b48a8eda10db376e1b8f63677c:-1705351362,77da8fb7a43996104bbe506a95962a81:1267803007</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 14:25:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>77c3f155837747d093636ccf2ec99110</sys_id>
+        <sys_metadata>87aa0bb7c339961065a51933e401314b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent display_value="x_1550111_shopnow_shop_orders">43f0e48fc37d521065a51933e401316f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_87aa0bb7c339961065a51933e401314b</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_87aa0bb7c339961065a51933e401314b">acde4055c3065e1065a51933e40131ec</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 14:25:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

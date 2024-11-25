@@ -137,7 +137,7 @@
             "color_dv": "Primary",
             // "url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
             "url": "now/platform-analytics-workspace/dashboards/params/edit/false/sys-id/ffc4bc80c342d61065a51933e4013173",
-            "glyph": "pencil-square-o",
+            "glyph": "bar-chart",
             "sp_widget_dv": "Icon Link",
             "size": "md"
         },
@@ -160,7 +160,7 @@
             "color_dv": "Primary",
             // "url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
             "url": "sysapproval_approver_list.do?sysparm_query=source_tableLIKEshopnow%5EapproverDYNAMIC90d1921e5f510100a9ad2572f2b477fe%5Estate%3Drequested&sysparm_first_row=1&sysparm_view=",
-            "glyph": "pencil-square-o",
+            "glyph": "check",
             "sp_widget_dv": "Icon Link",
             "size": "md"
         }
@@ -181,14 +181,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:24:37</sys_created_on>
         <sys_id>bf6ca84fc3bd521065a51933e40131c7</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>ShopNow Shop Actions</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_bf6ca84fc3bd521065a51933e40131c7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-19 11:43:40</sys_updated_on>
+        <sys_updated_on>2024-11-20 18:27:37</sys_updated_on>
         <template><![CDATA[<div class="row">
   <div class="col-sm-4" ng-repeat="iconLink in c.data.iconLinkWidgets">
     <sp-widget widget="iconLink"></sp-widget>

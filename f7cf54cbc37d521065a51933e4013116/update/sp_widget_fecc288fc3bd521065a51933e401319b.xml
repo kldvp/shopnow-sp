@@ -4,27 +4,29 @@
         <client_script><![CDATA[api.controller = function ($scope, spUtil) {
 	/* widget controller */
 	var c = this;
-	function init() {
-		$scope.orders = c.data.orders;
-		$scope.orderStatuses = c.data.orderStatuses;
-		$scope.selectedStatus = '';
-	}
-	init();
+	c.searchText = '';
+	c.selectedStatus = '';
 	// show cancel button based on order status
 	$scope.showCancel = function (order) {
 		return ['shipping', 'processing'].includes(order.statusClass);
 	};
+
 	$scope.onStatusChange = function () {
 		$scope.server.get({
 			action: 'get_items',
-			status: $scope.selectedStatus,
+			status: c.selectedStatus,
 		}).then(function (res) {
-			$scope.orders = res.data.orders;
+			c.data.orders = res.data.orders;
 		});
 	};
 
+	$scope.refreshData = function () {
+		this.server.refresh();
+	}
+
 	spUtil.recordWatch($scope, "x_1550111_shopnow_shop_orders", "ordered_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe", function (res) {
-		$scope.onStatusChange();
+		if (c.selectedStatus) return;
+		$scope.refreshData();
 	});
 };]]></client_script>
         <controller_as>c</controller_as>
@@ -127,7 +129,7 @@
 	const statusKey = buildStatusQuery();
 	var orders = [];
 	function getOrders() {
-		var ordersGr = new GlideRecord("x_1550111_shopnow_shop_orders");
+		var ordersGr = new GlideRecordSecure("x_1550111_shopnow_shop_orders");
 		ordersGr.addQuery('ordered_by', gs.getUserID());
 		if (statusKey) ordersGr.addEncodedQuery(statusKey);
 		ordersGr.orderByDesc("sys_created_on");
@@ -174,27 +176,27 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:26:11</sys_created_on>
         <sys_id>fecc288fc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>174</sys_mod_count>
         <sys_name>ShopNow shop orders</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_fecc288fc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-20 07:22:30</sys_updated_on>
+        <sys_updated_on>2024-11-23 13:32:17</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-md-10">
       <!-- Filter Options -->
-      <div class="panel panel-default" ng-if="orders && orders.length">
+      <div class="panel panel-default" ng-if="data.orders && data.orders.length">
         <div class="panel-body">
           <div class="row">
             <div class="col-md-3">
-              <select 
-              class="form-control" 
-              ng-model="selectedStatus"
+              <select
+              class="form-control"
+              ng-model="c.selectedStatus"
               ng-change="onStatusChange()"
-              ng-options="status.name as status.label for status in orderStatuses">
+              ng-options="status.name as status.label for status in data.orderStatuses">
               </select>
             </div>
             <div class="col-md-6">
@@ -203,7 +205,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Search all orders"
-                  ng-model="searchText"
+                  ng-model="c.searchText"
                 />
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button">Search</button>
@@ -215,7 +217,7 @@
       </div>
 
       <!-- Order List -->
-      <div class="panel panel-default" ng-repeat="order in orders | filter:searchText">
+      <div class="panel panel-default" ng-repeat="order in data.orders | filter:c.searchText">
         <div class="panel-heading">
           <div class="row">
             <div class="col-md-3">

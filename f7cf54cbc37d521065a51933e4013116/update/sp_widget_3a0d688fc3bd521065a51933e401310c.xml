@@ -111,11 +111,11 @@
 			gs.addErrorMessage("You don't have permission to remove this item");
 			return;
 		}
-		var deleteCartItemGr = new GlideRecord('x_1550111_shopnow_shop_cart');
-		if (deleteCartItemGr.get(cartItemId) && deleteCartItemGr.canDelete()) {
+		var deleteCartItemGr = new GlideRecordSecure('x_1550111_shopnow_shop_cart');
+		if (deleteCartItemGr.get(cartItemId)) {
 			deleteCartItemGr.deleteRecord();
 		} else {
-			gs.addErrorMessage('You donot have permission to delete cart item');
+			gs.addErrorMessage('You do not have permission to delete cart item');
 			return;
 		}
 	}
@@ -125,8 +125,8 @@
 			return;
 		}
 		const cartItems = input.cartItems;
-		const orderGr = new GlideRecord('x_1550111_shopnow_shop_orders');
-		const cartGr = new GlideRecord('x_1550111_shopnow_shop_cart');
+		const orderGr = new GlideRecordSecure('x_1550111_shopnow_shop_orders');
+		const cartGr = new GlideRecordSecure('x_1550111_shopnow_shop_cart');
 		if (orderGr.canCreate() && cartGr.canDelete()) {
 			cartItems.forEach((item) => {
 				// place an order for each cart item
@@ -142,7 +142,7 @@
 				}
 			});
 		} else {
-			gs.addErrorMessage('You donot have permission to perform this operation');
+			gs.addErrorMessage('You donot have permission to perform this operation faling is order :' + orderGr.canCreate() + ' or cart '+ cartGr.canDelete());
 			return;
 		}
 	}
@@ -197,14 +197,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:27:16</sys_created_on>
         <sys_id>3a0d688fc3bd521065a51933e401310c</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>ShopNow shop products cart</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_3a0d688fc3bd521065a51933e401310c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 11:25:28</sys_updated_on>
+        <sys_updated_on>2024-11-23 13:34:26</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row" ng-if="data.cart.items.length">
     <div class="col-md-10">

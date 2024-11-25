@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="0340ec8bc37d521065a51933e4013141" extends="task" label="Shop cart" max_length="40" name="x_1550111_shopnow_shop_cart" type="collection">
-        <element label="Total amount" max_length="40" name="total_amount" type="float"/>
+        <element label="Total amount" mandatory="true" max_length="40" name="total_amount" type="float"/>
         <element attributes="encode_utf8=false" label="Product" mandatory="true" max_length="32" name="product" reference="x_1550111_shopnow_shop_products" type="reference"/>
-        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
-        <element attributes="encode_utf8=false" label="Added by" max_length="32" name="cart_user" reference="sys_user" type="reference"/>
+        <element label="Quantity" mandatory="true" max_length="40" name="quantity" type="integer"/>
+        <element attributes="encode_utf8=false" label="Added by" mandatory="true" max_length="32" name="cart_user" reference="sys_user" type="reference"/>
     </element>
 </database>

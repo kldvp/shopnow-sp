@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition table="x_1550111_shopnow_shop_orders">ordered_byISNOTEMPTY^ordered_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="ordered_by" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="ordered_by" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_type>allow</decision_type>
+        <description>Shop users will have create access to place orders for themselves.&#13;
+- Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role.&#13;
+- Shop Doctor (shop_doctor role) group users will also get this access as it inherits Shop user role.&#13;
+</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1550111_shopnow_shop_orders</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 08:53:50</sys_created_on>
+        <sys_id>cb9bc811c3065e1065a51933e401312f</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_security_acl_cb9bc811c3065e1065a51933e401312f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 14:10:11</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="DELETE">
+        <id>cb9bc811c3065e1065a51933e401312f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 10:00:08</sys_created_on>
+        <sys_id>e63cd095c3465e1065a51933e4013132</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 10:00:08</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_security_acl_cb9bc811c3065e1065a51933e401312f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>false</admin_overrides><advanced>false</advanced><applies_to/><condition table="x_1550111_shopnow_shop_orders">ordered_byISNOTEMPTY^ordered_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="ordered_by" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/><item endquery="false" field="ordered_by" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></condition><decision_type>allow</decision_type><description>Shop users will have create access to place orders for themselves.&#13;
+- Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role.&#13;
+- Shop Doctor (shop_doctor role) group users will also get this access as it inherits Shop user role.&#13;
+</description><local_or_existing>Local</local_or_existing><name>x_1550111_shopnow_shop_orders</name><operation display_value="create">create</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-22 08:53:50</sys_created_on><sys_id>cb9bc811c3065e1065a51933e401312f</sys_id><sys_mod_count>17</sys_mod_count><sys_name>x_1550111_shopnow_shop_orders</sys_name><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_security_acl_cb9bc811c3065e1065a51933e401312f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-22 14:10:11</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_es_latest_script action="INSERT_OR_UPDATE"><id>cb9bc811c3065e1065a51933e401312f</id><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-22 10:00:08</sys_created_on><sys_id>e63cd095c3465e1065a51933e4013132</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-22 10:00:08</sys_updated_on><table>sys_security_acl</table><use_es_latest>true</use_es_latest></sys_es_latest_script></record_update>]]></payload>
+        <payload_hash>1317924206</payload_hash>
+        <record_name>x_1550111_shopnow_shop_orders</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 14:10:11</sys_created_on>
+        <sys_id>ad755991c38a5e1065a51933e4013194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19354357d840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 14:10:11</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>e1755991c68a5e1078ab1011b110b694</update_guid>
+        <update_guid_history>e1755991c68a5e1078ab1011b110b694:1317924206,226001d50d0a5e10a385f7f79e868a6b:1554821734,f1e1a81117865e10dd8a1941280e6497:-7700421,479e501d94465e10f7a46c54c607932d:-488324857,6afd10d924465e10ea004bbb6edd9e81:-538892262,851d145955465e1043780c991c348868:1862064251,42dc9459c4465e10d475b76289cea62c:-1870932571,fabcd81942465e102d8566f57d432b5e:667521354,c79cdc19af465e10ae9b2e767af5eedd:1784330024,b63c5cd51e465e100c283344a8075443:-1019278448,2f789c51dd465e103cb63ac53067b33f:1180120170,57385411bd465e10bc8325c3bf29c0b9:-1918788245,700898513b465e10fcef50648d9ddd54:1180120170,4fa7d41147465e106f2f6ccd7f2cc202:865814275,99b150d599065e1083bfebd8ac45596d:1407505796,44cd08d1e1065e109ffb73fedbbaefe6:515252851,8b5d8891e9065e102cd25db0247f53d5:-1501133240,d70d489114065e1082d2e4e3318c9ef5:-1598864180</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 14:11:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>3ad7150171734900a4442044978e4400</sys_id>
+        <sys_metadata>cb9bc811c3065e1065a51933e401312f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent display_value="x_1550111_shopnow_shop_orders">43f0e48fc37d521065a51933e401316f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_cb9bc811c3065e1065a51933e401312f</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_cb9bc811c3065e1065a51933e401312f">ad755991c38a5e1065a51933e4013194</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 14:11:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
