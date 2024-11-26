@@ -48,14 +48,14 @@ Extends from: task
 
 **Fields**
 
-| Label        | Internal name | Type                      | Mandatory | Choice options                                       |
-|--------------|---------------|---------------------------|-----------|------------------------------------------------------|
-| Product      | product       | Refernce -> Shop products | Y         |                                                      |
-| Total amount | total_amount  | Floating Point Number     | Y         |                                                      |
-| Quantity     | quantity      | Integer                   | Y         |                                                      |
-| Ordered by   | ordered_by    | Reference -> User         | Y         |                                                      |
-| Order Status | order_status  | Choice                    |           | processing, approval, shipping, delivered, cancelled |
-
+| Label         | Internal name | Type                      | Mandatory | Choice options                                       | Default value |
+|---------------|---------------|---------------------------|-----------|------------------------------------------------------|---------------|
+| Product       | product       | Refernce -> Shop products | Y         |                                                      |               |
+| Total amount  | total_amount  | Floating Point Number     | Y         |                                                      |               |
+| Quantity      | quantity      | Integer                   | Y         |                                                      |               |
+| Ordered by    | ordered_by    | Reference -> User         | Y         |                                                      |               |
+| Order Status  | order_status  | Choice                    |           | processing, approval, shipping, delivered, cancelled | processing    |
+| Cancel Reason | cancel_reason | String                    |           |                                                      |               |
 
 
 </details>
