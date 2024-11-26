@@ -9,15 +9,16 @@ Extends from: task
 
 **Fields**
 
-| Label               | Internal name       | Type                  | Mandatory | Choice options                                                  |
-|---------------------|---------------------|-----------------------|-----------|-----------------------------------------------------------------|
-| Title               | title               | String (Full UTF-8)   | Y         |                                                                 |
-| Product Description | product_description | HTML                  | Y         |                                                                 |
-| Price               | price               | Floating Point Number | Y         |                                                                 |
-| Full details        | full_details        | HTML                  |           |                                                                 |
-| Category            | category            | Choice                | Y         | books, electronics, grocery, clothes, mediine, funiture, others |
-| Available           | available           | True/False            |           |                                                                 |
-| Picture             | picture             | Image                 | Y         |                                                                 |
+| Label               | Internal name       | Type                  | Mandatory | Choice options                                                  | Default value |
+|---------------------|---------------------|-----------------------|-----------|-----------------------------------------------------------------|---------------|
+| Title               | title               | String (Full UTF-8)   | Y         |                                                                 |               |
+| Product Description | product_description | HTML                  | Y         |                                                                 |               |
+| Price               | price               | Floating Point Number | Y         |                                                                 |               |
+| Full details        | full_details        | HTML                  |           |                                                                 |               |
+| Category            | category            | Choice                | Y         | books, electronics, grocery, clothes, mediine, funiture, others |               |
+| Available           | available           | True/False            |           |                                                                 | false         |
+| Picture             | picture             | Image                 | Y         |                                                                 |               |
+
 
 
 </details>
