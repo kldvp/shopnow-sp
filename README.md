@@ -2,6 +2,7 @@
 
 Tables
 - Shop products
+
 <details>
 <summary><ins>Click here to see table schema</ins></summary>
 Extends from: task
@@ -20,7 +21,9 @@ Extends from: task
 
 
 </details>
+
 - Shop cart
+
 <details>
 <summary><ins>Click here to see table schema</ins></summary>
 Extends from: task
@@ -36,7 +39,9 @@ Extends from: task
 
 
 </details>
+
 - Shop orders
+
 <details>
 <summary><ins>Click here to see table schema</ins></summary>
 Extends from: task
