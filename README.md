@@ -55,131 +55,170 @@ Extends from: task
 
 </details>
 
-Personas
+## Personas
 
 - Shop user
 - Shop admin
 - Shop doctor
-- Shop fulfiller (optional)
+- Shop fulfiller (replaced by schedule script)
 
-Record producer
-- Register Product: Add a new product to shopping catalog
-
-
-Flows (Flow designer)
-
-- Medical approval
-
-If ordered product category is medicine, it should get approval from *_Shop doctor_* user
-
-- GetAndSetProduct image
-
-If product is added by record producer, attachment will be stored in _sys_attachment_ table, this flow will copy attachment id to _picture_ column
+## Business Rules
 
 
-Reports
-- Last 7 days orders count
+- SetDefaultValues
+  - Set a default value for the *_full_details_* field if not provided by the user.
+- SetCancelReason
+  - Set the reject comment in the *_cancel_reason_* field if the approver rejects the order.
 
-Display a bar chart showing the number of orders placed, completed, canceled, and shipped for the last 7 days.
+## Script includes
 
 
-- Today's order status
+- CartUtils (client callable)
+- GetCartItemCount (on demand)
 
-Display a donut chart showing the number of orders placed, completed, canceled, and shipped for today.
 
-Portal
-- Shop products (/shop)
+## UI Actions
 
-Portal pages
 
-- shop list (/shop_list) 
+Overrided default functionalities of Submit & Update buttons
 
-  - Display available products for shop users
-  - Display all products for shop admin users
+- Add product (default override)
+- Update product (default override)
 
-- shop cart (/shop_cart_items)
-  - Display all cart items added by shop user
-- shop orders (/shop_orders)
-  - Display all orders placed by shop user
+## Scheduled scripts
 
-- shop product info (/shop_product_info)
-  - Display product information for given sys_id
 
-- shop order place (/shop_order_place)
-  - Display order success page
+- Process Orders
+  - Execute every 2 mins and process orders placed 5 mins ago
+  - Replicate actual order processing by changing status from 
+    - Processing -> Shipping
+    - Shipping -> Delivered
+  - Process all orders placed by users
+    - books, groceries & medicine orders status will be changed every 5 mins
+    - electronics orders status will be changed every 8 mins
+    - clothes, furniture & others orders status will be changed every 10 mins
 
-- Shop home (/shop_home)
-  - Display all available shop actions for logged in user based on his role
-  - Available actions: 
-    1. Add product (shop_admin)
-    2. Products 
-    3. Orders
-    4. Dashboard (shop_admin)
-    5. Approval requests (shop_doctor)
 
-Widgets
+## Roles
 
-Prefix:ShopNow 
-- header menu
-- shop actions
-- shop icon link
-- shop orders
-- shop product info
-- shop product list
-- shop product cart
 
-Menus
-- ShopNow
+- Admin
+- User
+- Doctor
 
-Modules
+## Access controls
+
+
+### Shop products
+
+- Shop admin will have read access to all products
+- Shop Admins will have create access to create products
+- Shop admins will have write access to all products
+- Shop admin will have delete access to all products
+- Shop user will have read access to only available products
+
+
+### Shop cart
+- Shop user will have access to read their own cart items
+- Shop user should have read access to create new cart items
+- Shop admin will have access to read all cart items
+- Shop user will have create access for cart items
+  - Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role
+- Shop users will have write access to update cart items
+  - Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role
+  - There are no conditions defined because if user can read items, they can update cart items too.
+- Shop users will have delete access to delete cart items
+  - Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role
+  - There are no conditions defined because if user can read items, they can delete cart items too.
+
+### Shop orders
+
+- Shop user will have access to read their own orders
+- Shop user should have read access to create orders
+- Shop admin will have access to read all cart items
+- Shop user will have create access for order  items
+  - Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role
+- Shop users will have write access to update order items
+  - Shop Admin (shop_admin role) group users will also get this access as it inherits Shop user role
+  - There are no conditions defined because if user can read items, they can update order items too.
+- Shop Admin will have delete access to delete order items
+- Doctors will have read access to see medical orders
+
+
+## Applicaton Menus & Modules
+
+
+- ShopNow (Menu)
 - Add product
 - Cart
 - Orders
 - Products
 
+## Notifications
 
-Server development
----
-Business rules
+Email notifications
+- OrderProcessing
+- OrderShipping
+- OrderDelivered
+- OrderCancel
 
-- setDefaultValues
-- ShopCartExplicitAcls
-- ShopOrderExplicitAcls
+## Service Portal, Pages & Widgets
 
-Script includes
+### Portal
+- ShopNow (/shop)
 
-- GetCart
-- getCartItemsCount
-- seedShoppingData
+### Pages
+- Shop - Dashboard
+- Shop - cart
+- Shop - list
+- Shop - orders
+- Shop - product info
+- Shop - order place
+- Shop - home
+
+### Widgets
+
+- Shop - ProductInfo
+  - Display product information.
+  - Add products to the cart.
+- Shop - ProductList
+  - List all products available for purchase.
+  - Admin users can view all products, including out-of-stock items.
+  - Basic users can only view available products.
+  - Filter orders based on order status: All, Processing, Shipping, Delivered, Cancelled.
+  - Allow search of products using server-side search functionality.
+- Shop - Actions
+  - Display actions based on the user's role.
+  - Admin users have access to all actions.
+  - Basic users can access Products and Orders.
+  - Doctor users can access Products, Orders, and Approvals.
+- Shop - HeaderMenu
+  - Navigation menu items
+- Shop - IconLink
+  - Cloned the icon link widget to display actions based on the user’s role.
+- Shop - ProductsCart
+  - Display all items added to the cart by the user.
+  - Edit or remove items from the cart.
+  - Place an order.
+- Shop - ShopOrders
+  - Display all orders placed by the user.
+  - Filter orders based on order status: All, Processing, Shipping, Delivered, Cancelled.
+  - Allow search of orders using client-side search functionality.
+
+## Reporting
 
 
-UI actions
+- Last 7 days orders count
+- Today orders status
 
-- Add product
-- Update product
+## Flows
 
+- MedicalApproval
+  - If ordered product category is medicine, it should get approval from Doctor
+- GetAndSetProductImage
+  - If product is added by record producer, attachment will be stored in *sys_attachment* table, this flow will copy attachment id to picture column
 
-Scheduled script executions
+## Record producer
 
-- Process orders
-
-Access control
----
-
-Roles
-- x_1550111_shopnow.shop_admin
-- x_1550111_shopnow.shop_doctor
-- x_1550111_shopnow.shop_doctor
-
-User groups
-
-- Shop Admins
-- Shop Users
-- Shop Doctors
-
-
-Access controls
-
-- Shop products
-- Shop cart
-- Shop orders
+Register product
+- Add a new product to shopping catalog
