@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="0cd0608fc37d521065a51933e40131fa" extends="task" label="Shop orders" max_length="40" name="x_1550111_shopnow_shop_orders" type="collection">
-        <element attributes="encode_utf8=false" label="Ordered by" max_length="32" name="ordered_by" reference="sys_user" type="reference"/>
-        <element label="Total amount" max_length="40" name="total_amount" type="float"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="pending" label="Order Status" max_length="40" name="order_status" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="processing" label="Order Status" max_length="40" name="order_status" read_only="true" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Shipping" sequence="2" value="shipping"/>
-                <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
-                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
-                <element inactive_on_update="false" label="Packing" sequence="1" value="packing"/>
-                <element inactive_on_update="false" label="Delivered" sequence="3" value="delivered"/>
+                <element inactive_on_update="false" label="Processing" sequence="0" value="processing"/>
+                <element inactive_on_update="false" label="Waiting for Approval" sequence="4" value="approval"/>
+                <element inactive_on_update="false" label="Shipping" sequence="1" value="shipping"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Delivered" sequence="2" value="delivered"/>
             </choice>
         </element>
+        <element attributes="encode_utf8=false" label="Ordered by" mandatory="true" max_length="32" name="ordered_by" reference="sys_user" type="reference"/>
+        <element label="Total amount" mandatory="true" max_length="40" name="total_amount" type="float"/>
         <element attributes="encode_utf8=false" label="Product" mandatory="true" max_length="32" name="product" reference="x_1550111_shopnow_shop_products" type="reference"/>
-        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+        <element label="Quantity" mandatory="true" max_length="40" name="quantity" type="integer"/>
+        <element label="Cancel Reason" max_length="255" name="cancel_reason" type="string_full_utf8"/>
     </element>
 </database>

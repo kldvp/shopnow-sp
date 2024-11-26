@@ -16,15 +16,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 12:55:01</sys_created_on>
         <sys_id>88218d87c331921065a51933e4013100</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>shop_product_info</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_page_88218d87c331921065a51933e4013100</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-15 12:55:01</sys_updated_on>
-        <title>Shop product info</title>
+        <sys_updated_on>2024-11-26 14:36:55</sys_updated_on>
+        <title>Shop - ProductInfo</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=88218d87c331921065a51933e4013100"/>

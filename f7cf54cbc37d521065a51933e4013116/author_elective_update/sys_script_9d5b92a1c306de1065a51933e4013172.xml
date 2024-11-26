@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1550111_shopnow_shop_orders</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1550111_shopnow_shop_orders">approval=approved^NQapproval=rejected^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="Rejected" endquery="false" field="approval" goto="false" newquery="true" operator="=" or="false" value="rejected"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>RestrictSelfApproval</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+	gs.info(`
+	opened by: ${current.opened_by},
+	current user: ${gs.getUserID()}
+	`);
+    if (gs.getUserID() === current.opened_by) {
+		current.state = "not_required";
+        gs.addErrorMessage('Requestor and approver cannot be same'); 
+    }
+    // Add your code here
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-23 14:08:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9d5b92a1c306de1065a51933e4013172</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RestrictSelfApproval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_script_9d5b92a1c306de1065a51933e4013172</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-24 02:38:25</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=9d5b92a1c306de1065a51933e4013172"/>
+    <sys_es_latest_script action="DELETE">
+        <id>9d5b92a1c306de1065a51933e4013172</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-23 14:08:03</sys_created_on>
+        <sys_id>bb8e5aa5c306de1065a51933e4013146</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-23 14:08:03</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_script_9d5b92a1c306de1065a51933e4013172</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_1550111_shopnow_shop_orders&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="x_1550111_shopnow_shop_orders"&gt;approval=approved^NQapproval=rejected^EQ&lt;item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="approved"/&gt;&lt;item display_value="Rejected" endquery="false" field="approval" goto="false" newquery="true" operator="=" or="false" value="rejected"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;RestrictSelfApproval&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+	gs.info(`
+	opened by: ${current.opened_by},
+	current user: ${gs.getUserID()}
+	`);
+    if (gs.getUserID() === current.opened_by) {
+		current.state = "not_required";
+        gs.addErrorMessage('Requestor and approver cannot be same'); 
+    }
+    // Add your code here
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-23 14:08:04&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;9d5b92a1c306de1065a51933e4013172&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;RestrictSelfApproval&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="ShopNow" source="x_1550111_shopnow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ShopNow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_9d5b92a1c306de1065a51933e4013172&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-24 02:38:25&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=9d5b92a1c306de1065a51933e4013172"/&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;9d5b92a1c306de1065a51933e4013172&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-23 14:08:03&lt;/sys_created_on&gt;&lt;sys_id&gt;bb8e5aa5c306de1065a51933e4013146&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-23 14:08:03&lt;/sys_updated_on&gt;&lt;table&gt;sys_script&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-631694048</payload_hash>
+        <record_name>RestrictSelfApproval</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-24 02:38:25</sys_created_on>
+        <sys_id>e34a49f9c342125065a51933e401315e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1935c08de9a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-24 02:38:25</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>a74a49f9844212505414eaeebaf9b15d</update_guid>
+        <update_guid_history>a74a49f9844212505414eaeebaf9b15d:-631694048,cfd122e9c206de109d06178fc6ee4904:-1375995463,d44f1ae5dd06de10b49e929d60da9e26:-1778215587,ce0f5aa54006de10e00b6e2a28ba65ed:-1999026916,4c9e16a51c06de1008391307d299c97d:1191460421</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-26 13:53:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>4bbb1bf28809435a85c7e98d267ed7a4</sys_id>
+        <sys_metadata>9d5b92a1c306de1065a51933e4013172</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RestrictSelfApproval</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent display_value="Shop orders">0cd0608fc37d521065a51933e40131fa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_script_9d5b92a1c306de1065a51933e4013172</sys_update_name>
+        <sys_update_version display_value="sys_script_9d5b92a1c306de1065a51933e4013172">e34a49f9c342125065a51933e401315e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-26 13:53:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

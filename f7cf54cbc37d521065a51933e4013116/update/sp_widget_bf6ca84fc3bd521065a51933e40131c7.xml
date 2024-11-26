@@ -18,112 +18,192 @@
         <id>shopnow_shop_actions</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>ShopNow Shop Actions</name>
+        <name>Shop - Actions</name>
         <option_schema/>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-	/* populate the 'data' object */
-	/* e.g., data.table = $sp.getValue('table'); */
-	const iconLinkOptions = [
-		// add product
-		{
-			"short_description": "Add a new product to inventory",
-			"color": "primary",
-			"roles": "x_1550111_shopnow.shop_admin",
-			"type": "url",
-			"title": "Add product",
-			"sys_class_name": "sp_instance_link",
-			"size_dv": "Medium",
-			"type_dv": "URL",
-			"sys_name": "Add product",
-			"sp_widget": "3caa67afcb13020000f8d856634c9c2e",
-			"sys_class_name_dv": "Instance with Link",
-			"order": 1,
-			"link_template": "Circle Icon",
-			"widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
-			"active": true,
-			"color_dv": "Primary",
-			"url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
-			"glyph": "pencil-square-o",
-			"sp_widget_dv": "Icon Link",
-			"size": "md"
-		},
-		// products list
-		{
-			"short_description": "See all available products",
-			"color": "primary",
-			"sp_page": "shop_list",
-			"type": "page",
-			"title": "Products",
-			"sys_class_name": "sp_instance_link",
-			"size_dv": "Medium",
-			"type_dv": "Page",
-			"sys_name": "Products",
-			"sp_widget": "3caa67afcb13020000f8d856634c9c2e",
-			"sys_class_name_dv": "Instance with Link",
-			"order": 1,
-			"link_template": "Circle Icon",
-			"widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
-			"active": true,
-			"color_dv": "Primary",
-			"glyph": "list-alt",
-			"sp_widget_dv": "Icon Link",
-			"size": "md",
-			"sp_page_dv": "shop_list"
-		},
-		// shop ordes
-		{
-			"short_description": "Find all orders",
-			"color": "primary",
-			"sp_page": "shop_orders",
-			"type": "page",
-			"title": "Orders",
-			"sys_class_name": "sp_instance_link",
-			"size_dv": "Medium",
-			"type_dv": "Page",
-			"sys_name": "Orders",
-			"sp_widget": "3caa67afcb13020000f8d856634c9c2e",
-			"sys_class_name_dv": "Instance with Link",
-			"order": 1,
-			"link_template": "Circle Icon",
-			"widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
-			"active": true,
-			"color_dv": "Primary",
-			"glyph": "shopping-bag",
-			"sp_widget_dv": "Icon Link",
-			"size": "md",
-			"sp_page_dv": "shop_orders"
-		}
-	];
-	data.iconLinkWidgets = [];
-	iconLinkOptions.forEach(function(linkOptions){
-		if (linkOptions.roles && !gs.hasRole(linkOptions.roles)) {
-			return;
-		}
-		const iconLinkWidgetInstance = $sp.getWidget("shopnow_shop_icon_link", linkOptions);
-		iconLinkWidgetInstance.data.href = linkOptions.type === 'page' ? '?id='+linkOptions.sp_page : linkOptions.url;
-		iconLinkWidgetInstance.data.target = linkOptions.target || "";
-		data.iconLinkWidgets.push(iconLinkWidgetInstance);
-	});
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    const iconLinkOptions = [
+        // add product
+        // {
+        // 	"short_description": "Add a new product to inventory",
+        // 	"color": "primary",
+        // 	"roles": "x_1550111_shopnow.shop_admin",
+        // 	"type": "url",
+        // 	"title": "Add product",
+        // 	"sys_class_name": "sp_instance_link",
+        // 	"size_dv": "Medium",
+        // 	"type_dv": "URL",
+        // 	"sys_name": "Add product",
+        // 	"sp_widget": "3caa67afcb13020000f8d856634c9c2e",
+        // 	"sys_class_name_dv": "Instance with Link",
+        // 	"order": 1,
+        // 	"link_template": "Circle Icon",
+        // 	"widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
+        // 	"active": true,
+        // 	"color_dv": "Primary",
+        // 	"url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
+        // 	"glyph": "pencil-square-o",
+        // 	"sp_widget_dv": "Icon Link",
+        // 	"size": "md"
+        // },
+        {
+            "short_description": "Add a new product to inventory",
+            "color": "primary",
+            "roles": "x_1550111_shopnow.shop_admin",
+            "type": "url",
+            "title": "Add product",
+            "sys_class_name": "sp_instance_link",
+            "size_dv": "Medium",
+            "type_dv": "URL",
+            "sys_name": "Add product",
+            "sp_widget": "3caa67afcb13020000f8d856634c9c2e",
+            "sys_class_name_dv": "Instance with Link",
+            "order": 1,
+            "link_template": "Circle Icon",
+            "widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
+            "active": true,
+            "color_dv": "Primary",
+            // "url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
+            "url": "?id=sc_cat_item&sys_id=e77ffae3c3f1561065a51933e40131b4",
+            "glyph": "pencil-square-o",
+            "sp_widget_dv": "Icon Link",
+            "size": "md"
+        },
+        // products list
+        {
+            "short_description": "See all available products",
+            "color": "primary",
+            "sp_page": "shop_list",
+            "type": "page",
+            "title": "Products",
+            "sys_class_name": "sp_instance_link",
+            "size_dv": "Medium",
+            "type_dv": "Page",
+            "sys_name": "Products",
+            "sp_widget": "3caa67afcb13020000f8d856634c9c2e",
+            "sys_class_name_dv": "Instance with Link",
+            "order": 1,
+            "link_template": "Circle Icon",
+            "widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
+            "active": true,
+            "color_dv": "Primary",
+            "glyph": "list-alt",
+            "sp_widget_dv": "Icon Link",
+            "size": "md",
+            "sp_page_dv": "shop_list"
+        },
+        // shop ordes
+        {
+            "short_description": "Find all orders",
+            "color": "primary",
+            "sp_page": "shop_orders",
+            "type": "page",
+            "title": "Orders",
+            "sys_class_name": "sp_instance_link",
+            "size_dv": "Medium",
+            "type_dv": "Page",
+            "sys_name": "Orders",
+            "sp_widget": "3caa67afcb13020000f8d856634c9c2e",
+            "sys_class_name_dv": "Instance with Link",
+            "order": 1,
+            "link_template": "Circle Icon",
+            "widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
+            "active": true,
+            "color_dv": "Primary",
+            "glyph": "shopping-bag",
+            "sp_widget_dv": "Icon Link",
+            "size": "md",
+            "sp_page_dv": "shop_orders"
+        },
+        {
+            "short_description": "All shop orders reports",
+            "color": "primary",
+            "roles": "x_1550111_shopnow.shop_admin",
+            "type": "url",
+            "title": "Dashboard",
+            "sys_class_name": "sp_instance_link",
+            "size_dv": "Medium",
+            "type_dv": "URL",
+            "sys_name": "ApprovalRequests",
+            "sp_widget": "3caa67afcb13020000f8d856634c9c2e",
+            "sys_class_name_dv": "Instance with Link",
+            "order": 1,
+            "link_template": "Circle Icon",
+            "widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
+            "active": true,
+            "color_dv": "Primary",
+            // "url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
+            "url": "now/platform-analytics-workspace/dashboards/params/edit/false/sys-id/ffc4bc80c342d61065a51933e4013173",
+            "glyph": "bar-chart",
+            "sp_widget_dv": "Icon Link",
+            "size": "md"
+        },
+        {
+            "short_description": "Approvals for medical orders",
+            "color": "primary",
+            "roles": "x_1550111_shopnow.shop_doctor",
+            "type": "url",
+            "title": "Approval requests",
+            "sys_class_name": "sp_instance_link",
+            "size_dv": "Medium",
+            "type_dv": "URL",
+            "sys_name": "ApprovalRequests",
+            "sp_widget": "3caa67afcb13020000f8d856634c9c2e",
+            "sys_class_name_dv": "Instance with Link",
+            "order": 1,
+            "link_template": "Circle Icon",
+            "widget_parameters": "{\n\t\"link_template\": {\n\t\t\"value\": \"Circle Icon\",\n\t\t\"displayValue\": \"Circle Icon\"\n\t}\n}",
+            "active": true,
+            "color_dv": "Primary",
+            // "url": "x_1550111_shopnow_shop_products.do?sysparm_stack=shop",
+            "url": "sysapproval_approver_list.do?sysparm_query=source_tableLIKEshopnow%5EapproverDYNAMIC90d1921e5f510100a9ad2572f2b477fe%5Estate%3Drequested&sysparm_first_row=1&sysparm_view=",
+            "glyph": "check",
+            "sp_widget_dv": "Icon Link",
+            "size": "md"
+        }
+    ];
+    data.iconLinkWidgets = [];
+    iconLinkOptions.forEach(function(linkOptions) {
+        if (linkOptions.roles && !gs.hasRole(linkOptions.roles)) {
+            return;
+        }
+        const iconLinkWidgetInstance = $sp.getWidget("shopnow_shop_icon_link", linkOptions);
+        iconLinkWidgetInstance.data.href = linkOptions.type === 'page' ? '?id=' + linkOptions.sp_page : linkOptions.url;
+        iconLinkWidgetInstance.data.target = linkOptions.target || "";
+        data.iconLinkWidgets.push(iconLinkWidgetInstance);
+    });
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:24:37</sys_created_on>
         <sys_id>bf6ca84fc3bd521065a51933e40131c7</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>ShopNow Shop Actions</sys_name>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Shop - Actions</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_bf6ca84fc3bd521065a51933e40131c7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-15 11:59:04</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:44:42</sys_updated_on>
         <template><![CDATA[<div class="row">
   <div class="col-sm-4" ng-repeat="iconLink in c.data.iconLinkWidgets">
     <sp-widget widget="iconLink"></sp-widget>
   </div>
 </div>]]></template>
     </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>bf6ca84fc3bd521065a51933e40131c7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-19 11:22:25</sys_created_on>
+        <sys_id>ae425d1cc3c61a1065a51933e40131f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-19 11:22:25</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

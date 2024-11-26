@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>4</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">b3c8f808c342d61065a51933e4013175</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 14:52:36</sys_created_on>
+        <sys_id>b7c8b448c342d61065a51933e4013134</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_column_b7c8b448c342d61065a51933e4013134</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 14:52:36</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sp_column_b7c8b448c342d61065a51933e4013134</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><semantic_tag/><size>4</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">b3c8f808c342d61065a51933e4013175</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-18 14:52:36</sys_created_on><sys_id>b7c8b448c342d61065a51933e4013134</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sp_column_b7c8b448c342d61065a51933e4013134</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-18 14:52:36</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>1652024617</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 14:52:36</sys_created_on>
+        <sys_id>f7c8b448c342d61065a51933e4013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1933fc2e1240000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 14:52:36</sys_updated_on>
+        <type>Column</type>
+        <update_guid>fbc8b448d642d6105d890954ff737a35</update_guid>
+        <update_guid_history>fbc8b448d642d6105d890954ff737a35:1652024617</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">064d736cc34a9a1065a51933e401316e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-20 18:27:58</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>65bd517bc4c74aa6807f383a07236c64</sys_id>
+        <sys_metadata>b7c8b448c342d61065a51933e4013134</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sp_column_b7c8b448c342d61065a51933e4013134</sys_update_name>
+        <sys_update_version display_value="sp_column_b7c8b448c342d61065a51933e4013134">f7c8b448c342d61065a51933e4013136</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-20 18:27:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

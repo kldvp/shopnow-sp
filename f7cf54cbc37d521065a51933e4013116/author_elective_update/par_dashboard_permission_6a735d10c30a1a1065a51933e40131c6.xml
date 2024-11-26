@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="DELETE">
+        <can_read>true</can_read>
+        <can_share>true</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="ShopNow Dashboard">ffc4bc80c342d61065a51933e4013173</dashboard>
+        <group display_value="Shop Admins" name="Shop Admins">c86a6193c339d21065a51933e40131e1</group>
+        <owner>true</owner>
+        <role/>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-19 11:27:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6a735d10c30a1a1065a51933e40131c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ffc4bc80c342d61065a51933e4013173</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>par_dashboard_permission_6a735d10c30a1a1065a51933e40131c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-19 11:27:36</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>par_dashboard_permission_6a735d10c30a1a1065a51933e40131c6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission"><par_dashboard_permission action="INSERT_OR_UPDATE"><can_read>true</can_read><can_share>true</can_share><can_write>false</can_write><dashboard display_value="ShopNow Dashboard">ffc4bc80c342d61065a51933e4013173</dashboard><group display_value="Shop Admins" name="Shop Admins">c86a6193c339d21065a51933e40131e1</group><owner>true</owner><role/><sys_class_name>par_dashboard_permission</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-19 11:27:36</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6a735d10c30a1a1065a51933e40131c6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ffc4bc80c342d61065a51933e4013173</sys_name><sys_overrides/><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>par_dashboard_permission_6a735d10c30a1a1065a51933e40131c6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-19 11:27:36</sys_updated_on><user/></par_dashboard_permission></record_update>]]></payload>
+        <payload_hash>723428091</payload_hash>
+        <record_name>ffc4bc80c342d61065a51933e4013173</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-19 11:27:36</sys_created_on>
+        <sys_id>ee735d10c30a1a1065a51933e40131c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193442d8dd90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-19 11:27:36</sys_updated_on>
+        <type>PAR Dashboard Permission</type>
+        <update_guid>a2735d10c70a1a10b0954177520369c9</update_guid>
+        <update_guid_history>a2735d10c70a1a10b0954177520369c9:723428091</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ShopNow Dashboard">3c935110c30a1a1065a51933e40131b3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-19 11:28:02</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_permission">par_dashboard_permission</sys_db_object>
+        <sys_id>53bac9f8da24481680fb0e7d4df42fe4</sys_id>
+        <sys_metadata>6a735d10c30a1a1065a51933e40131c6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ffc4bc80c342d61065a51933e4013173</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>par_dashboard_permission_6a735d10c30a1a1065a51933e40131c6</sys_update_name>
+        <sys_update_version display_value="par_dashboard_permission_6a735d10c30a1a1065a51933e40131c6">ee735d10c30a1a1065a51933e40131c9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-19 11:28:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

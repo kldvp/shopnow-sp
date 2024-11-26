@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">aba1fc07c3fd521065a51933e40131cf</sp_column>
+        <sp_widget display_value="EC Breadcrumb">f9e6ff8553d1a1101852ddeeff7b12b8</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-16 11:10:17</sys_created_on>
+        <sys_id>a7b2795fc339d21065a51933e4013182</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sp_instance_a7b2795fc339d21065a51933e4013182</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-16 11:10:17</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=a7b2795fc339d21065a51933e4013182"/>
+</record_update>

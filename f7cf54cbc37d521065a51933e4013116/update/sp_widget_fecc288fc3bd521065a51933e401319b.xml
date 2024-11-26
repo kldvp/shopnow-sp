@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function($scope) {
+        <client_script><![CDATA[api.controller = function ($scope, spUtil, spModal) {
 	/* widget controller */
 	var c = this;
-	console.log(c.data.user);
+	c.searchText = '';
+	c.selectedStatus = '';
+	// show cancel button based on order status
+	$scope.showCancel = function (order) {
+		return ['shipping', 'processing'].includes(order.statusClass);
+	};
+
+	$scope.onStatusChange = function () {
+		$scope.server.get({
+			action: 'get_items',
+			status: c.selectedStatus,
+		}).then(function (res) {
+			c.data.orders = res.data.orders;
+		});
+	};
+
+	$scope.cancelOrder = function (order) {
+		console.log('Order with id mark as cancelled :' + JSON.stringify(order, null, 2));
+		spModal.confirm("Are you sure, you want to cancel this order ?").then(function (confirmed) {
+			if (confirmed) {
+				$scope.server.get({
+					action: 'cancel_order',
+					orderId: order.sysId,
+				}).then(function (res) {
+					console.log('order cancelled');
+					// c.data.orders = res.data.orders;
+				});
+			}
+		});
+	};
+
+	$scope.refreshData = function () {
+		this.server.refresh();
+	}
+
+	spUtil.recordWatch($scope, "x_1550111_shopnow_shop_orders", "ordered_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe", function (res) {
+		console.log('Refresh called');
+		if (c.selectedStatus) return;
+		$scope.refreshData();
+	});
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>.custom-input-group {
@@ -21,9 +60,12 @@
 }
 
 .img-thumbnail {
-  width: 100px; /* Consistent width */
-  height: 100px; /* Consistent height */
-  object-fit: cover; /* Ensures images cover the specified area without distortion */
+  width: 100px;
+  /* Consistent width */
+  height: 100px;
+  /* Consistent height */
+  object-fit: cover;
+  /* Ensures images cover the specified area without distortion */
 }
 
 .order-status {
@@ -49,6 +91,11 @@
   color: #a94442;
 }
 
+.status-shipping {
+  background-color: #d9edf7;
+  color: #31708f;
+}
+
 .order-date {
   color: #777;
   font-size: 13px;
@@ -66,8 +113,7 @@
 .table-responsive.no-border table td {
   border-top: none !important;
   border-bottom: none !important;
-}
-</css>
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -77,50 +123,122 @@
         <id>shopnow_shop_orders</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>ShopNow shop orders</name>
+        <name>Shop - ShopOrders</name>
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {
+        <script><![CDATA[(function () {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
-	const user = gs.getUser();
-	data.user = { 
-		name: user.getDisplayName(),
-		email: user.getEmail()
-	};
+	if (input && input.action === 'cancel_order' ) {
+		if (!input.orderId) {
+			gs.addErrorMessage('Order id is not provided.');
+			return;
+		}
+		var updateOrderGr = new GlideRecord("x_1550111_shopnow_shop_orders");
+		updateOrderGr.addQuery('sys_id', input.orderId);
+		updateOrderGr.query();
+		if (updateOrderGr.next()) {
+			updateOrderGr.order_status = 'cancelled';
+			updateOrderGr.update();
+		}
+		return;
+	}
+	function formatDate(date) {
+		var gd = new GlideDate();
+		gd.setValue(date);
+		var formattedDate = gd.getByFormat("MMMM dd, yyyy");
+		return formattedDate;
+	}
+	// build query for category
+	function buildStatusQuery() {
+		if (!input || !input.status) return null;
+		let query = "order_status=<placeholder>";
+		return query.replaceAll('<placeholder>', input.status);
+	}
+	const statusKey = buildStatusQuery();
+	var orders = [];
+	function getOrders() {
+		var ordersGr = new GlideRecordSecure("x_1550111_shopnow_shop_orders");
+		ordersGr.addQuery('ordered_by', gs.getUserID());
+		if (statusKey) ordersGr.addEncodedQuery(statusKey);
+		ordersGr.orderByDesc("sys_created_on");
+		ordersGr.query();
+		while (ordersGr.next()) {
+			var orderObj = {
+				sysId: ordersGr.sys_id.toString(),
+				placedDate: formatDate(new GlideDateTime(ordersGr.sys_created_on).getDate()),
+				total: ordersGr.total_amount.getDisplayValue(),
+				shipTo: ordersGr.ordered_by.name.getDisplayValue(),
+				orderId: ordersGr.number.getDisplayValue(),
+				status: ordersGr.order_status.getDisplayValue(),
+				statusClass: ordersGr.order_status.getValue(),
+				cancelReason: ordersGr.cancel_reason.getValue(),
+				quantity: ordersGr.quantity.getValue(),
+				item: {
+					name: ordersGr.product.title.getDisplayValue(),
+					img: ordersGr.product.picture.getDisplayValue() + '?t=medium',
+					link: '?id=shop_product_info&sys_id=' + ordersGr.product,
+				},
+			};
+			orders.push(orderObj);
+		}
+		return orders;
+	}
+	function getOrderStatuses() {
+		var orderStatusesGr = new GlideAggregate("x_1550111_shopnow_shop_orders");
+		orderStatusesGr.addQuery('ordered_by', gs.getUserID());
+		orderStatusesGr.groupBy("order_status");
+		orderStatusesGr.query();
+		var orderStatuses = [{ label: 'All Orders', name: '' }];
+		while (orderStatusesGr.next()) {
+			var categoryObj = {
+				label: orderStatusesGr.order_status.getDisplayValue(),
+				name: orderStatusesGr.order_status.getValue(),
+			};
+			orderStatuses.push(categoryObj);
+		}
+		return orderStatuses;
+	}
+	data.orders = getOrders();
+	data.orderStatuses = getOrderStatuses();
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:26:11</sys_created_on>
         <sys_id>fecc288fc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>ShopNow shop orders</sys_name>
+        <sys_mod_count>223</sys_mod_count>
+        <sys_name>Shop - ShopOrders</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_fecc288fc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-15 11:26:11</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:49:46</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-md-10">
       <!-- Filter Options -->
-      <div class="panel panel-default">
+      <div class="panel panel-default" ng-if="data.orders && data.orders.length">
         <div class="panel-body">
           <div class="row">
             <div class="col-md-3">
-              <select class="form-control">
-                <option>All Orders</option>
-                <option>Delivered</option>
-                <option>Processing</option>
-                <option>Cancelled</option>
+              <select
+              class="form-control"
+              ng-model="c.selectedStatus"
+              ng-change="onStatusChange()"
+              ng-options="status.name as status.label for status in data.orderStatuses">
               </select>
             </div>
             <div class="col-md-6">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search all orders">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search all orders"
+                  ng-model="c.searchText"
+                />
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button">Search</button>
                 </span>
@@ -130,25 +248,24 @@
         </div>
       </div>
 
-      <!-- Order 1 -->
-      <div class="panel panel-default">
+      <!-- Order List -->
+      <div class="panel panel-default" ng-repeat="order in data.orders | filter:c.searchText">
         <div class="panel-heading">
           <div class="row">
             <div class="col-md-3">
-              <b>ORDER PLACED</b><br>
-              <span class="order-date">November 8, 2024</span>
+              <b>ORDER PLACED</b><br />
+              <span class="order-date">{{ order.placedDate }}</span>
             </div>
             <div class="col-md-3">
-              <strong>TOTAL</strong><br>
-              <span>₹24,999</span>
+              <strong>TOTAL</strong><br />
+              <span>{{ order.total }}</span>
             </div>
             <div class="col-md-3">
-              <strong>SHIP TO</strong><br>
-              <span>John Doe</span>
+              <strong>SHIP TO</strong><br/>
+              <span>{{ order.shipTo }}</span>
             </div>
             <div class="col-md-3">
-              <strong>ORDER # 405-0318721-0111045</strong><br>
-              <a href="#">View order details</a>
+              <strong>ORDER # {{ order.orderId }}</strong><br />
             </div>
           </div>
         </div>
@@ -159,14 +276,17 @@
                 <table class="table">
                   <tr>
                     <td width="100">
-                      <img ng-src="e2c03fafc365921065a51933e401312c.iix?t=large" class="img-thumbnail" alt="Product">
+                      <img ng-src="{{ order.item.img }}" class="img-thumbnail" alt="Product" />
                     </td>
                     <td>
-                      <h4><a href="#product/headphones">Premium Wireless Headphones</a></h4>
-                      <span class="order-status status-delivered">Delivered Nov 10</span>
+                      <h4><a ng-href="{{ order.item.link }}">{{ order.item.name }}</a></h4>
+                      <blockquote ng-if="order.cancelReason">
+                        <p>Approver rejected with a comment: {{ order.cancelReason }}</p>
+                      </blockquote>
+                      <span class="order-status status-{{ order.statusClass }}">{{ order.status }}</span>
                     </td>
                     <td class="pull-right">
-                      Qty: 1
+                      Qty: {{ order.quantity }}
                     </td>
                   </tr>
                 </table>
@@ -174,129 +294,29 @@
             </div>
             <div class="col-md-4">
               <div class="action-buttons">
-                <button class="btn btn-default">
-                  Buy it again
-                </button>
-                <button class="btn btn-default">
-                  Write product review
-                </button>
+                <a ng-href="{{ order.item.link }}"><button class="btn btn-default">Buy it again</button></a>
+                <button class="btn btn-default" ng-if="showCancel(order)" ng-click="cancelOrder(order)">Cancel order</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Order 2 -->
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="row">
-            <div class="col-md-3">
-              <strong>ORDER PLACED</strong><br>
-              <span class="order-date">November 5, 2024</span>
-            </div>
-            <div class="col-md-3">
-              <strong>TOTAL</strong><br>
-              <span>₹12,499</span>
-            </div>
-            <div class="col-md-3">
-              <strong>SHIP TO</strong><br>
-              <span>John Doe</span>
-            </div>
-            <div class="col-md-3 text-right">
-              <strong>ORDER # 405-0318721-0111046</strong><br>
-              <a href="#">View order details</a>
-            </div>
-          </div>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="table-responsive no-border">
-                <table class="table">
-                  <tr>
-                    <td width="100">
-                      <img ng-src="0031c137c32d921065a51933e401315e.iix?t=large" class="img-thumbnail" alt="Product">
-                    </td>
-                    <td>
-                      <h4><a href="#product/smartwatch">Smart Watch Pro</a></h4>
-                      <span class="order-status status-processing">Out for delivery</span>
-                    </td>
-                    <td class="text-right">
-                      Qty: 1
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="action-buttons">
-                <button class="btn btn-default btn-block text-center">
-                  Track package
-                </button>
-                <button class="btn btn-default btn-block text-center">
-                  Cancel order
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Order 3 -->
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="row">
-            <div class="col-md-3">
-              <strong>ORDER PLACED</strong><br>
-              <span class="order-date">October 29, 2024</span>
-            </div>
-            <div class="col-md-3">
-              <strong>TOTAL</strong><br>
-              <span>₹4,999</span>
-            </div>
-            <div class="col-md-3">
-              <strong>SHIP TO</strong><br>
-              <span>John Doe</span>
-            </div>
-            <div class="col-md-3 text-right">
-              <strong>ORDER # 405-0318721-0111047</strong><br>
-              <a href="#">View order details</a>
-            </div>
-          </div>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="table-responsive no-border">
-                <table class="table">
-                  <tr>
-                    <td width="100">
-                      <img ng-src="bbee7c73c32d921065a51933e401312a.iix?t=large" class="img-thumbnail" alt="Product">
-                    </td>
-                    <td>
-                      <h4><a href="#product/keyboard">Mechanical Gaming Keyboard</a></h4>
-                      <span class="order-status status-cancelled">Cancelled</span>
-                    </td>
-                    <td class="text-right">
-                      Qty: 1
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="action-buttons">
-                <button class="btn btn-default">
-                  Buy it again
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div ng-if="(orders | filter:searchText).length === 0">
+        <h1>No orders found</h1>
       </div>
     </div>
   </div>
-</div>
-]]></template>
+</div>]]></template>
     </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>fecc288fc3bd521065a51933e401319b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-20 07:14:30</sys_created_on>
+        <sys_id>7423a924c34e5a1065a51933e40131f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-20 07:14:30</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

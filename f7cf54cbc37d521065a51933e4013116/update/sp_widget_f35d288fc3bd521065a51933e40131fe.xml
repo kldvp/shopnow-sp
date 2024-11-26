@@ -1,56 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function ($scope, spUtil, $rootScope, $timeout, spAriaUtil, spGtd, $window, i18n) {
+        <client_script><![CDATA[api.controller = function ($scope, spUtil, $rootScope, $timeout) {
 	var c = this;
 	$scope.loadingIndicator = $rootScope.loadingIndicator;
 	$scope.cartItemCount = c.data.cartCount;
+	$scope.cartLabel = 'Cart';
 	// update cart count handler
 	function updateCartCount() {
 		c.server.get({
 			action: 'get_cart_count'
-		}).then(function(r) {
+		}).then(function (r) {
 			$scope.cartItemCount = r.data.cartCount || $scope.cartItemCount;
 		});
 	}
-	$rootScope.$on('update_cart', updateCartCount);
+
+	// update cart label
+	function updateCartLabel() {
+		$scope.cartLabel = 'Cart]]>👇<![CDATA[';
+		$timeout(function () {
+			$scope.cartLabel = 'Cart';
+		}, 3000);
+	}
+	$rootScope.$on('update_cart', updateCartLabel);
 
 	$scope.$on('sp_loading_indicator', function (e, value) {
 		$scope.loadingIndicator = value;
 	});
-	// PRB1108244: visibleItems array is used to improve keyboard nav
-	// in menu, refresh it as needed
-	$scope.$watch('data.menu.items', function () {
-		$scope.visibleItems = [];
-		if ($scope.data.menu.items) {
-			for (var i in $scope.data.menu.items) {
-				var item = $scope.data.menu.items[i];
-				if (item.items || (item.scriptedItems && item.scriptedItems.count != 0))
-					$scope.visibleItems.push(item);
-			}
-		}
-	}, true);
-	// Get list of record watchers
-	var record_watchers = [];
-	if ($scope.data.menu.items) {
-		for (var i in $scope.data.menu.items) {
-			var item = $scope.data.menu.items[i];
-			if (item.type == 'scripted') {
-				if (item.scriptedItems.record_watchers)
-					record_watchers = record_watchers.concat(item.scriptedItems.record_watchers);
-			}
-			if (item.type == 'filtered') {
-				record_watchers.push({ 'table': item.table, 'filter': item.filter });
-			}
-		}
-	}
-	// Init record watchers
-	for (var y in record_watchers) {
-		var watcher = record_watchers[y];
-		spUtil.recordWatch($scope, watcher.table, watcher.filter);
-	}
-	$rootScope.$broadcast('sp-header-loaded');
-}]]></client_script>
+
+	$scope.menuItems = c.data.menu.items;
+
+	// using record watch to update cart count
+	spUtil.recordWatch($scope, "x_1550111_shopnow_shop_cart", "cart_userDYNAMIC90d1921e5f510100a9ad2572f2b477fe", function(res){
+		if (!res || !res.data || res.data.operation === 'update') return;
+		updateCartCount();
+	});
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>.header-loader {
 	float: left;
@@ -198,7 +183,7 @@
         <id>shopnow_header_menu</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>ShopNow header menu</name>
+        <name>Shop - HeaderMenu</name>
         <option_schema/>
         <public>true</public>
         <roles/>
@@ -213,9 +198,13 @@
 		return (cartCountGa.next() && cartCountGa.getAggregate('COUNT')) || 0;
 	}
 
-	// get cart items count using client callable script includes
+	// get cart items count
 	function getCartCountScriptIncludes() {
-		const countGr = new GetCart().getItemsCount();
+		// using client callable script includes
+		// const countGr = new GetCart().getItemsCount();
+
+		// using on demand script includes
+		const countGr = getCartItemsCount();
 		return countGr;
 	}
 
@@ -238,14 +227,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:28:43</sys_created_on>
         <sys_id>f35d288fc3bd521065a51933e40131fe</sys_id>
-        <sys_mod_count>26</sys_mod_count>
-        <sys_name>ShopNow header menu</sys_name>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>Shop - HeaderMenu</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_f35d288fc3bd521065a51933e40131fe</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-16 08:04:58</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:42:47</sys_updated_on>
         <template><![CDATA[<ul class="nav navbar-nav" aria-label="${Header}">
   <div class="header-loader" ng-class="{'invisible': !loadingIndicator}">
     <div class="hidden-xs hidden-sm sp-loading-indicator la-sm">
@@ -254,7 +243,7 @@
       <div></div>
     </div>
   </div>
-  <li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}"
+  <li ng-repeat="item in menuItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}"
     ng-include="'shopnowHeaderMenuTemplate'"></li>
   <!-- Shopping cart stuff -->
 <li ng-if="data.isLoggedIn" class="header-menu-item">
@@ -265,7 +254,7 @@
        class="toggle-dropdown"
        aria-label="${Your shopping cart currently has} {{cartItemCount}} ${items}">
     	<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      <span ng-bind-html="'${Cart}'" aria-hidden="true"></span>
+      <span ng-bind-html="cartLabel" aria-hidden="true"></span>
       <span ng-if="cartItemCount > 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count">{{cartItemCount}}</span>
 	</a>
   </li>

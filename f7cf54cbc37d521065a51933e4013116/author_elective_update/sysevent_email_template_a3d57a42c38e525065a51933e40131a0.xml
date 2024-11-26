@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="DELETE">
+        <collection>x_1550111_shopnow_shop_orders</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p>&nbsp;</p>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .header {
+      text-align: center;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 0;
+      border-radius: 8px 8px 0 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .order-summary {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 10px;
+    }
+  </style>
+<div class="container">
+<div class="header">
+<h2>Order Confirmation ✅</h2>
+</div>
+<p>Dear ${ordered_by},</p>
+<p>Thank you for your order with ShopNow! ]]>🛒<![CDATA[ Your order ${number} is now being processed.</p>
+<div class="order-summary">
+<h4>]]>📦<![CDATA[ Order Summary</h4>
+<ul style="list-style: none; padding-left: 0;">
+<li><strong>Order Number:</strong> ${number}</li>
+<li><strong>Product: </strong>${product.title}</li>
+<li><strong>Order Date:</strong> ${sys_created_on}</li>
+<li><strong>Total Amount:</strong> ${total_amount}</li>
+</ul>
+</div>
+<p>]]>🌐<![CDATA[ You can track your order status by clicking the button below:</p>
+<p style="text-align: center;"><a class="btn" href="https://dev214943.service-now.com/shop?id=shop_orders">Track Your Order</a></p>
+<p>Thank you for shopping with us! ]]>😊<![CDATA[</p>
+<div class="footer">
+<p>&copy; 2024 ShopNow. All Rights Reserved.</p>
+</div>
+</div>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>OrderStatusTemplate</name>
+        <sms_alternate/>
+        <subject>Your Order : ${number} (${product.title}) is Being Processed</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-25 05:08:23</sys_created_on>
+        <sys_id>a3d57a42c38e525065a51933e40131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OrderStatusTemplate</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sysevent_email_template_a3d57a42c38e525065a51933e40131a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-25 05:08:23</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sysevent_email_template_a3d57a42c38e525065a51933e40131a0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sysevent_email_template"&gt;&lt;sysevent_email_template action="INSERT_OR_UPDATE"&gt;&lt;collection&gt;x_1550111_shopnow_shop_orders&lt;/collection&gt;&lt;email_layout/&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .header {
+      text-align: center;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 0;
+      border-radius: 8px 8px 0 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .order-summary {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 10px;
+    }
+  &lt;/style&gt;
+&lt;div class="container"&gt;
+&lt;div class="header"&gt;
+&lt;h2&gt;Order Confirmation ✅&lt;/h2&gt;
+&lt;/div&gt;
+&lt;p&gt;Dear ${ordered_by},&lt;/p&gt;
+&lt;p&gt;Thank you for your order with ShopNow! ]]&gt;🛒&lt;![CDATA[ Your order ${number} is now being processed.&lt;/p&gt;
+&lt;div class="order-summary"&gt;
+&lt;h4&gt;]]&gt;📦&lt;![CDATA[ Order Summary&lt;/h4&gt;
+&lt;ul style="list-style: none; padding-left: 0;"&gt;
+&lt;li&gt;&lt;strong&gt;Order Number:&lt;/strong&gt; ${number}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Product: &lt;/strong&gt;${product.title}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Order Date:&lt;/strong&gt; ${sys_created_on}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Total Amount:&lt;/strong&gt; ${total_amount}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;]]&gt;🌐&lt;![CDATA[ You can track your order status by clicking the button below:&lt;/p&gt;
+&lt;p style="text-align: center;"&gt;&lt;a class="btn" href="https://dev214943.service-now.com/shop?id=shop_orders"&gt;Track Your Order&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thank you for shopping with us! ]]&gt;😊&lt;![CDATA[&lt;/p&gt;
+&lt;div class="footer"&gt;
+&lt;p&gt;&amp;copy; 2024 ShopNow. All Rights Reserved.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;OrderStatusTemplate&lt;/name&gt;&lt;sms_alternate/&gt;&lt;subject&gt;Your Order : ${number} (${product.title}) is Being Processed&lt;/subject&gt;&lt;sys_class_name&gt;sysevent_email_template&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-11-25 05:08:23&lt;/sys_created_on&gt;&lt;sys_id&gt;a3d57a42c38e525065a51933e40131a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;OrderStatusTemplate&lt;/sys_name&gt;&lt;sys_package display_value="ShopNow" source="x_1550111_shopnow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ShopNow"&gt;f7cf54cbc37d521065a51933e4013116&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_template_a3d57a42c38e525065a51933e40131a0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-11-25 05:08:23&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;/sysevent_email_template&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-50656450</payload_hash>
+        <record_name>OrderStatusTemplate</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-25 05:08:23</sys_created_on>
+        <sys_id>0e363a42c38e525065a51933e40131e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19361b888e10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-25 05:08:23</sys_updated_on>
+        <type>Email Template</type>
+        <update_guid>02363a42d78e5250baec9d901db06ee1</update_guid>
+        <update_guid_history>02363a42d78e5250baec9d901db06ee1:-50656450</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-25 08:28:10</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_template">sysevent_email_template</sys_db_object>
+        <sys_id>45c3c0b503e5447b8e9a16c2f11cad79</sys_id>
+        <sys_metadata>a3d57a42c38e525065a51933e40131a0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OrderStatusTemplate</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent display_value="Shop orders">0cd0608fc37d521065a51933e40131fa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sysevent_email_template_a3d57a42c38e525065a51933e40131a0</sys_update_name>
+        <sys_update_version display_value="sysevent_email_template_a3d57a42c38e525065a51933e40131a0">0e363a42c38e525065a51933e40131e1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-25 08:28:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

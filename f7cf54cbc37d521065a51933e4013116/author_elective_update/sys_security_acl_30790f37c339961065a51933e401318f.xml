@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Shop Admins will have write access to update any order</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1550111_shopnow_shop_orders</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 06:49:52</sys_created_on>
+        <sys_id>30790f37c339961065a51933e401318f</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_update_name>sys_security_acl_30790f37c339961065a51933e401318f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 09:06:42</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="DELETE">
+        <id>30790f37c339961065a51933e401318f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-18 07:31:23</sys_created_on>
+        <sys_id>24d35bffc339961065a51933e4013178</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-18 07:31:23</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</application>
+        <file_path/>
+        <instance_id>007b1b7ddbe2f19cae4c9027c596197e</instance_id>
+        <instance_name>dev214943</instance_name>
+        <name>sys_security_acl_30790f37c339961065a51933e401318f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>false</admin_overrides><advanced>false</advanced><applies_to/><condition/><decision_type>allow</decision_type><description>Shop Admins will have write access to update any order</description><local_or_existing>Local</local_or_existing><name>x_1550111_shopnow_shop_orders</name><operation display_value="write">write</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-18 06:49:52</sys_created_on><sys_id>30790f37c339961065a51933e401318f</sys_id><sys_mod_count>46</sys_mod_count><sys_name>x_1550111_shopnow_shop_orders</sys_name><sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package><sys_policy/><sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope><sys_update_name>sys_security_acl_30790f37c339961065a51933e401318f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-22 09:06:42</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_es_latest_script action="INSERT_OR_UPDATE"><id>30790f37c339961065a51933e401318f</id><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-18 07:31:23</sys_created_on><sys_id>24d35bffc339961065a51933e4013178</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-18 07:31:23</sys_updated_on><table>sys_security_acl</table><use_es_latest>true</use_es_latest></sys_es_latest_script></record_update>]]></payload>
+        <payload_hash>-13186630</payload_hash>
+        <record_name>x_1550111_shopnow_shop_orders</record_name>
+        <reverted_from/>
+        <source>e8fd2197c339d21065a51933e40131b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 09:06:43</sys_created_on>
+        <sys_id>4000d895c3065e1065a51933e4013116</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193531fa4fa0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 09:06:43</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>f7ffc895fa065e10757c42b0d440b815</update_guid>
+        <update_guid_history>f7ffc895fa065e10757c42b0d440b815:-13186630,feaa84dd1dc25e1054356e433a41081a:-365210138,5075bf411f825e105426279cdb78889e:1813194399,721dbfb8738eda101ced29dd35b4f55d:-365210138,245763bcfd0eda10b49476edc7ee40fc:-1576027363,2e57db38edcada10b7d3b754a8ebe6c7:-300762159,eb26dbb4cbcada10d161a49c2459536f:-1640311295,b7c55bb43fcada1051a3d107b1e26261:-130611215,56751774e2cada10380b33e7abe285bd:-1313449016,54841f34c0cada104b59c249e6bb75b3:-1576027363,c4741b3440cada108b7c38ad3c8d79c9:-568341021,a9a19ffca38ada103d6dbe05e9527d1b:170939767,d13113bcdb8ada10cbbc12a2f893884e:2002012127,f1215b7c068ada10d5c4955fb806bfa1:-1732063960,bc40df7c478ada10a27c7f8f929e4c66:-1705977542,b5decbf4878ada10cf7a6ef9888e51d5:-605658211,82be4bf87c8ada105ad0b571d6610ce1:599608005,ad8c0b38f38ada10a5ea94388a9b1fc4:-658832713,ffdb8bf4108ada10def110739afcd124:-384388329,2b6b03f4b98ada10bb6a569ce30eea15:1912995771,00facb746e8ada10c64760ea764bcb5d:-403210652,4ada4774d08ada10b9c3a36456f934d6:1514084989,55670f30cc8ada101a7d11bf454ac4f3:-2060452676,a4e64b303d8ada109ac50e4e9d09fe20:-597620916,fba64730108ada10f3848ae64e232a50:974216485,ccb58fbcc34ada10680a1060d37a76ad:-533314171,1f3cbeb0464ada10cee3d24333ab7079:937736571,4dfb7a303b4ada10e9e6c7bc690b8705:-819724785,5617b238fb0ada10b119915fe52bcda5:-1245657175,4283f674290ada10509e1cfdd9458529:2092326250,15927e34df0ada102428c18d46247249:1855931078,33127eb0750ada10a5e972c403da7440:-1371642188,ab807e70db0ada1059327f49f2c0ddae:891297233,7450ba70970ada1050f197a8637d9731:-928709966,12cfe270390ada10209b25340e444ea3:1701997240,f04f6630ef0ada10c6b4057fffcc471d:-478049317,9ecee2309c0ada1025a68deca7c4f0dc:-2071275548,f2ae6abcddc6da10f08c7999343b312b:1075527905,925e6afc15c6da1043192caae3aff0aa:-621539399,5c3e6a3c52c6da101973938d5727b127:-1400171567,37696ef06ac6da106ed2e9615536a06f:-249505525,cb75133708799610f8691c3989c9f32d:-1576027363,e9c453f3ea7996101a21b4c1f142cd40:669043186,92149fb3bc7996103d540f4c42184688:1140633916,700497ff7139961012b3a672f2bfb652:-468257164,a0d397ff143996104c82896b961c2a63:-1526440137,105a83b7c039961028279f185c5ec62f:1859414516</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-22 14:25:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>522f6844bf2d4c4e956910d96eb8d4c4</sys_id>
+        <sys_metadata>30790f37c339961065a51933e401318f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1550111_shopnow_shop_orders</sys_name>
+        <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
+        <sys_parent display_value="x_1550111_shopnow_shop_orders">43f0e48fc37d521065a51933e401316f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
+        <sys_scope_delete display_value="">2f43c1f026994de5962f5ab682e923a1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_30790f37c339961065a51933e401318f</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_30790f37c339961065a51933e401318f">4000d895c3065e1065a51933e4013116</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-22 14:25:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
