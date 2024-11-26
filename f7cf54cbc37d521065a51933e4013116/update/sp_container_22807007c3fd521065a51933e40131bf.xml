@@ -6,7 +6,7 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>shop list - Container 2</name>
+        <name>Shop - List - Container 2</name>
         <order>2</order>
         <semantic_tag/>
         <sp_page display_value="shop_list">a7403cc3c3fd521065a51933e401310f</sp_page>
@@ -15,14 +15,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:42:33</sys_created_on>
         <sys_id>22807007c3fd521065a51933e40131bf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>shop list - Container 2</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Shop - List - Container 2</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_container_22807007c3fd521065a51933e40131bf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-15 11:42:33</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:36:19</sys_updated_on>
         <title/>
         <width>container</width>
     </sp_container>

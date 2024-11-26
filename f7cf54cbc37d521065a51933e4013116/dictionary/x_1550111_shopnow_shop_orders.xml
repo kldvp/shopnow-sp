@@ -13,5 +13,6 @@
         <element label="Total amount" mandatory="true" max_length="40" name="total_amount" type="float"/>
         <element attributes="encode_utf8=false" label="Product" mandatory="true" max_length="32" name="product" reference="x_1550111_shopnow_shop_products" type="reference"/>
         <element label="Quantity" mandatory="true" max_length="40" name="quantity" type="integer"/>
+        <element label="Cancel Reason" max_length="255" name="cancel_reason" type="string_full_utf8"/>
     </element>
 </database>

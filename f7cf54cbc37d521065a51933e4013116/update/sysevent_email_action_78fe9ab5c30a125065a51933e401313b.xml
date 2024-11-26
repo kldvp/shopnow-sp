@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
     <sysevent_email_action action="INSERT_OR_UPDATE">
         <action_insert>true</action_insert>
-        <action_update>false</action_update>
+        <action_update>true</action_update>
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
@@ -62,7 +62,7 @@
 </div>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>Order placed - Processing</name>
+        <name>Order - Processing</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
@@ -81,15 +81,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>78fe9ab5c30a125065a51933e401313b</sys_id>
-        <sys_mod_count>18</sys_mod_count>
-        <sys_name>Order placed - Processing</sys_name>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>Order - Processing</sys_name>
         <sys_overrides/>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sysevent_email_action_78fe9ab5c30a125065a51933e401313b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-25 07:04:16</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:40:37</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

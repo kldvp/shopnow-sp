@@ -99,14 +99,14 @@ producer.portal_redirect = "shop?id=shop_list";
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-17 11:24:05</sys_created_on>
         <sys_id>e77ffae3c3f1561065a51933e40131b4</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>Register Product</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sc_cat_item_producer_e77ffae3c3f1561065a51933e40131b4</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-21 05:05:28</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-11-26 06:35:06</sys_updated_on>
         <table_name>x_1550111_shopnow_shop_products</table_name>
         <taxonomy_topic/>
         <template/>
@@ -114,7 +114,7 @@ producer.portal_redirect = "shop?id=shop_list";
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>30</version>
+        <version>33</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

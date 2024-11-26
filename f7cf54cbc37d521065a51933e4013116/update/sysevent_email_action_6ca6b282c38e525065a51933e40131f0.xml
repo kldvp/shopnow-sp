@@ -39,40 +39,40 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<div style="width: 100%; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #ffffff;">
-<div style="text-align: center; background-color: #007bff; color: white; padding: 10px 0; border-radius: 8px 8px 0 0;">
-<h2 style="margin: 0;"><span style="font-family: arial, helvetica, sans-serif;">Order Shipped ]]>🚚<![CDATA[</span></h2>
+<div style="text-align: center; background-color: #dc3545; color: white; padding: 10px 0; border-radius: 8px 8px 0 0;">
+<h2 style="margin: 0;">Order Cancelled ❌</h2>
 </div>
-<p style="margin: 15px 0;"><span style="font-family: arial, helvetica, sans-serif;">Dear ${ordered_by},</span></p>
-<p style="margin: 15px 0;"><span style="font-family: arial, helvetica, sans-serif;">Good news! ]]>🎉<![CDATA[ Your order <strong>${number}</strong> is on its way to you. Track your shipment below:</span></p>
+<p style="margin: 15px 0;">Dear ${ordered_by},</p>
+<p style="margin: 15px 0;">We regret to inform you that your order <strong>${number}</strong> has been cancelled. If this was not your intention or you have any questions, please contact us at <a style="color: #007bff; text-decoration: none;" href="mailto:${support_email}">${support_email}</a>.</p>
 <div style="background-color: white; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin-top: 10px;">
-<h4 style="margin-top: 0;"><span style="font-family: arial, helvetica, sans-serif;">]]>📦<![CDATA[ Shipping Details</span></h4>
+<h4 style="margin-top: 0;">]]>📋<![CDATA[ Order Summary</h4>
 <ul style="list-style: none; padding: 0; margin: 0;">
-<li style="margin-bottom: 5px; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Order Number:</strong> ${number}</span></li>
-<li style="margin-bottom: 5px; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Product:</strong> ${product.title}</span></li>
-<li style="margin-bottom: 5px; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Order Date:</strong> ${sys_created_on}</span></li>
-<li style="margin-bottom: 5px; font-family: arial, helvetica, sans-serif;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Total Amount:</strong> ${total_amount}</span></li>
+<li style="margin-bottom: 5px;"><strong>Order Number:</strong> ${number}</li>
+<li style="margin-bottom: 5px;"><strong>Product:</strong> ${product.title}</li>
+<li style="margin-bottom: 5px;"><strong>Order Date:</strong> ${sys_created_on}</li>
+<li style="margin-bottom: 5px;"><strong>Cancellation Reason:</strong> ${cancellation_reason}</li>
 </ul>
 </div>
-<p style="text-align: center; margin: 15px 0;"><span style="font-family: arial, helvetica, sans-serif;"><a style="display: inline-block; background-color: #007bff; color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-size: 14px;" href="https://dev214943.service-now.com/shop?id=shop_orders">Track Your Order</a></span></p>
-<p style="margin: 15px 0;"><span style="font-family: arial, helvetica, sans-serif;">Thank you for shopping with us!</span></p>
+<p style="margin: 15px 0;">We apologize for any inconvenience caused and hope to serve you in the future.</p>
+<p style="margin: 15px 0;">Thank you for your understanding.</p>
 <div style="text-align: center; font-size: 12px; color: #555; margin-top: 20px;">
-<p style="margin: 0;"><span style="font-family: arial, helvetica, sans-serif;">&copy; 2024 ShopNow. All Rights Reserved.</span></p>
+<p style="margin: 0;">&copy; 2024 ShopNow. All Rights Reserved.</p>
 </div>
 </div>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>Order cancelled</name>
+        <name>Order -  Cancel</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
         <recipient_fields/>
         <recipient_groups/>
-        <recipient_users>prasad.kodali@servicenow.com,shop-users@sharklasers.com</recipient_users>
+        <recipient_users>prasad.kodali@servicenow.com,shop-users@sharklasers.com,prasadkodali786@gmail.com</recipient_users>
         <reply_to/>
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Your Order : ${product.title}  (${number}) is on is on its Way!🚚 </subject>
+        <subject>Your Order # ${number} Has Been Cancelled</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -80,15 +80,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6ca6b282c38e525065a51933e40131f0</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Order cancelled</sys_name>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Order -  Cancel</sys_name>
         <sys_overrides/>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sysevent_email_action_6ca6b282c38e525065a51933e40131f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-25 07:03:55</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:41:17</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

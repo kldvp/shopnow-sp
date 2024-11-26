@@ -123,7 +123,7 @@
         <id>shopnow_shop_orders</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>ShopNow shop orders</name>
+        <name>Shop - ShopOrders</name>
         <option_schema/>
         <public>false</public>
         <roles/>
@@ -173,6 +173,7 @@
 				orderId: ordersGr.number.getDisplayValue(),
 				status: ordersGr.order_status.getDisplayValue(),
 				statusClass: ordersGr.order_status.getValue(),
+				cancelReason: ordersGr.cancel_reason.getValue(),
 				quantity: ordersGr.quantity.getValue(),
 				item: {
 					name: ordersGr.product.title.getDisplayValue(),
@@ -207,14 +208,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:26:11</sys_created_on>
         <sys_id>fecc288fc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>210</sys_mod_count>
-        <sys_name>ShopNow shop orders</sys_name>
+        <sys_mod_count>223</sys_mod_count>
+        <sys_name>Shop - ShopOrders</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_fecc288fc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-25 09:17:43</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:49:46</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="row">
     <div class="col-md-10">
@@ -260,7 +261,7 @@
               <span>{{ order.total }}</span>
             </div>
             <div class="col-md-3">
-              <strong>SHIP TO</strong><br />
+              <strong>SHIP TO</strong><br/>
               <span>{{ order.shipTo }}</span>
             </div>
             <div class="col-md-3">
@@ -279,6 +280,9 @@
                     </td>
                     <td>
                       <h4><a ng-href="{{ order.item.link }}">{{ order.item.name }}</a></h4>
+                      <blockquote ng-if="order.cancelReason">
+                        <p>Approver rejected with a comment: {{ order.cancelReason }}</p>
+                      </blockquote>
                       <span class="order-status status-{{ order.statusClass }}">{{ order.status }}</span>
                     </td>
                     <td class="pull-right">

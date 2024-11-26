@@ -140,7 +140,7 @@
         <id>shopnow_shop_products_list</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>ShopNow shop products list</name>
+        <name>Shop -  ProductsList</name>
         <option_schema>[{"hint":"Specify number of items to show for pagination","name":"items_in_page","section":"Presentation","default_value":"8","label":"Items in page","type":"integer"}]</option_schema>
         <public>false</public>
         <roles/>
@@ -148,7 +148,7 @@
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
 	// Assign products to widget data
-	const fieldNames = ['category', 'title', 'full_details', 'product_description', 'picture', 'price', 'sys_id'];
+	const fieldNames = ['category', 'title', 'full_details', 'product_description', 'picture', 'price', 'sys_id', 'available'];
 	const pageLimit = parseInt(options.items_in_page);
 	// build query for search
 	function buildSearchQuery() {
@@ -201,9 +201,9 @@
 		data.start = input.end;
 		data.end = input.end + pageLimit;
 	}
-	gs.info('pagination start :' + data.start + " end:" + data.end);
+	// gs.info('pagination start :' + data.start + " end:" + data.end);
 	// get products
-	let iterateCount = 0;
+	// let iterateCount = 0;
 	function getProducts() {
 		const products = [];
 		const productGr = new GlideRecord('x_1550111_shopnow_shop_products');
@@ -215,7 +215,7 @@
 		productGr.chooseWindow(data.start, data.end);
 		productGr.query();
 		while (productGr.next()) {
-			iterateCount += 1;
+			// iterateCount += 1;
 			const product = {};
 			fieldNames.forEach((field) => {
 				product[field] = productGr.getDisplayValue(field);
@@ -242,14 +242,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-15 11:27:55</sys_created_on>
         <sys_id>d83d24cfc3bd521065a51933e401319b</sys_id>
-        <sys_mod_count>236</sys_mod_count>
-        <sys_name>ShopNow shop products list</sys_name>
+        <sys_mod_count>254</sys_mod_count>
+        <sys_name>Shop -  ProductsList</sys_name>
         <sys_package display_value="ShopNow" source="x_1550111_shopnow">f7cf54cbc37d521065a51933e4013116</sys_package>
         <sys_policy/>
         <sys_scope display_value="ShopNow">f7cf54cbc37d521065a51933e4013116</sys_scope>
         <sys_update_name>sp_widget_d83d24cfc3bd521065a51933e401319b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-18 08:16:32</sys_updated_on>
+        <sys_updated_on>2024-11-26 14:52:18</sys_updated_on>
         <template><![CDATA[<div class="container">
   <!-- First Row: Add padding-bottom to create gap -->
   <div class="row">
@@ -290,7 +290,6 @@
       </div>
     </div>
 
-    <!-- Product list takes the remaining space -->
     <div class="col-md-10">
       <div class="row" ng-if="c.items.length">
         <div ng-repeat="product in c.items" class="col-sm-3 product-item">
@@ -303,7 +302,8 @@
             <div class="padding-4">
               <h3><a ng-href="{{::product.url}}">{{product.title}}</a></h3>
               <p class="margin-bottom-0" ng-bind-html="product.product_description"></p>
-              <p class="text-primary"><strong>₹{{product.price}}</strong></p>
+              <p class="text-primary" ng-if="product.available !== 'false'"><strong>₹{{product.price}}</strong></p>
+              <p class="text-danger" ng-if="product.available === 'false'"><strong>Out of Stock</strong></p>
             </div>
           </div>
         </div>

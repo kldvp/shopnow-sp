@@ -98,6 +98,20 @@
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cancel_reason</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-11-25 13:26:55</sys_created_on>
+            <sys_id>bc582416c3c6925065a51933e4013146</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1550111_shopnow_shop_orders" sys_domain="global" view="Default view">ba44e0c3c3bd521065a51933e401315f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-11-25 13:26:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
