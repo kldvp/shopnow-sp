@@ -234,6 +234,9 @@ Email notifications
 - Last 7 days orders count
 - Today orders status
 
+<img width="1724" alt="Screenshot 2024-11-27 at 11 16 42 AM" src="https://github.com/user-attachments/assets/b4a57608-9631-48b1-935e-b825b3f5aadc">
+
+
 ## Flows
 
 - MedicalApproval
