@@ -113,62 +113,14 @@ Extends from: task
 - Shop Admin will have delete access to delete order items
 - Doctors will have read access to see medical orders
 
-
-
-## Business Rules
-
-
-- SetDefaultValues
-  - Set a default value for the *_full_details_* field if not provided by the user.
-- SetCancelReason
-  - Set the reject comment in the *_cancel_reason_* field if the approver rejects the order.
-
-## Script includes
-
-
-- CartUtils (client callable)
-- GetCartItemCount (on demand)
-
-
-## UI Actions
-
-
-Overrided default functionalities of Submit & Update buttons
-
-- Add product (default override)
-- Update product (default override)
-
-## Scheduled scripts
-
-
-- Process Orders
-  - Execute every 2 mins and process orders placed 5 mins ago
-  - Replicate actual order processing by changing status from 
-    - Processing -> Shipping
-    - Shipping -> Delivered
-  - Process all orders placed by users
-    - books, groceries & medicine orders status will be changed every 5 mins
-    - electronics orders status will be changed every 8 mins
-    - clothes, furniture & others orders status will be changed every 10 mins
-
-
-
 ## Applicaton Menus & Modules
 
 
 - ShopNow (Menu)
-- Add product
+- Add product (admin can see)
 - Cart
 - Orders
 - Products
-
-## Notifications
-
-Email notifications
-- OrderProcessing
-- OrderShipping
-- OrderDelivered
-- OrderCancel
 
 ## Service Portal, Pages & Widgets
 
@@ -226,6 +178,52 @@ Email notifications
   - Display all orders placed by the user.
   - Filter orders based on order status: All, Processing, Shipping, Delivered, Cancelled.
   - Allow search of orders using client-side search functionality.
+
+
+## Business Rules
+
+
+- SetDefaultValues
+  - Set a default value for the *_full_details_* field if not provided by the user.
+- SetCancelReason
+  - Set the reject comment in the *_cancel_reason_* field if the approver rejects the order.
+
+## Script includes
+
+
+- CartUtils (client callable)
+- GetCartItemCount (on demand)
+
+
+## UI Actions
+
+
+Overrided default functionalities of Submit & Update buttons
+
+- Add product (default override)
+- Update product (default override)
+
+## Scheduled scripts
+
+
+- Process Orders
+  - Execute every 2 mins and process orders placed 5 mins ago
+  - Replicate actual order processing by changing status from 
+    - Processing -> Shipping
+    - Shipping -> Delivered
+  - Process all orders placed by users
+    - books, groceries & medicine orders status will be changed every 5 mins
+    - electronics orders status will be changed every 8 mins
+    - clothes, furniture & others orders status will be changed every 10 mins
+
+
+## Notifications
+
+Email notifications
+- OrderProcessing
+- OrderShipping
+- OrderDelivered
+- OrderCancel
 
 
 ## Reporting
