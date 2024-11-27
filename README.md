@@ -15,7 +15,7 @@ Extends from: task
 | Product Description | product_description | HTML                  | Y         |                                                                 |               |
 | Price               | price               | Floating Point Number | Y         |                                                                 |               |
 | Full details        | full_details        | HTML                  |           |                                                                 |               |
-| Category            | category            | Choice                | Y         | books, electronics, grocery, clothes, mediine, funiture, others |               |
+| Category            | category            | Choice                | Y         | books, electronics, grocery, clothes, medicine, furniture, others |               |
 | Available           | available           | True/False            |           |                                                                 | false         |
 | Picture             | picture             | Image                 | Y         |                                                                 |               |
 
