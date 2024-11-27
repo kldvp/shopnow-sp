@@ -63,10 +63,10 @@ Extends from: task
 
 ## Personas
 
-- Shop user
-- Shop admin
-- Shop doctor
-- Shop fulfiller (replaced by schedule script)
+- Admin
+- Customer
+- Doctor
+- Fulfiller (replaced by schedule script)
 
 ## Business Rules
 
@@ -108,9 +108,9 @@ Overrided default functionalities of Submit & Update buttons
 ## Roles
 
 
-- Admin
-- User
-- Doctor
+- Shop_admin
+- Shop_user
+- Shop_doctor
 
 ## Access controls
 
@@ -195,6 +195,17 @@ Email notifications
   - Allow search of products using server-side search functionality.
 - Shop - Actions
   - Display actions based on the user's role.
+
+**Admin View**
+  <img width="1721" alt="Screenshot 2024-11-27 at 11 07 53 AM" src="https://github.com/user-attachments/assets/e53e9786-8d65-4d32-8f74-5ecc7334b786">
+
+**User with doctor role**
+<img width="1460" alt="Screenshot 2024-11-27 at 11 11 59 AM" src="https://github.com/user-attachments/assets/0bcfb7d9-736d-4d8d-9e00-01a4194e1a3e">
+
+**User view**
+<img width="1459" alt="Screenshot 2024-11-27 at 11 13 00 AM" src="https://github.com/user-attachments/assets/8aa226ed-a74d-4330-8a21-10ceb627ba9a">
+
+
   - Admin users have access to all actions.
   - Basic users can access Products and Orders.
   - Doctor users can access Products, Orders, and Approvals.
@@ -206,10 +217,14 @@ Email notifications
   - Display all items added to the cart by the user.
   - Edit or remove items from the cart.
   - Place an order.
+
+  **Real time updates example**
+  ![real_time_updates](https://github.com/user-attachments/assets/ebcf1f43-a638-46e7-b173-381cd403fd24)
 - Shop - ShopOrders
   - Display all orders placed by the user.
   - Filter orders based on order status: All, Processing, Shipping, Delivered, Cancelled.
   - Allow search of orders using client-side search functionality.
+
 
 ## Reporting
 
