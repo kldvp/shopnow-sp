@@ -1,6 +1,6 @@
 # ShopNow app
 
-Tables
+## Tables
 - Shop products
 
 <details>
